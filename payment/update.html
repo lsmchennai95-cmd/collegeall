@@ -1,0 +1,48 @@
+ <?php 	
+ include("../dbconfig.php");
+date_default_timezone_set('Asia/Kolkata');
+require_once("../cookie.php");
+   $courseid = $_GET[courseid];
+  
+					   // echo "yes";
+					    include("../dbconfig.php");
+					    
+					    $query = "select * from student where email='$email'";  
+    $result = mysqli_query($conn, $query);  
+    $nos = mysqli_num_rows($result); 
+    
+   if($nos>0)
+   {
+       
+                
+  $sel = mysqli_fetch_assoc(mysqli_query($conn,"select * from course where courseid='$courseid'"));
+ $coursename=$sel['coursename'];
+ $querys = "select * from registered_courses where email='$email'";  
+    $results = mysqli_query($conn, $querys);  
+    $noss = mysqli_num_rows($results); 
+    if($noss>0){
+       $sql = "UPDATE `registered_courses` SET `courseid`='$courseid'  WHERE email='$email'";
+mysqli_query($conn,$sql); 
+    } else
+    {
+        $date=date("d-M-Y");
+        mysqli_query($conn,"INSERT INTO `registered_courses`(`email`, `courseid`, `status`, `regdate`) VALUES ('$email','$courseid','0','$date')"); 
+
+    }
+ 
+
+$sql = "UPDATE `onlineStudent` SET `course`='$courseid',`coursename`='$coursename'  WHERE email='$student'";
+mysqli_query($conn,$sql);
+        
+            //  echo "<span style='color:green'>Updated!</span>";
+
+         echo '<meta http-equiv="Refresh" content="0;url=change.php" />';
+   }
+   else
+   {
+        echo "<span style='color:red'>All fields are mandatory!</span>";
+        // echo '<meta http-equiv="Refresh" content="5;url=https://iop.liba.edu/rockstar/list-courses/" />';
+   }
+				 
+					
+					?>

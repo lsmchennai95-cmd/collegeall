@@ -1,0 +1,25 @@
+# robots.txt for https://collegeall.com/
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /dashboard/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /search-results/
+Allow: /
+
+# Block crawling of duplicate or low-value pages
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+
+# Sitemap locations
+Sitemap: https://collegeall.com/sitemap.xml
+Sitemap: https://collegeall.com/sitemap_index.xml
+
+# Crawl-delay (optional)
+# Crawl-delay: 10

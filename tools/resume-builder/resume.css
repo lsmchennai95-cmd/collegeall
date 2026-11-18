@@ -1,0 +1,756 @@
+:root {
+    --primary-color: #004aad;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --success-color: #2ecc71;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app-container .header {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.app-container .header h1 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.app-container .header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.app-container .resume-form-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+.app-container .section-title {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.app-container .resume-form-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: #f8f9fa;
+    transition: var(--transition);
+}
+
+.app-container .resume-form-section:hover {
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.app-container .dynamic-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.app-container .btn-add {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.app-container .btn-add:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.app-container .btn-remove {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.app-container .btn-remove:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.app-container .btn-primary-custom {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.app-container .btn-primary-custom:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.app-container .nav-tabs .nav-link {
+    color: var(--secondary-color);
+    font-weight: 500;
+    border: none;
+    padding: 12px 20px;
+    transition: var(--transition);
+}
+
+.app-container .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.app-container .nav-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border: none;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.app-container .preview-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+}
+
+/* Fix full-page PDF rendering */
+#preview-page,
+.preview-container,
+.app-container {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+}
+
+/* Ensure resume renders fully */
+.app-container .resume-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume-preview {
+    width: 100%;
+    max-width: 750px;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 10px;
+}
+
+/* Required for full capture */
+html, body {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Enable page breaks */
+.app-container .page-break {
+    page-break-before: always;
+    break-before: page;
+}
+
+.app-container .template-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.app-container .template-option {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.app-container .template-option:hover {
+    border-color: var(--primary-color);
+}
+
+.app-container .template-option.active {
+    border-color: var(--primary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.app-container .template-name {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.app-container .resume-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.app-container .resume-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.app-container .resume-contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.app-container .resume-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.app-container .resume-section {
+    margin-bottom: 25px;
+}
+
+.app-container .resume-section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.app-container .resume-item {
+    margin-bottom: 15px;
+}
+
+.app-container .resume-item-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.app-container .resume-item-subtitle {
+    font-style: italic;
+    color: #666;
+}
+
+.app-container .resume-item-duration {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.app-container .resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.app-container .skill-tag {
+    background-color: var(--light-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.app-container .action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.app-container .btn-download {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.app-container .btn-download:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+.app-container .btn-back {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.app-container .btn-back:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.app-container .hidden {
+    display: none;
+}
+
+/* Template Styles */
+.app-container .template-modern .resume-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.app-container .template-modern .resume-name {
+    color: white;
+}
+
+.app-container .template-modern .resume-section-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.app-container .template-classic .resume-header {
+    text-align: left;
+    border-bottom: 3px double #ddd;
+}
+
+.template-classic .resume-contact {
+    justify-content: flex-start;
+}
+
+.app-container .template-classic .resume-section-title {
+    border-bottom: 1px solid #ddd;
+    color: #444;
+}
+
+.app-container .template-professional .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.app-container .template-professional .resume-contact {
+    justify-content: flex-end;
+}
+
+.app-container .template-professional .resume-section-title {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .app-container .template-selector {
+        flex-direction: column;
+    }
+
+    .app-container .resume-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .app-container .action-buttons {
+        flex-direction: column;
+    }
+
+    .app-container .resume-preview {
+        padding: 20px;
+    }
+}
+
+.app-container .form-control:focus,
+.app-container .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+.app-container .alert-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+/* Mobile Responsive */
+/* Mobile Responsive Styles for Resume Builder */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .app-container .header {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    .app-container .header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .app-container .header p {
+        font-size: 0.9rem;
+    }
+
+    .app-container .resume-form-container {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    /* Mobile Navigation Tabs */
+    .app-container .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .app-container .nav-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .app-container .nav-tabs .nav-item {
+        flex: 0 0 auto;
+    }
+
+    .app-container .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        border-bottom: 2px solid transparent;
+    }
+
+    .app-container .nav-tabs .nav-link.active {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .app-container .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .app-container .resume-form-section {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+
+    /* Form Layout Adjustments */
+    .app-container .row {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .app-container .row > [class*="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .app-container .mb-3 {
+        margin-bottom: 15px !important;
+    }
+
+    /* Input Groups */
+    .app-container .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .app-container .input-group .form-control,
+    .app-container .input-group .form-select,
+    .app-container .input-group .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .app-container .input-group .form-select {
+        max-width: 100% !important;
+    }
+
+    /* Dynamic Items */
+    .app-container .dynamic-item {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    /* Buttons */
+    .app-container .btn-add,
+    .app-container .btn-primary-custom {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .app-container .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .app-container .d-flex.justify-content-between .btn {
+        width: 100%;
+    }
+
+    /* Preview Page */
+    .app-container .preview-container {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+
+    .app-container .template-selector {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .app-container .template-option {
+        min-width: 100%;
+        padding: 12px;
+    }
+
+    .app-container .resume-container {
+        padding: 0;
+    }
+
+    .app-container #resume-preview {
+        padding: 15px;
+        transform: scale(0.95);
+        transform-origin: top center;
+    }
+
+    /* Resume Content Mobile Adjustments */
+    .app-container .resume-name {
+        font-size: 1.5rem !important;
+    }
+
+    .app-container .resume-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .app-container .resume-contact-item {
+        font-size: 0.85rem;
+    }
+
+    .app-container .resume-section-title {
+        font-size: 1.1rem;
+    }
+
+    .app-container .resume-item-title {
+        font-size: 1rem;
+    }
+
+    .app-container .resume-item-subtitle,
+    .app-container .resume-item-duration {
+        font-size: 0.85rem;
+    }
+
+    .app-container .resume-skills {
+        gap: 6px;
+    }
+
+    .app-container .skill-tag {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .app-container .action-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .app-container .btn-download,
+    .app-container .btn-back {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    /* Template Specific Mobile Adjustments */
+    .app-container .template-modern .resume-header {
+        padding: 20px;
+    }
+
+    .app-container .template-professional .resume-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .app-container .template-professional .resume-contact {
+        justify-content: center;
+    }
+
+    /* Form Controls */
+    .app-container .form-control,
+    .app-container .form-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 12px;
+    }
+
+    .app-container textarea.form-control {
+        min-height: 120px;
+    }
+
+    /* Error Messages */
+    .app-container .alert-error {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .app-container {
+        padding: 8px;
+    }
+
+    .app-container .header {
+        padding: 15px 12px;
+    }
+
+    .app-container .header h1 {
+        font-size: 1.3rem;
+    }
+
+    .app-container .resume-form-container {
+        padding: 15px 12px;
+    }
+
+    .app-container .nav-tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .app-container .section-title {
+        font-size: 1.1rem;
+    }
+
+    .app-container #resume-preview {
+        transform: scale(0.9);
+    }
+
+    .app-container .resume-name {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) and (orientation: landscape) {
+    .app-container .header {
+        padding: 15px;
+    }
+
+    .app-container .resume-form-container {
+        padding: 15px;
+    }
+
+    .app-container .nav-tabs .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Touch Device Improvements */
+@media (hover: none) and (pointer: coarse) {
+    .app-container .btn-add:hover,
+    .app-container .btn-remove:hover,
+    .app-container .btn-primary-custom:hover,
+    .app-container .btn-download:hover,
+    .app-container .btn-back:hover {
+        transform: none;
+    }
+
+    .app-container .nav-tabs .nav-link:hover {
+        border-bottom: 2px solid transparent;
+    }
+
+    .app-container .nav-tabs .nav-link.active:hover {
+        border-bottom: 3px solid var(--primary-color);
+    }
+
+    .app-container .resume-form-section:hover {
+        box-shadow: none;
+    }
+}
+
+/* High-resolution mobile devices */
+@media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+    .app-container .resume-form-container,
+    .app-container .preview-container,
+    .app-container .dynamic-item {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+}
+
+/* Print styles for mobile PDF */
+@media print {
+    .app-container .nav-tabs,
+    .app-container .btn-add,
+    .app-container .btn-remove,
+    .app-container .action-buttons {
+        display: none !important;
+    }
+    
+    .app-container #resume-preview {
+        transform: none !important;
+        padding: 0 !important;
+    }
+}
