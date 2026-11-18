@@ -1,3 +1,4 @@
+const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', apiBaseUrl: 'https://api.collegeall.com' };
 
 
 const courseTabs = document.getElementById("courseTabs");
@@ -17,7 +18,7 @@ function generateStars(rating) {
 // Fetch Courses from API
 async function loadCourses() {
   try {
-    const res = await fetch("https://api.collegeall.com/api/v1/get-one-week-course");
+    const res = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/get-one-week-course");
     const json = await res.json();
     courses = json.data.courses;
 
@@ -156,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function () {
   const grid = document.getElementById("universities-logos-grid");
 
-  fetch("https://api.collegeall.com/api/v1/all-universities")
+  fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/all-universities")
     .then(response => response.json())
     .then(res => {
       if (res.status === 200 && res.data && res.data.universities) {

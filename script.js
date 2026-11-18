@@ -1,7 +1,8 @@
+const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', assetBaseUrl: 'https://collegeall.com', apiBaseUrl: 'https://api.collegeall.com' };
 // document.addEventListener("DOMContentLoaded", function () {
 //   const grid = document.getElementById("universities-logos-grid");
 
-//   fetch("https://api.collegeall.com/api/v1/all-universities") 
+//   fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/all-universities") 
 //     .then(response => response.json())
 //     .then(res => {
 //       if (res.status === 200 && res.data && res.data.universities) {
@@ -48,7 +49,7 @@
   const page_id = '1';
   const by_id = '1';
 
-  fetch('https://api.collegeall.com/api/v1/click-log', {
+  fetch((appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/click-log', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -148,7 +149,7 @@ function shuffle(array) {
 
 async function loadCourses() {
   try {
-    const response = await fetch("https://api.collegeall.com/api/v1/topcourse", {
+    const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/topcourse", {
       method: "POST",
       headers: { "Content-Type": "application/json" }
     });
@@ -287,7 +288,7 @@ async function fetchUniversities() {
   grid.innerHTML = `<div class="universities-loading">Loading universities...</div>`;
 
   try {
-    const response = await fetch("https://api.collegeall.com/api/v1/all-universities");
+    const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/all-universities");
     const data = await response.json();
 
     if (data.status === 200 && data.data?.universities) {
@@ -340,11 +341,11 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 5,
     reviews: "2,354",
-    url: "https://collegeall.com/one-week-online-courses/courses/web-development/web-development-bootcamp/",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/web-development/web-development-bootcamp/",
     price: 499,
     oldPrice: 2499,
     tag: "Bestseller",
-    img: "https://collegeall.com/one-week-online-courses/img/web-development.webp"
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/web-development.webp"
   },
   {
     id: 2,
@@ -353,11 +354,11 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.3,
     reviews: "1,892",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/master-digital-marketing/",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/master-digital-marketing/",
     price: 499,
     oldPrice: 1999,
     tag: "Popular",
-    img: "https://collegeall.com/one-week-online-courses/img/digital-marketing.jpg"
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/digital-marketing.jpg"
   },
   {
     id: 3,
@@ -366,11 +367,11 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.6,
     reviews: "1,940",
-    url: "https://collegeall.com/one-week-online-courses/courses/data-analysis/data-analysis-with-excel-python/",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/data-analysis/data-analysis-with-excel-python/",
     price: 499,
     oldPrice: 2099,
     tag: "Trending",
-    img: "https://collegeall.com/one-week-online-courses/img/excel.webp"
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/excel.webp"
   },
   {
     id: 4,
@@ -382,8 +383,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "2,373",
-    url: "https://collegeall.com/one-week-online-courses/courses/web-development/html-crash-course/",
-    img: "https://collegeall.com/one-week-online-courses/img/html.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/web-development/html-crash-course/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/html.webp",
     tag: "New",
     learn: [
       "Page structure & elements",
@@ -402,8 +403,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,750",
-    url: "https://collegeall.com/one-week-online-courses/courses/web-development/css-mastery-responsive-websites/",
-    img: "https://collegeall.com/one-week-online-courses/img/CSS-mastery.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/web-development/css-mastery-responsive-websites/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/CSS-mastery.webp",
     tag: "New",
     learn: [
       "Flexbox & Grid systems",
@@ -422,8 +423,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 5,
     reviews: "2,230",
-    url: "https://collegeall.com/one-week-online-courses/courses/web-development/javascript-for-beginners/",
-    img: "https://collegeall.com/one-week-online-courses/img/js.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/web-development/javascript-for-beginners/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/js.webp",
     tag: "New",
     learn: [
       "Core syntax & logic",
@@ -442,8 +443,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "2.023",
-    url: "https://collegeall.com/one-week-online-courses/courses/web-development/react-js-bootcamp/",
-    img: "https://collegeall.com/one-week-online-courses/img/react-bootcamp.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/web-development/react-js-bootcamp/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/react-bootcamp.webp",
     tag: "New",
     learn: [
       "Components & props",
@@ -462,8 +463,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,621",
-    url: "https://collegeall.com/one-week-online-courses/courses/backend-development/express-js-fundamentals/",
-    img: "https://collegeall.com/one-week-online-courses/img/rest-api-in-nodejs.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/backend-development/express-js-fundamentals/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/rest-api-in-nodejs.webp",
     tag: "New",
     learn: [
       "Setting up Express servers",
@@ -482,8 +483,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,803",
-    url: "https://collegeall.com/one-week-online-courses/courses/backend-development/mysql-fundamentals/",
-    img: "https://collegeall.com/one-week-online-courses/img/MySQL-fundamentals.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/backend-development/mysql-fundamentals/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/MySQL-fundamentals.webp",
     tag: "New",
     learn: [
       "Database design & relationships",
@@ -502,8 +503,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,203",
-    url: "https://collegeall.com/one-week-online-courses/courses/backend-and-hosting/aws-hosting-masterclass/",
-    img: "https://collegeall.com/one-week-online-courses/img/hosting.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/backend-and-hosting/aws-hosting-masterclass/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/hosting.webp",
     tag: "New",
     learn: [
       "EC2 setup",
@@ -522,8 +523,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,302",
-    url: "https://collegeall.com/one-week-online-courses/courses/backend-and-hosting/domain-server-setup-made-easy/",
-    img: "https://collegeall.com/one-week-online-courses/img/dns.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/backend-and-hosting/domain-server-setup-made-easy/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/dns.webp",
     tag: "New",
     learn: [
       "DNS & record types",
@@ -542,8 +543,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.3,
     reviews: "1,287",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/digital-marketing-mastery/",
-    img: "https://collegeall.com/one-week-online-courses/img/digital-marketing-sales.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/digital-marketing-mastery/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/digital-marketing-sales.webp",
     tag: "New",
     learn: [
       "Marketing funnels",
@@ -562,8 +563,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,331",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/seo-growth-formula/",
-    img: "https://collegeall.com/one-week-online-courses/img/seo.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/seo-growth-formula/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/seo.webp",
     tag: "New",
     learn: [
       "Keyword research",
@@ -582,8 +583,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,305",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/google-tools-power-pack/",
-    img: "https://collegeall.com/one-week-online-courses/img/google-analysis.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/google-tools-power-pack/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/google-analysis.webp",
     tag: "New",
     learn: [
       "Analytics setup",
@@ -602,8 +603,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.8,
     reviews: "2,012",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/google-ads-blueprint/",
-    img: "https://collegeall.com/one-week-online-courses/img/google-ads.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/google-ads-blueprint/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/google-ads.webp",
     tag: "New",
     learn: [
       "Keyword targeting",
@@ -622,8 +623,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.3,
     reviews: "1,464",
-    url: "https://collegeall.com/one-week-online-courses/courses/digital-marketing/meta-ads-mastery/",
-    img: "https://collegeall.com/one-week-online-courses/img/meta-ads.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/digital-marketing/meta-ads-mastery/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/meta-ads.webp",
     tag: "New",
     learn: [
       "Business Manager setup",
@@ -642,8 +643,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,070",
-    url: "https://collegeall.com/one-week-online-courses/courses/business-tools/crm-integration-simplified/",
-    img: "https://collegeall.com/one-week-online-courses/img/crm-automation.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/business-tools/crm-integration-simplified/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/crm-automation.webp",
     tag: "New",
     learn: [
       "CRM workflow setup",
@@ -662,8 +663,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.3,
     reviews: "1,360",
-    url: "https://collegeall.com/one-week-online-courses/courses/data-management/data-management-pro/",
-    img: "https://collegeall.com/one-week-online-courses/img/data-management.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/data-management/data-management-pro/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/data-management.webp",
     tag: "New",
     learn: [
       "Data structuring",
@@ -682,8 +683,8 @@ const oneWeekCourses = [
     instructor: "CollegeAll Certified | 1 Week Program",
     rating: 4.5,
     reviews: "1,254",
-    url: "https://collegeall.com/one-week-online-courses/courses/data-management/excel-power-skills/",
-    img: "https://collegeall.com/one-week-online-courses/img/excel-business-dashboard.webp",
+    url: (appConfig.appUrl || "https://collegeall.com") + "/one-week-online-courses/courses/data-management/excel-power-skills/",
+    img: (appConfig.assetBaseUrl || "https://collegeall.com") + "/one-week-online-courses/img/excel-business-dashboard.webp",
     tag: "New",
     learn: [
       "Advanced formulas",
@@ -790,7 +791,7 @@ async function otpVerify() {
   console.log("Verifying OTP with payload:", payload);
 
   try {
-    const response = await fetch("https://api.collegeall.com/api/v1/verify-otp", {
+    const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/verify-otp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -810,7 +811,7 @@ async function otpVerify() {
     if (status === 200) {
       // ✅ OTP verified successfully
       alert("✅ OTP Verified Successfully!");
-      window.location.href = "https://collegeall.com/thank-you/";
+      window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/thank-you/";
     } else {
       // ❌ OTP failed or backend returned generic error
       otpError.textContent = message || "Invalid OTP. Please try again.";

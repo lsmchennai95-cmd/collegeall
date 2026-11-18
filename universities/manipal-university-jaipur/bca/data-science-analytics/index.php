@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta name="keywords" content="BCA Data Science online, Manipal BCA Data Analytics, best online BCA in data science, AI and machine learning BCA, online programming and analytics BCA, big data and cloud computing BCA, Online BCA Data Science Manipal, best BCA in data analytics, artificial intelligence BCA online, big data and cloud analytics BCA, programming and data science BCA, BCA machine learning online">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
     
     <link rel="stylesheet" href="../../../css/course.css">
@@ -67,7 +69,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/Manipal%20University%20Jaipur.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -264,7 +266,7 @@
             </div>
         </div>
     </main>
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script>
         const currentURL = window.location.href.replace(/\/$/, '');
         (async () => {

@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta name="keywords" content="DY Patil Online MBA Retail, online MBA in retail management, DY Patil University MBA Retail, online MBA retail program, MBA retail degree online, DY Patil MBA retail course, online MBA in India, master retail management MBA, DY Patil online courses, MBA retail management specialization, online MBA admission, DY Patil University admissions, MBA in retail management, online MBA retail India, DY Patil MBA program, retail management skills MBA, online MBA with retail focus, DY Patil University online MBA, MBA retail online course, master retail management MBA, DY Patil MBA retail syllabus, online MBA in retail management, DY Patil University MBA online, MBA retail career, online MBA for working professionals, DY Patil MBA retail fees, MBA Retail Management Online Course, DY Patil MBA Retail Syllabus and Fees, MBA in Retail Management DY Patil University, best online MBA retail program, online MBA, MBA online, online MBA courses, online MBA degree">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
     
     <link rel="stylesheet" href="../../../css/course.css">
@@ -67,7 +69,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/D.Y.%20Patil%20University.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -264,7 +266,7 @@
             </div>
         </div>
     </main>
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script>
         const currentURL = window.location.href.replace(/\/$/, '');
         (async () => {

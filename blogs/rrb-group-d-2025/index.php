@@ -1,5 +1,7 @@
 
 <?php
+
+require_once __DIR__ . '/../../config/bootstrap.php';
 // Blog created on December 10, 2025
 ?>
 <!doctype html>
@@ -16,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://collegeall.com/assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
     <style>
       
     .blog-hero-image {
@@ -363,7 +365,7 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-  <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+  <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 <main>
     <div class="about-area2 gray-bg pt-60 pb-60">
         <div class="container">
@@ -434,7 +436,7 @@ or their respective <strong data-start="2727" data-end="2750">regional RRB porta
     </div>
 </main>
 
-  <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+  <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

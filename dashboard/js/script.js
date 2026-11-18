@@ -1,3 +1,4 @@
+const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', apiBaseUrl: 'https://api.collegeall.com' };
 // Global Course Manager for synchronization between sections
 class GlobalCourseManager {
     constructor() {
@@ -63,7 +64,7 @@ window.globalCourseManager = new GlobalCourseManager();
 function validateToken() {
     const token = localStorage.getItem('authToken');
     if (!token) {
-        window.location.href = "https://collegeall.com/signin/";
+        window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
         return false;
     }
     return true;
@@ -198,7 +199,7 @@ class Dashboard {
             const myHeaders = new Headers();
             myHeaders.append("authtoken", token);
 
-            const response = await fetch("https://api.collegeall.com/api/v1/getuser-details/", {
+            const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/getuser-details/", {
                 method: "GET",
                 headers: myHeaders,
                 redirect: "follow"
@@ -239,7 +240,7 @@ class Dashboard {
         }
 
         try {
-            const response = await fetch("https://api.collegeall.com/api/v1/getcourse-details", {
+            const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/getcourse-details", {
                 method: "GET",
                 headers: { "authtoken": token }
             });
@@ -282,7 +283,7 @@ class Dashboard {
     handleUnauthorized() {
         localStorage.removeItem('authToken');
         sessionStorage.removeItem('user_details');
-        window.location.href = "https://collegeall.com/signin/";
+        window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
     }
 
     updateUI() {
@@ -458,7 +459,7 @@ class Dashboard {
 
     async loadUniversities() {
         try {
-            const response = await fetch("https://api.collegeall.com/api/v1/all-universities");
+            const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/all-universities");
             const result = await response.json();
             const universities = result?.data?.universities || [];
 
@@ -501,7 +502,7 @@ class Dashboard {
             courseSelect.disabled = true;
             this.courseMap.clear();
 
-            const response = await fetch("https://api.collegeall.com/api/v1/get-courses", {
+            const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/get-courses", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ uni_id: universityId })
@@ -580,7 +581,7 @@ class Dashboard {
 
             const raw = JSON.stringify({ course_id: courseId });
 
-            const response = await fetch("https://api.collegeall.com/api/v1/course-selected", {
+            const response = await fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/course-selected", {
                 method: "POST",
                 headers: myHeaders,
                 body: raw,
@@ -680,7 +681,7 @@ function formatPercentage(value) {
 function logoutUser() {
     localStorage.removeItem("authToken");
     sessionStorage.removeItem("user_details");
-    window.location.href = "https://collegeall.com/signin/";
+    window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
 }
 
 // Add token validation to page-specific scripts

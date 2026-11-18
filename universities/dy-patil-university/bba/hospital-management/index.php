@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta name="keywords" content="DY Patil University, BBA in Hospital Management, online BBA, BBA Hospital Management online, DY Patil online courses, BBA degree online, hospital management degree, online BBA program, DY Patil University online courses, BBA in HM, DY Patil BBA, healthcare management and administration, online BBA in India, DY Patil University BBA, BBA online admission, DY Patil online education, BBA in Hospital Management, online degree in hospital management, DY Patil University admissions, BBA HM course details, DY Patil BBA program, online BBA in hospital management, DY Patil University BBA HM, BBA in Hospital Management online course, DY Patil online BBA admission, hospital management BBA online, DY Patil University BBA HM, online BBA, DY Patil BBA HM course, BBA in Hospital Management India, DY Patil University online BBA, BBA in HM, DY Patil online degree, BBA in Hospital Management program, DY Patil University BBA in HM, online BBA in hospital management, DY Patil BBA admission, BBA in Hospital Management online degree, DY Patil University online BBA, BBA in HM online course, DY Patil BBA in HM program, online BBA in hospital management India, DY Patil University BBA in Hospital Management, BBA in Hospital Management online admission, DY Patil online BBA in HM, BBA in Hospital Management course details, DY Patil University BBA in HM program, online BBA in hospital management India, DY Patil BBA in Hospital Management online, BBA in HM online program, DY Patil University online BBA in HM, BBA in Hospital Management online course, DY Patil BBA in HM online admission, healthcare administration degree online, DY Patil BBA healthcare management, online BBA in healthcare management and administration, DY Patil University BBA hospital management course, BBA in healthcare management and administration, DY Patil BBA hospital management program, online BBA in healthcare management and administration, DY Patil University BBA hospital management online, BBA in healthcare management and administration, DY Patil online BBA hospital management course.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
     
     <link rel="stylesheet" href="../../../css/course.css">
@@ -67,7 +69,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/D.Y.%20Patil%20University.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -264,7 +266,7 @@
             </div>
         </div>
     </main>
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script>
         const currentURL = window.location.href.replace(/\/$/, '');
         (async () => {

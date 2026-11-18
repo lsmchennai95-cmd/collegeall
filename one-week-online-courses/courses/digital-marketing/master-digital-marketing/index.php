@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../../../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +42,7 @@
 </head>
 <body>
 
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 
     <div id="modalContainer"></div>
     
@@ -414,7 +415,7 @@
     </section>
 
     <!-- Footer -->
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

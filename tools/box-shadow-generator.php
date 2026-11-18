@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config/bootstrap.php'; ?>
 <!doctype html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="../index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://collegeall.com/assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
     <style>
         :root {
             --bg: #0f172a;
@@ -232,7 +233,7 @@
 </head>
 
 <body>
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="wrap">
         <header>
             <div>
@@ -325,7 +326,7 @@
         <footer>Made with ❤️ — adjust values, toggle inset, or choose a preset to quickly style your element.</footer>
     </div>
 
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>

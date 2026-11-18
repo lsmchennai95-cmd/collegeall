@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +63,7 @@
 </head>
 
 <body>
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="row">
         <div class="col-lg-12">
 
@@ -147,7 +148,7 @@
 
         </div>
     </div>
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
 </body>
 
 </html>

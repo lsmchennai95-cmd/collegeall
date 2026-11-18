@@ -1,3 +1,8 @@
+<?php
+if (!defined('COLLEGEALL_BOOTSTRAPPED')) {
+    require_once __DIR__ . '/config/bootstrap.php';
+}
+?>
 <section class="footer-modern pt-5 pb-3">
         <div class="container">
                 <div class="row">
@@ -5,7 +10,7 @@
                         <div class="col-lg-4 col-md-6">
                                 <div class="footer-brand">
                                         <div class="footer-logo">
-                                                <img src="https://collegeall.com/img/Logo/collegeallLogo.png"
+                                                <img src="<?php echo asset_url('/img/'); ?>Logo/collegeallLogo.png"
                                                         alt="CollegeAll">
                                         </div>
 
@@ -47,11 +52,11 @@
                                 <div class="footer-section">
                                         <h5 class="footer-title">Legal & Contact</h5>
                                         <ul class="footer-links">
-                                                <li><a href="https://collegeall.com/terms-condition/">Terms &
+                                                <li><a href="<?php echo app_url('/terms-condition/'); ?>">Terms &
                                                                 Conditions</a></li>
-                                                <li><a href="https://collegeall.com/privacy-policy/">Privacy Policy</a>
+                                                <li><a href="<?php echo app_url('/privacy-policy/'); ?>">Privacy Policy</a>
                                                 </li>
-                                                <li><a href="https://collegeall.com/blogs/">Blogs</a></li>
+                                                <li><a href="<?php echo app_url('/blogs/'); ?>">Blogs</a></li>
                                         </ul>
                                 </div>
                         </div>
@@ -64,50 +69,50 @@
                                                 <h5 class="footer-title">Bachelor's Degree</h5>
                                                 <ul class="footer-links">
                                                   
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/bba/general/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/bba/general/'); ?>">MUJ
                                                                         Online BBA - General</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/bca/cloud-computing/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/bca/cloud-computing/'); ?>">MUJ
                                                                         Online BCA - Cloud Computing</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/bca/cyber-security/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/bca/cyber-security/'); ?>">MUJ
                                                                         Online BCA - Cyber Security</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/bca/data-science-analytics/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/bca/data-science-analytics/'); ?>">MUJ
                                                                         Online BCA - Data Science Analytics</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/bcom/general/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/bcom/general/'); ?>">MUJ
                                                                         Online BCOM - General</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/computer-applications/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/computer-applications/'); ?>">VGU
                                                                         Online BA - Computer Applications</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/economics/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/economics/'); ?>">VGU
                                                                         Online BA - Economics</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/english/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/english/'); ?>">VGU
                                                                         Online BA - English</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/history/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/history/'); ?>">VGU
                                                                         Online BA - History</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/international-relations/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/international-relations/'); ?>">VGU
                                                                         Online BA - International Relations</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/political-science/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/political-science/'); ?>">VGU
                                                                         Online BA - Political Science</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/psychology/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/psychology/'); ?>">VGU
                                                                         Online BA - Psychology</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/ba/public-policy-development/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/ba/public-policy-development/'); ?>">VGU
                                                                         Online BA - Public Policy Development</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bba/digital-marketing/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bba/digital-marketing/'); ?>">VGU
                                                                         Online BBA - Digital Marketing</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bba/fintech/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bba/fintech/'); ?>">VGU
                                                                         Online BBA - Fintech</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bba/retail-management/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bba/retail-management/'); ?>">VGU
                                                                         Online BBA - Retail Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/artificial-intelligence/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/artificial-intelligence/'); ?>">VGU
                                                                         Online BCA - Artificial intelligence</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/block-chain-technology/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/block-chain-technology/'); ?>">VGU
                                                                         Online BCA - Block Chain Technology</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/cloud-technology-information-security/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/cloud-technology-information-security/'); ?>">VGU
                                                                         Online BCA - Cloud Technology & Information
                                                                         Security</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/data-science/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/data-science/'); ?>">VGU
                                                                         Online BCA - Data Science</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/general/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/general/'); ?>">VGU
                                                                         Online BCA - General</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/bca/ux-design/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/bca/ux-design/'); ?>">VGU
                                                                         Online BCA - UX-Design</a></li>
                                                 </ul>
                                         </div>
@@ -117,36 +122,36 @@
                                                 <div class="mb-4">
                                                         <h5 class="footer-title">Top Courses</h5>
                                                         <ul class="footer-links">
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/business-analytics/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/business-analytics/'); ?>">LIBA
                                                                                 Online PGDM - Business Analytics</a>
                                                                 </li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/financial-management/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/financial-management/'); ?>">LIBA
                                                                                 Online PGDM - Financial Management</a>
                                                                 </li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/healthcare-management/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/healthcare-management/'); ?>">LIBA
                                                                                 Online PGDM - Healthcare Management</a>
                                                                 </li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/human-resource-management/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/human-resource-management/'); ?>">LIBA
                                                                                 Online PGDM - Human Resource
                                                                                 Management</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/logistics-and-supply-chain-management/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/logistics-and-supply-chain-management/'); ?>">LIBA
                                                                                 Online PGDM - Logistics & Supply Chain
                                                                                 Management</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgdm/marketing-management/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgdm/marketing-management/'); ?>">LIBA
                                                                                 Online PGDM - Marketing Management</a>
                                                                 </li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgpm/ai-data-science/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgpm/ai-data-science/'); ?>">LIBA
                                                                                 Online
                                                                                 PGPM - AI & Data Science</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgpm/fintech/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgpm/fintech/'); ?>">LIBA
                                                                                 Online PGPM -
                                                                                 Fintech</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/pgpm/healthcare/">LIBA
+                                                                <li><a href="<?php echo app_url('/universities/liba/pgpm/healthcare/'); ?>">LIBA
                                                                                 Online PGPM
                                                                                 - Healthcare</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/ms-finance/">MS
+                                                                <li><a href="<?php echo app_url('/universities/liba/ms-finance/'); ?>">MS
                                                                                 Finance</a></li>
-                                                                <li><a href="https://collegeall.com/universities/liba/dba/">Doctor
+                                                                <li><a href="<?php echo app_url('/universities/liba/dba/'); ?>">Doctor
                                                                                 of Business
                                                                                 Analytics</a></li>
                                                         </ul>
@@ -157,19 +162,19 @@
                                                         <ul class="footer-links">
                                                              
                                                             
-                                                                <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mca/general/">MUJ
+                                                                <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mca/general/'); ?>">MUJ
                                                                                 Online MCA - General</a></li>
-                                                                <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mca/ai-data-science/">MUJ
+                                                                <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mca/ai-data-science/'); ?>">MUJ
                                                                                 Online MCA - AI & Data Science</a></li>
-                                                                <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mca/cloud-computing/">MUJ
+                                                                <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mca/cloud-computing/'); ?>">MUJ
                                                                                 Online MCA - Cloud Computing</a></li>
-                                                                <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mca/cyber-security/">MUJ
+                                                                <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mca/cyber-security/'); ?>">MUJ
                                                                                 Online MCA - Cyber Security</a></li>
-                                                                <li><a href="https://collegeall.com/universities/andhra-university/mca/general/">AU
+                                                                <li><a href="<?php echo app_url('/universities/andhra-university/mca/general/'); ?>">AU
                                                                                 Online MCA - General</a></li>
-                                                                <li><a href="https://collegeall.com/universities/sikkim-manipal-university/mca/cloud-computing/">SMU
+                                                                <li><a href="<?php echo app_url('/universities/sikkim-manipal-university/mca/cloud-computing/'); ?>">SMU
                                                                                 Online MCA - Cloud Computing</a></li>
-                                                                <li><a href="https://collegeall.com/universities/vivekananda-global-university/">VGU
+                                                                <li><a href="<?php echo app_url('/universities/vivekananda-global-university/'); ?>">VGU
                                                                                 Online MCA - General</a></li>
                                                         </ul>
                                                 </div>
@@ -179,52 +184,52 @@
                                         <div class="course-category">
                                                 <h5 class="footer-title">Popular MBA Courses</h5>
                                                 <ul class="footer-links">
-                                                        <li><a href="https://collegeall.com/universities/bharathidasan-university/mba/general/">BDU
+                                                        <li><a href="<?php echo app_url('/universities/bharathidasan-university/mba/general/'); ?>">BDU
                                                                         Online MBA - General</a></li>
                                                
                                                   
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/agri-business-management/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/agri-business-management/'); ?>">VGU
                                                                         Online MBA - Agri-Business Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/finance/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/finance/'); ?>">VGU
                                                                         Online MBA - Finance</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/healthcare-management/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/healthcare-management/'); ?>">VGU
                                                                         Online MBA - Healthcare Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/hrm/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/hrm/'); ?>">VGU
                                                                         Online MBA - Human Resource Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/information-technology/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/information-technology/'); ?>">VGU
                                                                         Online MBA - Information Technology</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/international-business-management/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/international-business-management/'); ?>">VGU
                                                                         Online MBA - International Business
                                                                         Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/marketing/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/marketing/'); ?>">VGU
                                                                         Online MBA - Marketing</a></li>
-                                                        <li><a href="https://collegeall.com/universities/vivekananda-global-university/mba/operation-management/">VGU
+                                                        <li><a href="<?php echo app_url('/universities/vivekananda-global-university/mba/operation-management/'); ?>">VGU
                                                                         Online MBA - Operation Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/analytics-data-science/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/analytics-data-science/'); ?>">MUJ
                                                                         Online MBA - Analytics & Data Science</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/finance/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/finance/'); ?>">MUJ
                                                                         Online MBA - Finance</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/hrm/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/hrm/'); ?>">MUJ
                                                                         Online MBA - Human Resource Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/information-systems/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/information-systems/'); ?>">MUJ
                                                                         Online MBA - Information Systems</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/international-business-management/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/international-business-management/'); ?>">MUJ
                                                                         Online MBA - International Business
                                                                         Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/logistics-supply-chain-management/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/logistics-supply-chain-management/'); ?>">MUJ
                                                                         Online MBA - Logistics Supply Chain
                                                                         Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/operations-management/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/operations-management/'); ?>">MUJ
                                                                         Online MBA - Operations Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/manipal-university-jaipur/mba/project-management/">MUJ
+                                                        <li><a href="<?php echo app_url('/universities/manipal-university-jaipur/mba/project-management/'); ?>">MUJ
                                                                         Online MBA - Project Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/andhra-university/mba/finance/">AU
+                                                        <li><a href="<?php echo app_url('/universities/andhra-university/mba/finance/'); ?>">AU
                                                                         Online
                                                                         MBA - Finance</a></li>
-                                                        <li><a href="https://collegeall.com/universities/andhra-university/mba/hrm/">AU
+                                                        <li><a href="<?php echo app_url('/universities/andhra-university/mba/hrm/'); ?>">AU
                                                                         Online MBA -
                                                                         Human Resource Management</a></li>
-                                                        <li><a href="https://collegeall.com/universities/andhra-university/mba/marketing/">AU
+                                                        <li><a href="<?php echo app_url('/universities/andhra-university/mba/marketing/'); ?>">AU
                                                                         Online
                                                                         MBA - Marketing</a></li>
                                                 </ul>
@@ -239,14 +244,14 @@
                                 <div class="copyright">
                                         ©
                                         <script>document.write(new Date().getFullYear())</script>
-                                        <a href="https://collegeall.com"
+                                        <a href="<?php echo app_url('/'); ?>"
                                                 class="text-decoration-none text-light fw-semibold">CollegeAll.com</a>.
                                         All Rights Reserved.
                                 </div>
                                 <div class="legal-links">
-                                        <a href="https://collegeall.com/terms-condition/">Terms & Conditions</a>
-                                        <a href="https://collegeall.com/privacy-policy/">Privacy Policy</a>
-                                        <a href="https://collegeall.com/blogs/">Blogs</a>
+                                        <a href="<?php echo app_url('/terms-condition/'); ?>">Terms & Conditions</a>
+                                        <a href="<?php echo app_url('/privacy-policy/'); ?>">Privacy Policy</a>
+                                        <a href="<?php echo app_url('/blogs/'); ?>">Blogs</a>
                                 </div>
                         </div>
                 </div>
@@ -262,7 +267,7 @@
 
         async function fetchCourses() {
                 try {
-                        const res = await fetch("https://api.collegeall.com/api/v1/topcourse", {
+                        const res = await fetch((window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com") + "/api/v1/topcourse", {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" }
                         });
@@ -353,7 +358,7 @@
     const page_id = '1';
     const by_id = '1';
 
-    fetch('https://api.collegeall.com/api/v1/click-log', {
+    fetch((window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl ? window.APP_CONFIG.apiBaseUrl : 'https://api.collegeall.com') + '/api/v1/click-log', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

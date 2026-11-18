@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta name="keywords" content="online MA English, MA English Bharathidasan, literature course online, PG English, UGC English MA, English theory course, online postgraduate English, Bharathidasan PG arts, MA English flexible, MA English syllabus, Indian writing course, MA critical theory, distance MA English, academic writing course, English education degree, PG arts degree, BDU MA English, Bharathidasan distance MA, best MA English online, MA English for teachers, language and culture, modern literature course, research in literature, literary criticism, comparative literature, PG English course India, MA English Tamil Nadu, British and Indian literature, UGC MA English">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
     
     <link rel="stylesheet" href="../../../css/course.css">
@@ -67,7 +69,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/Bharathidasan%20University.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -264,7 +266,7 @@
             </div>
         </div>
     </main>
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script>
         const currentURL = window.location.href.replace(/\/$/, '');
         (async () => {

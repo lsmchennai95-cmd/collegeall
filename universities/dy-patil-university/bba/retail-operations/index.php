@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <meta name="keywords" content="DY Patil University, BBA in Retail Operations, online BBA,  BBA Retail Operations online, DY Patil online courses, BBA degree online, retail operations degree, online BBA program, DY Patil University online courses, DY Patil BBA, retail management and operations, online BBA in India, DY Patil University BBA, BBA online admission, DY Patil online education, BBA in Retail Operations, online degree in retail operations, DY Patil University admissions, BBA RO course details, DY Patil BBA program, online BBA in retail operations, DY Patil University BBA RO, BBA in Retail Operations online course, DY Patil online BBA admission, retail operations BBA online, DY Patil University BBA RO, online BBA, DY Patil BBA RO course, BBA in Retail Operations India, DY Patil University online BBA, BBA in RO, DY Patil online degree, BBA in Retail Operations program, DY Patil University BBA in RO, online BBA in retail operations, DY Patil BBA admission, BBA in Retail Operations online degree, DY Patil University online BBA, BBA in RO online course, DY Patil BBA in RO program, online BBA in retail operations India, DY Patil University BBA in Retail Operations, BBA in Retail Operations online admission, DY Patil online BBA in RO, BBA in Retail Operations course details, DY Patil University BBA in RO program, online BBA in retail operations India, DY Patil BBA in Retail Operations online, BBA in RO online program, DY Patil University online BBA in RO, BBA in Retail Operations online course, DY Patil BBA in RO online admission, retail management degree online, DY Patil BBA retail management, online BBA in retail management and operations, DY Patil University BBA retail operations course, BBA in retail management and operations, DY Patil BBA retail operations program, online BBA in retail management and operations, DY Patil University BBA retail operations online, BBA in retail management and operations, DY Patil online BBA retail operations course.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
     
     <link rel="stylesheet" href="../../../css/course.css">
@@ -67,7 +69,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/D.Y.%20Patil%20University.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -264,7 +266,7 @@
             </div>
         </div>
     </main>
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script>
         const currentURL = window.location.href.replace(/\/$/, '');
         (async () => {

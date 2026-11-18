@@ -1,6 +1,7 @@
+const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', apiBaseUrl: 'https://api.collegeall.com' };
 let originalPrice;
 
-fetch('https://collegeall.com/one-week-online-courses/paymentModal/')
+fetch((appConfig.appUrl || 'https://collegeall.com') + '/one-week-online-courses/paymentModal/')
 .then(response => response.text())
 .then(html => {
     document.getElementById('modalContainer').innerHTML = html;
@@ -25,7 +26,7 @@ fetch('https://collegeall.com/one-week-online-courses/paymentModal/')
         idInput.value = courseId;
 
         // Fetch course list
-        fetch('https://api.collegeall.com/api/v1/get-one-week-course')
+        fetch((appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/get-one-week-course')
         .then(res => res.json())
         .then(data => {
             const course = data?.data?.courses?.find(c => c.id == parseInt(courseId));
@@ -71,7 +72,7 @@ fetch('https://collegeall.com/one-week-online-courses/paymentModal/')
         applyBtn.textContent = "Checking...";
 
         try {
-            const response = await fetch("https://api.collegeall.com/api/v1/promo_code/verify", {
+            const response = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/promo_code/verify", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -238,7 +239,7 @@ async function handleSubmit(event) {
     try {
         // ✅ Verify Promo Code
         if (promoCode) {
-            const verifyResponse = await fetch("https://api.collegeall.com/api/v1/promo_code/verify", {
+            const verifyResponse = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/promo_code/verify", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -279,7 +280,7 @@ async function handleSubmit(event) {
         console.log("DATA: ", formData);
         
 
-        const response = await fetch("https://api.collegeall.com/api/v1/course_leads", {
+        const response = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/course_leads", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
@@ -335,7 +336,7 @@ async function verifyOtp(contact, amount) {
     }
 
     try {
-        const verifyResponse = await fetch("https://api.collegeall.com/api/v1/course-verify-otp", {
+        const verifyResponse = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/course-verify-otp", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ user_id: inserId ,otp: otp })
@@ -370,7 +371,7 @@ function openRazorpay(amount, contact) {
         description: "Course Enrollment Payment",
         handler: function (response) {
             console.log("✅ Payment Successful:", response);
-            window.location.href = "https://collegeall.com/thank-you/";
+            window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/thank-you/";
         },
         prefill: {
             contact: contact
@@ -386,9 +387,9 @@ function openRazorpay(amount, contact) {
 
 // Search
 document.getElementById("searchInput").addEventListener("focus", function () {
-    window.location.href = "https://collegeall.com/search/";
+    window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/search/";
 });
 
 document.getElementById("mobileSearchBtn").addEventListener("click", function () {
-    window.location.href = "https://collegeall.com/search/"; 
+    window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/search/"; 
 });

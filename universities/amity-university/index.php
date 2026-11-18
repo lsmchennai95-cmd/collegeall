@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,9 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://collegeall.com/universities/amity-university/" />
 
-     <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+     <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://collegeall.com/assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
@@ -103,7 +104,7 @@
 <body>
 
  
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 
     <!-- University Hero Section -->
     <section class="university-hero" style="background: linear-gradient(10deg, #0000005c, transparent) ,url('https://api.collegeall.com/university_banners/Amity%20University.webp'); background-size: 100%;">
@@ -417,7 +418,7 @@
     </div>
 
     <!-- Footer -->
-      <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+      <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>

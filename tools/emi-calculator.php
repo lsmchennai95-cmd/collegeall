@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://collegeall.com/assets/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
     <style>
         :root {
             --primary-color: #10b981;
@@ -82,7 +83,7 @@
     </style>
 </head>
 <body class="bg-light">
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -234,7 +235,7 @@
         </div>
     </div>
 
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>

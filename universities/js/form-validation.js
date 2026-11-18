@@ -99,7 +99,8 @@ function handleSubmit(event) {
  
         console.log("Data: ", formData);
  
-        fetch("https://api.collegeall.com/api/v1/crm_leads", {
+        const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+        fetch(`${apiBase}/api/v1/crm_leads`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -176,7 +177,8 @@ function verifyOtp() {
  
     console.log("Verifying OTP with payload:", payload);
  
-    fetch("https://api.collegeall.com/api/v1/verify-otp", {  // 🔹 Adjust to your backend URL
+    const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+    fetch(`${apiBase}/api/v1/verify-otp`, {  // 🔹 Adjust to your backend URL
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -190,7 +192,8 @@ function verifyOtp() {
             if (result.status === 200 && !result.error) {
                 // ✅ OTP verified successfully
                 alert("✅ OTP Verified Successfully!");
-                window.location.href = "https://collegeall.com/thank-you/"; // or any redirect page
+                const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "https://collegeall.com";
+                window.location.href = `${appUrl}/thank-you/`; // or any redirect page
             } else {
                 // ❌ OTP verification failed
                 otpError.textContent = result.message || "Invalid OTP. Please try again.";

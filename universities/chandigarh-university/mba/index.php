@@ -1,4 +1,6 @@
 <?php
+
+require_once __DIR__ . '/../../../config/bootstrap.php';
 /* Auto-generated PHP file */
 ?>
 <!DOCTYPE html>
@@ -12,9 +14,9 @@
     <meta name="keywords" content="Chandigarh University Online MBA, CU Online MBA, Distance MBA Chandigarh University, MBA specializations, UGC-DEB MBA, Online MBA India">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-    <link rel="stylesheet" href="https://collegeall.com/universities/css/course.css">
+    <link rel="stylesheet" href="<?php echo asset_url('/universities/css/course.css'); ?>">
 
     <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
@@ -71,7 +73,7 @@
     
 </head>
 <body>
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <header class="course-header" style="background: url(https://api.collegeall.com/university_banners/CHChandigarh%20University.webp); background-size: 100%;" class="course-header mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -247,10 +249,10 @@
             </div>
         </div>
     </main>
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://collegeall.com/universities/js/script.js"></script>
-    <script src="https://collegeall.com/universities/js/form-validation.js"></script>
+    <script src="<?php echo asset_url('/universities/js/script.js'); ?>"></script>
+    <script src="<?php echo asset_url('/universities/js/form-validation.js'); ?>"></script>
     <script>
         const currentURL = window.location.href.replace(new RegExp("/$"), "");
         (async () => {

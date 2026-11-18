@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,7 @@
 
 <body>
 
-    <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 
     <!-- Thank You Page Start -->
     <div class="thank-container">
@@ -69,7 +70,7 @@
     </div>
     <!-- Thank You Page End -->
 
-    <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+    <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
 
     <script src="https://kit.fontawesome.com/a2d9b6a76b.js" crossorigin="anonymous"></script>
     <!-- Bootstrap 5 JS -->

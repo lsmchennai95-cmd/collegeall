@@ -1,0 +1,26 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Temp and audit files
+repo_audit.php
+summarize_audit.php
+analyze_rhf.php
+analyze_snippets.php
+categorize_prod_urls.php
+analyze_341.php
+check_depths.php
+list_js_urls.php
+inspect_first_lines.php
+audit_results.json
+migration_plan.php
+apply_migration.php
+validate_env.php
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

@@ -1,3 +1,9 @@
+<?php
+if (!defined('COLLEGEALL_BOOTSTRAPPED')) {
+    require_once __DIR__ . '/config/bootstrap.php';
+}
+echo render_app_config_script();
+?>
 <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom scrollbar to match 'no-scrollbar' utility */
@@ -36,8 +42,8 @@
     <div class="w-full px-4 lg:px-12">
         <div class="flex items-center justify-between h-[80px]">
 
-            <a href="https://collegeall.com/" class="flex-shrink-0 flex items-center gap-3">
-                 <img src="https://collegeall.com/img/Logo/collegeallLogo.png" alt="CollegeAll" class="h-10 w-auto" />
+            <a href="<?php echo app_url('/'); ?>" class="flex-shrink-0 flex items-center gap-3">
+                 <img src="<?php echo asset_url('/img/'); ?>Logo/collegeallLogo.png" alt="CollegeAll" class="h-10 w-auto" />
             </a>
 
             <div class="hidden lg:flex flex-1 max-w-2xl mx-12">
@@ -88,20 +94,20 @@
                     </button>
                     <div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-64 z-50">
                         <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 text-sm">
-                            <a href="https://collegeall.com/tools/qr-generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">QR Code Generator</a>
-                            <a href="https://collegeall.com/tools/Password-Generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Password Generator</a>
-                            <a href="https://collegeall.com/tools/data-convertor.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Array to CSV Convertor</a>
-                            <a href="https://collegeall.com/tools/bmi-calculator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">BMI Calculator</a>
-                            <a href="https://collegeall.com/tools/color-palette.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Color Picker</a>
-                            <a href="https://collegeall.com/tools/gradient-generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Gradient Generator</a>
-                            <a href="https://collegeall.com/tools/image-compressor.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Image Compressor</a>
-                            <a href="https://collegeall.com/tools/api-tester.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Api Tester</a>
-                            <a href="https://collegeall.com/tools/emi-calculator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">EMI Calculator</a>
-                            <a href="https://collegeall.com/tools/resume-builder/" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Resume Builder</a>
+                            <a href="<?php echo app_url('/tools/qr-generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">QR Code Generator</a>
+                            <a href="<?php echo app_url('/tools/Password-Generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Password Generator</a>
+                            <a href="<?php echo app_url('/tools/data-convertor.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Array to CSV Convertor</a>
+                            <a href="<?php echo app_url('/tools/bmi-calculator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">BMI Calculator</a>
+                            <a href="<?php echo app_url('/tools/color-palette.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Color Picker</a>
+                            <a href="<?php echo app_url('/tools/gradient-generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Gradient Generator</a>
+                            <a href="<?php echo app_url('/tools/image-compressor.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Image Compressor</a>
+                            <a href="<?php echo app_url('/tools/api-tester.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Api Tester</a>
+                            <a href="<?php echo app_url('/tools/emi-calculator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">EMI Calculator</a>
+                            <a href="<?php echo app_url('/tools/resume-builder/'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Resume Builder</a>
                         
                             <div class="border-t border-gray-100 my-1"></div>
                         
-                            <a href="https://collegeall.com/tools/" class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">More Tools</a>
+                            <a href="<?php echo app_url('/tools/'); ?>" class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">More Tools</a>
                         </div>
                     </div>
                 </div>
@@ -113,44 +119,44 @@
                     </button>
                     <div class="absolute top-full right-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-80 z-50">
                         <div class="bg-white rounded-xl shadow-xl border border-gray-100 p-2 text-sm">
-                            <a href="https://collegeall.com/blogs/vignan-university-online-mba/" 
+                            <a href="<?php echo app_url('/blogs/vignan-university-online-mba/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Vignan University Online MBA
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/upgrade-your-skills-with-online-mba-in-project-management/" 
+                            <a href="<?php echo app_url('/blogs/upgrade-your-skills-with-online-mba-in-project-management/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Upgrade Your Skills with Online MBA in Project Management
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/online-mcom-general-kurukshetra-university-ugc-approved-postgraduate-degree/" 
+                            <a href="<?php echo app_url('/blogs/online-mcom-general-kurukshetra-university-ugc-approved-postgraduate-degree/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Online M.Com (Kurukshetra University)
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/online-mba-program/" 
+                            <a href="<?php echo app_url('/blogs/online-mba-program/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Online MBA Program
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/mba-in-international-finance-accredited-by-acca-uk-jain-university-online/" 
+                            <a href="<?php echo app_url('/blogs/mba-in-international-finance-accredited-by-acca-uk-jain-university-online/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                MBA in International Finance (Jain University)
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/gen-z-online-mba/" 
+                            <a href="<?php echo app_url('/blogs/gen-z-online-mba/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Gen Z Online MBA
                             </a>
                         
-                            <a href="https://collegeall.com/blogs/boost-your-salary/" 
+                            <a href="<?php echo app_url('/blogs/boost-your-salary/'); ?>" 
                                class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                                Boost Your Salary
                             </a>
                         
                             <div class="border-t border-gray-100 my-1"></div>
                         
-                            <a href="https://collegeall.com/blogs/" 
+                            <a href="<?php echo app_url('/blogs/'); ?>" 
                                class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">
                                View All Blogs
                             </a>
@@ -159,7 +165,7 @@
                 </div>
 
                 <div class="flex items-center gap-3 pl-4 border-l border-gray-200">
-                   <a href="https://collegeall.com/university-suggestions/" class="flex items-center gap-1.5 px-5 py-2.5 bg-secondary hover:bg-secondary-dark text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-secondary/20 hover:-translate-y-0.5">
+                   <a href="<?php echo app_url('/university-suggestions/'); ?>" class="flex items-center gap-1.5 px-5 py-2.5 bg-secondary hover:bg-secondary-dark text-white rounded-full text-sm font-bold transition-all shadow-lg shadow-secondary/20 hover:-translate-y-0.5">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> AI Match
                    </a>
                    <a href="/signin" class="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full text-sm font-bold transition-colors">
@@ -185,14 +191,14 @@
     <div id="mobile-menu-overlay" class="fixed inset-0 z-50 bg-black/50 xl:hidden backdrop-blur-sm hidden" role="dialog" aria-modal="true">
        <div id="mobile-menu-panel" class="absolute right-0 top-0 w-[320px] bg-white shadow-2xl p-6 overflow-y-auto transform translate-x-full transition-transform duration-300">
           <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
-             <img src="https://collegeall.com/img/Logo/collegeallLogo.png" alt="Logo" class="h-8" />
+             <img src="<?php echo asset_url('/img/'); ?>Logo/collegeallLogo.png" alt="Logo" class="h-8" />
              <button id="mobile-menu-close-btn" class="p-1 rounded-full hover:bg-gray-100">
                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
              </button>
           </div>
 
           <div class="space-y-3 mb-8">
-             <a href="https://collegeall.com/university-suggestions/" class="flex items-center gap-3 p-3 rounded-xl bg-secondary/10 text-secondary font-bold">
+             <a href="<?php echo app_url('/university-suggestions/'); ?>" class="flex items-center gap-3 p-3 rounded-xl bg-secondary/10 text-secondary font-bold">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> AI Suggestion Tool
              </a>
              <div class="grid grid-cols-2 gap-3">
@@ -212,20 +218,20 @@
                    <svg id="mobile-tools-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div id="mobile-tools-menu" class="space-y-2 pl-4 border-l-2 border-gray-100 hidden">
-                   <a href="https://collegeall.com/tools/qr-generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">QR Code Generator</a>
-                    <a href="https://collegeall.com/tools/Password-Generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Password Generator</a>
-                    <a href="https://collegeall.com/tools/data-convertor.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Array to CSV Convertor</a>
-                    <a href="https://collegeall.com/tools/bmi-calculator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">BMI Calculator</a>
-                    <a href="https://collegeall.com/tools/color-palette.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Color Picker</a>
-                    <a href="https://collegeall.com/tools/gradient-generator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Gradient Generator</a>
-                    <a href="https://collegeall.com/tools/image-compressor.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Image Compressor</a>
-                    <a href="https://collegeall.com/tools/api-tester.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Api Tester</a>
-                    <a href="https://collegeall.com/tools/emi-calculator.php" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">EMI Calculator</a>
-                    <a href="https://collegeall.com/tools/resume-builder/" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Resume Builder</a>
+                   <a href="<?php echo app_url('/tools/qr-generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">QR Code Generator</a>
+                    <a href="<?php echo app_url('/tools/Password-Generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Password Generator</a>
+                    <a href="<?php echo app_url('/tools/data-convertor.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Array to CSV Convertor</a>
+                    <a href="<?php echo app_url('/tools/bmi-calculator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">BMI Calculator</a>
+                    <a href="<?php echo app_url('/tools/color-palette.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Color Picker</a>
+                    <a href="<?php echo app_url('/tools/gradient-generator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Gradient Generator</a>
+                    <a href="<?php echo app_url('/tools/image-compressor.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Image Compressor</a>
+                    <a href="<?php echo app_url('/tools/api-tester.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Api Tester</a>
+                    <a href="<?php echo app_url('/tools/emi-calculator.php'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">EMI Calculator</a>
+                    <a href="<?php echo app_url('/tools/resume-builder/'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors font-medium">Resume Builder</a>
                 
                     <div class="border-t border-gray-100 my-1"></div>
                 
-                    <a href="https://collegeall.com/tools/" class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">More Tools</a>
+                    <a href="<?php echo app_url('/tools/'); ?>" class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">More Tools</a>
                 </div>
              </div>
 
@@ -235,43 +241,43 @@
                    <svg id="mobile-blogs-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div id="mobile-blogs-menu" class="space-y-2 pl-4 border-l-2 border-gray-100 hidden">
-                   <a href="https://collegeall.com/blogs/vignan-university-online-mba/" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
+                   <a href="<?php echo app_url('/blogs/vignan-university-online-mba/'); ?>" class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                         Vignan University Online MBA
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/upgrade-your-skills-with-online-mba-in-project-management/" 
+                    <a href="<?php echo app_url('/blogs/upgrade-your-skills-with-online-mba-in-project-management/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        Upgrade Your Skills with Online MBA in Project Management
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/online-mcom-general-kurukshetra-university-ugc-approved-postgraduate-degree/" 
+                    <a href="<?php echo app_url('/blogs/online-mcom-general-kurukshetra-university-ugc-approved-postgraduate-degree/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        Online M.Com (Kurukshetra University)
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/online-mba-program/" 
+                    <a href="<?php echo app_url('/blogs/online-mba-program/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        Online MBA Program
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/mba-in-international-finance-accredited-by-acca-uk-jain-university-online/" 
+                    <a href="<?php echo app_url('/blogs/mba-in-international-finance-accredited-by-acca-uk-jain-university-online/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        MBA in International Finance (Jain University)
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/gen-z-online-mba/" 
+                    <a href="<?php echo app_url('/blogs/gen-z-online-mba/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        Gen Z Online MBA
                     </a>
                         
-                    <a href="https://collegeall.com/blogs/boost-your-salary/" 
+                    <a href="<?php echo app_url('/blogs/boost-your-salary/'); ?>" 
                        class="block px-4 py-2.5 text-gray-600 hover:bg-gray-50 hover:text-primary rounded-lg transition-colors truncate font-medium">
                        Boost Your Salary
                     </a>
                         
                     <div class="border-t border-gray-100 my-1"></div>
                         
-                    <a href="https://collegeall.com/blogs/" 
+                    <a href="<?php echo app_url('/blogs/'); ?>" 
                        class="block px-4 py-2.5 text-primary font-bold hover:bg-primary/5 rounded-lg transition-colors text-center">
                        View All Blogs
                     </a>
@@ -311,7 +317,7 @@
     const mobileBlogsIcon = document.getElementById('mobile-blogs-icon');
 
     // --- Data Fetching (Unchanged) ---
-    const API_URL = "https://api.collegeall.com/api/v1/topcourse";
+    const API_URL = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com") + "/api/v1/topcourse";
 
     const fetchPrograms = async () => {
         // ... (data fetching logic remains the same)

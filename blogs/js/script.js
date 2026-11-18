@@ -134,7 +134,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             console.log("Data: ", formData);
 
-            fetch("https://api.collegeall.com/api/v1/crm_leads", {
+            const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+            fetch(`${apiBase}/api/v1/crm_leads`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -214,7 +215,8 @@ function verifyOtp() {
 
     console.log("Verifying OTP with payload:", payload);
 
-    fetch("https://api.collegeall.com/api/v1/verify-otp", {  // 🔹 Adjust to your backend URL
+    const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+    fetch(`${apiBase}/api/v1/verify-otp`, {  // 🔹 Adjust to your backend URL
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -228,7 +230,8 @@ function verifyOtp() {
             if (result.status === 200 && !result.error) {
                 // ✅ OTP verified successfully
                 alert("✅ OTP Verified Successfully!");
-                window.location.href = "https://collegeall.com/thank-you/"; // or any redirect page
+                const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "https://collegeall.com";
+                window.location.href = `${appUrl}/thank-you/`; // or any redirect page
             } else {
                 // ❌ OTP verification failed
                 otpError.textContent = result.message || "Invalid OTP. Please try again.";
@@ -256,7 +259,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     let ads = [];
 
     try {
-        const response = await fetch("https://api.collegeall.com/api/v1/ads/active");
+        const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+        const response = await fetch(`${apiBase}/api/v1/ads/active`);
         const result = await response.json();
 
         if (result.status !== 200 || !Array.isArray(result.data) || result.data.length === 0) {
@@ -299,7 +303,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     adImage.onerror = () => {
-        adImage.src = "https://api.collegeall.com/banner_compressed/LIBA.webp";
+        const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+        adImage.src = `${apiBase}/banner_compressed/LIBA.webp`;
     };
 });
 
@@ -322,7 +327,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // ===== Fetch Ads =====
     try {
-        const response = await fetch("https://api.collegeall.com/api/v1/ads/active");
+        const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+        const response = await fetch(`${apiBase}/api/v1/ads/active`);
         const result = await response.json();
 
         if (result.status !== 200 || !Array.isArray(result.data) || !result.data.length) {

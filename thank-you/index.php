@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +36,7 @@
         <!-- Robots -->
         <meta name="robots" content="index, follow">
         <meta property="og:site_name" content="collegeall">
-        <link rel="stylesheet" href="https://collegeall.com/Css/all.min.css"
+        <link rel="stylesheet" href="<?php echo asset_url('/Css/all.min.css'); ?>"
                 integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
                 crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -99,8 +100,8 @@
         <script type="text/javascript" async=""
                 src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
 
-        <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://collegeall.com/assets/css/all.min.css">
+        <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
                 rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -138,7 +139,7 @@
 <body>
 
 
-        <?php echo file_get_contents('https://collegeall.com/header.php'); ?>
+        <?php include COLLEGEALL_ROOT . '/header.php'; ?>
         <!-- Thank You Page Start -->
         <div style="background-color:#007bff; padding:5rem 1rem; text-align:center; color:white;">
                 <i class="fas fa-check-circle" style="font-size:2rem; display:block; margin-bottom:1rem;"></i>
@@ -148,7 +149,7 @@
                         style="background-color:white; color:#007bff; padding:0.75rem 1.5rem; text-decoration:none; border-radius:0.25rem;">Back
                         to Home</a>
         </div>
-        <?php echo file_get_contents('https://collegeall.com/footer.php'); ?>
+        <?php include COLLEGEALL_ROOT . '/footer.php'; ?>
         <script src="./script.js"></script>
 
 </body>

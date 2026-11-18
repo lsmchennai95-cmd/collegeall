@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../../config/bootstrap.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
  
@@ -8,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://collegeall.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <style>
         :root {
             --primary: #0046ad;

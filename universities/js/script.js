@@ -1,24 +1,38 @@
 // Search
-document.getElementById("searchInput").addEventListener("focus", function () {
-    window.location.href = "./search";
+document.getElementById("searchInput")?.addEventListener("focus", function () {
+    const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "";
+    window.location.href = appUrl ? `${appUrl}/search/` : "/search/";
 });
 
-document.getElementById("mobileSearchBtn").addEventListener("click", function () {
-    window.location.href = "https://collegeall.com/search/"; 
+document.getElementById("mobileSearchBtn")?.addEventListener("click", function () {
+    const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "https://collegeall.com";
+    window.location.href = `${appUrl}/search/`; 
 });
 // 🧭 Get current page URL (without trailing slash fix)
 const currentURLs = window.location.href.replace(/\/$/, '');
+const appConfig = window.APP_CONFIG || {
+    appUrl: "https://collegeall.com",
+    apiBaseUrl: "https://api.collegeall.com",
+    dataJsonUrl: "https://collegeall.com/data.json"
+};
+const dataJsonUrl = appConfig.dataJsonUrl || (appConfig.assetBaseUrl ? `${appConfig.assetBaseUrl}/data.json` : "https://collegeall.com/data.json");
 
-// fetch('http://localhost/collegeall.com/data.json')
-fetch('https://collegeall.com/data.json')
+fetch(dataJsonUrl)
     .then(response => response.json())
     .then(data => {
 
         console.log("DATA: ", data);
         
     
-        // 🔍 Find the key matching the current URL
-        const matchedKey = Object.keys(data).find(key => key.replace(/\/$/, '') === currentURLs);
+        // 🔍 Find the key matching the current URL or path
+        const currentPath = window.location.pathname.replace(/\/$/, '');
+        const matchedKey = Object.keys(data).find(key => {
+            try {
+                const keyPath = new URL(key).pathname.replace(/\/$/, '');
+                if (keyPath === currentPath) return true;
+            } catch (e) {}
+            return key.replace(/\/$/, '') === currentURLs;
+        });
 
         if (!matchedKey) {
             document.getElementById('curriculumAccordion').innerHTML =
@@ -107,12 +121,14 @@ function Signup() {
 function Navigate() {
     window.location.href = '../../'
 }
-document.getElementById("searchInput").addEventListener("focus", function () {
-    window.location.href = "/search/"; // Change to your desired URL
+document.getElementById("searchInput")?.addEventListener("focus", function () {
+    const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "";
+    window.location.href = appUrl ? `${appUrl}/search/` : "/search/";
 });
         
-document.getElementById("mobileSearchBtn").addEventListener("click", function () {
-    window.location.href = "https://collegeall.com/search/"; 
+document.getElementById("mobileSearchBtn")?.addEventListener("click", function () {
+    const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "https://collegeall.com";
+    window.location.href = `${appUrl}/search/`; 
 });
 
 const array = [
@@ -154,7 +170,8 @@ function populateLogos() {
 // Call the function to populate logos
 populateLogos();
 function loadUniversityAndCourseData(University_id = null) {
-    let baseURL = "https://api.collegeall.com/api/v1/filtercourse-university";
+    const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+    let baseURL = `${apiBase}/api/v1/filtercourse-university`;
 
     // Add parameters only if they exist
     if (University_id) {
