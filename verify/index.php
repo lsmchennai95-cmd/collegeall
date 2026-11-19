@@ -2,131 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>College All</title>
-  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png" />
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-    }
-
-    .otp {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .otp .otp-card {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .otp h1 {
-      color: #0056b3;
-    }
-
-    .otp h2 {
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .otp p {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 20px;
-    }
-
-    .otp .otp-inputs {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-
-    .otp .otp-inputs input {
-      width: 50px;
-      height: 60px;
-      font-size: 1.5rem;
-      text-align: center;
-      border: 2px solid gray;
-      border-radius: 8px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .otp .otp-inputs input:focus {
-      border-color: #0056b3;
-    }
-
-    .otp button {
-      background-color: #0056b3;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .otp button:hover {
-      background-color: #003f88;
-    }
-
-    .otp .resend {
-      margin-top: 15px;
-      font-size: 0.9rem;
-    }
-
-    .otp .resend a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    .otp .resend a:hover {
-      text-decoration: underline;
-    }
-
-    header .logo {
-      padding: 30px 50px;
-    }
-
-    header .logo img {
-      max-height: 50px;
-    }
-  </style>
-
-    <!-- Meta Pixel Code -->
+    <title>Account Verification | CollegeAll</title>
+    <meta name="description" content="Verify your CollegeAll student account to securely complete your application and counseling profile.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://collegeall.com/verify/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Account Verification | CollegeAll">
+    <meta property="og:description" content="Verify your CollegeAll student account to securely complete your application and counseling profile.">
+    <meta property="og:url" content="https://collegeall.com/verify/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Account Verification | CollegeAll">
+    <meta name="twitter:description" content="Verify your CollegeAll student account to securely complete your application and counseling profile.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+  <meta charset="UTF-8" />  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png" />  <style>    * {      box-sizing: border-box;    }    body {      margin: 0;      font-family: 'Segoe UI', sans-serif;      background-color: #f9f9f9;    }    .otp {      display: flex;      justify-content: center;      align-items: center;      min-height: 100vh;    }    .otp .otp-card {      background: white;      padding: 40px 30px;      border-radius: 12px;      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);      text-align: center;      max-width: 800px;      width: 100%;    }    .otp h1 {      color: #0056b3;    }    .otp h2 {      margin-bottom: 10px;      color: #333;    }    .otp p {      color: #555;      font-size: 0.95rem;      margin-bottom: 20px;    }    .otp .otp-inputs {      display: flex;      justify-content: center;      gap: 20px;      margin-bottom: 20px;    }    .otp .otp-inputs input {      width: 50px;      height: 60px;      font-size: 1.5rem;      text-align: center;      border: 2px solid gray;      border-radius: 8px;      outline: none;      transition: border-color 0.2s;    }    .otp .otp-inputs input:focus {      border-color: #0056b3;    }    .otp button {      background-color: #0056b3;      color: white;      border: none;      padding: 12px 24px;      border-radius: 6px;      font-size: 1rem;      cursor: pointer;      transition: background-color 0.3s ease;    }    .otp button:hover {      background-color: #003f88;    }    .otp .resend {      margin-top: 15px;      font-size: 0.9rem;    }    .otp .resend a {      color: #0056b3;      text-decoration: none;    }    .otp .resend a:hover {      text-decoration: underline;    }    header .logo {      padding: 30px 50px;    }    header .logo img {      max-height: 50px;    }  </style>    <!-- Meta Pixel Code -->    <script>        !function(f,b,e,v,n,t,s)        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?        n.callMethod.apply(n,arguments):n.queue.push(arguments)};        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';        n.queue=[];t=b.createElement(e);t.async=!0;        t.src=v;s=b.getElementsByTagName(e)[0];        s.parentNode.insertBefore(t,s)}(window, document,'script',        'https://connect.facebook.net/en_US/fbevents.js');        fbq('init', '25443278008607273');        fbq('track', 'PageView');    </script>    <noscript><img height="1" width="1" style="display:none"    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"    /></noscript>    <!-- End Meta Pixel Code -->    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '25443278008607273');
-        fbq('track', 'PageView');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 
 <body>

@@ -3,55 +3,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Thank You! | CollegeAll</title>
-    <meta name="description"
-        content="Master web development with HTML, CSS, JavaScript, and React. Learn to build responsive, modern websites with our certified 1-week program.">
-    <meta name="keywords"
-        content="web development, HTML, CSS, JavaScript, React JS, frontend development, responsive websites, coding bootcamp, web design, web apps">
-    <meta name="author" content="CollegeAll Certified">
-    <meta property="og:title" content="The Complete Web Development Bootcamp | CollegeAll">
-    <meta property="og:description"
-        content="Learn web development fast! HTML, CSS, JavaScript & React in 1 week. Perfect for beginners and aspiring developers.">
+    <title>Thank You | One-Week Online Courses | CollegeAll</title>
+    <meta name="description" content="Thank you for enrolling in a CollegeAll One-Week Online Course. Our academic team will send you course access details shortly.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://collegeall.com/one-week-online-courses/thank-you/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./img/web-development.webp">
-
-    <!-- Theme and Favicon -->
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-    <link rel="stylesheet" href="../index.css">
-
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
- 
-        gtag('config', 'AW-17357684990');
-    </script>
-
-        <style>
-        .thank-container{
-            background-color:#007bff; 
-            padding:5rem 1rem; 
-            text-align:center; 
-            color:white; 
-            min-height: 80vh; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
-</head>
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Thank You | One-Week Online Courses | CollegeAll">
+    <meta property="og:description" content="Thank you for enrolling in a CollegeAll One-Week Online Course. Our academic team will send you course access details shortly.">
+    <meta property="og:url" content="https://collegeall.com/one-week-online-courses/thank-you/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Thank You | One-Week Online Courses | CollegeAll">
+    <meta name="twitter:description" content="Thank you for enrolling in a CollegeAll One-Week Online Course. Our academic team will send you course access details shortly.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta name="keywords"        content="web development, HTML, CSS, JavaScript, React JS, frontend development, responsive websites, coding bootcamp, web design, web apps">    <meta name="author" content="CollegeAll Certified">    <!-- Theme and Favicon -->    <meta name="theme-color" content="#ffffff">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>    <link rel="stylesheet" href="../index.css">                <style>        .thank-container{            background-color:#007bff;             padding:5rem 1rem;             text-align:center;             color:white;             min-height: 80vh;             display: flex;            justify-content: center;            align-items: center;        }    </style></head>
 
 <body>
 

@@ -2,62 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Percentage Predictor</title>
-     <meta name="description" content="Calculate your academic percentage and predict future scores. Find out how many marks you need to achieve your target percentage.">
-    <meta name="keywords" content="percentage calculator, marks predictor, academic calculator, grade predictor, score calculator, education tool">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .percentage-container .card {
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            border: none;
-        }
-        .percentage-container .card-header {
-            border-radius: 15px 15px 0 0 !important;
-            font-weight: 600;
-        }
-        .percentage-container .btn-primary {
-            background-color: #4361ee;
-            border-color: #4361ee;
-        }
-        .percentage-container .btn-primary:hover {
-            background-color: #3a56d4;
-            border-color: #3a56d4;
-        }
-        .percentage-container .result-box {
-            background-color: #e9ecef;
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .percentage-container .highlight {
-            color: #4361ee;
-            font-weight: bold;
-        }
-        .percentage-container .nav-tabs .nav-link.active {
-            background-color: #4361ee;
-            color: white;
-            border: none;
-        }
-        .percentage-container .nav-tabs .nav-link {
-            color: #4361ee;
-            border: 1px solid #dee2e6;
-        }
-    </style>
-</head>
+    <meta name="description" content="Calculate your academic percentage and predict future scores. Find out how many marks you need to achieve your target percentage.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/rank-predictor.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Percentage Predictor">
+    <meta property="og:description" content="Calculate your academic percentage and predict future scores. Find out how many marks you need to achieve your target percentage.">
+    <meta property="og:url" content="https://collegeall.com/tools/rank-predictor.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Percentage Predictor">
+    <meta name="twitter:description" content="Calculate your academic percentage and predict future scores. Find out how many marks you need to achieve your target percentage.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Percentage Predictor",
+      "description": "Calculate your academic percentage and predict future scores. Find out how many marks you need to achieve your target percentage.",
+      "url": "https://collegeall.com/tools/rank-predictor.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="percentage calculator, marks predictor, academic calculator, grade predictor, score calculator, education tool">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <style>        body {            background-color: #f8f9fa;            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        }        .percentage-container .card {            border-radius: 15px;            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);            margin-bottom: 20px;            border: none;        }        .percentage-container .card-header {            border-radius: 15px 15px 0 0 !important;            font-weight: 600;        }        .percentage-container .btn-primary {            background-color: #4361ee;            border-color: #4361ee;        }        .percentage-container .btn-primary:hover {            background-color: #3a56d4;            border-color: #3a56d4;        }        .percentage-container .result-box {            background-color: #e9ecef;            border-radius: 10px;            padding: 15px;            margin-top: 15px;            display: none;        }        .percentage-container .highlight {            color: #4361ee;            font-weight: bold;        }        .percentage-container .nav-tabs .nav-link.active {            background-color: #4361ee;            color: white;            border: none;        }        .percentage-container .nav-tabs .nav-link {            color: #4361ee;            border: 1px solid #dee2e6;        }    </style></head>
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="container percentage-container py-5">

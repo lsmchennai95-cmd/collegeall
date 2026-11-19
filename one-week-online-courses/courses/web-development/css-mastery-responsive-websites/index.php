@@ -2,44 +2,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>CSS Mastery: Design Beautiful, Responsive Websites | CollegeAll</title>
-    <meta name="title" content="CSS Mastery: Design Beautiful, Responsive Websites | CollegeAll Certified">
     <meta name="description" content="Learn CSS from basics to advanced techniques in 7 days. Master responsive design, Flexbox, Grid, animations, and modern web styling.">
-    <meta name="keywords" content="CSS course, CSS3, Flexbox, Grid, responsive design, web design, animations, transitions, frontend development, CollegeAll certified, mobile-friendly websites, web styling, design course">
-    <meta name="author" content="CollegeAll Certified">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="CSS Mastery: Design Beautiful, Responsive Websites | CollegeAll">
-    <meta property="og:description" content="Master CSS in 7 days: responsive layouts, animations, Flexbox, Grid, and modern design techniques. Live review session included.">
-    <meta property="og:image" content="https://collegeall.com/one-week-online-courses/img/CSS-mastery.webp">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/one-week-online-courses/courses/web-development/css-mastery-responsive-websites/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="CSS Mastery: Design Beautiful, Responsive Websites | CollegeAll">
+    <meta property="og:description" content="Learn CSS from basics to advanced techniques in 7 days. Master responsive design, Flexbox, Grid, animations, and modern web styling.">
     <meta property="og:url" content="https://collegeall.com/one-week-online-courses/courses/web-development/css-mastery-responsive-websites/">
-
-    <!-- Theme and Favicon -->
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../../../css/course.css">
-    <link rel="stylesheet" href="../../../index.css">
-
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
- 
-        gtag('config', 'AW-17357684990');
+    <meta property="og:image" content="https://collegeall.com/one-week-online-courses/img/CSS-mastery.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="CSS Mastery: Design Beautiful, Responsive Websites | CollegeAll">
+    <meta name="twitter:description" content="Learn CSS from basics to advanced techniques in 7 days. Master responsive design, Flexbox, Grid, animations, and modern web styling.">
+    <meta name="twitter:image" content="https://collegeall.com/one-week-online-courses/img/CSS-mastery.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "CSS Mastery",
+      "description": "Learn CSS from basics to advanced techniques in 7 days. Master responsive design, Flexbox, Grid, animations, and modern web styling.",
+      "url": "https://collegeall.com/one-week-online-courses/courses/web-development/css-mastery-responsive-websites/",
+      "provider": {
+        "@type": "Organization",
+        "name": "CollegeAll Certified",
+        "url": "https://collegeall.com/one-week-online-courses/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "INR",
+        "category": "Online Short Course",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "1 Week"
+      }
+    }
     </script>
-</head>
+    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta name="keywords" content="CSS course, CSS3, Flexbox, Grid, responsive design, web design, animations, transitions, frontend development, CollegeAll certified, mobile-friendly websites, web styling, design course">    <meta name="author" content="CollegeAll Certified">    <!-- Open Graph -->    <!-- Theme and Favicon -->    <meta name="theme-color" content="#ffffff">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link rel="stylesheet" href="<?php echo asset_url('/one-week-online-courses/css/course.css'); ?>">    <link rel="stylesheet" href="<?php echo asset_url('/one-week-online-courses/index.css'); ?>">        </head>
 <body>
 
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

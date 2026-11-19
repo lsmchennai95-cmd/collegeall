@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP | CollegeAll Student Portal</title>
+    <meta name="description" content="Enter your one-time verification password to securely authenticate and access your CollegeAll account.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://collegeall.com/verify-otp/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Verify OTP | CollegeAll Student Portal">
+    <meta property="og:description" content="Enter your one-time verification password to access your CollegeAll account.">
+    <meta property="og:url" content="https://collegeall.com/verify-otp/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Verify OTP | CollegeAll Student Portal">
+    <meta name="twitter:description" content="Enter your one-time verification password to access your CollegeAll account.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
 <style>
 
     .otp-inner-container {
@@ -93,6 +115,16 @@
         }
     }
 </style>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body>

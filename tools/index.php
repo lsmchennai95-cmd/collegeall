@@ -2,243 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-    <title>Collegeall.com Free Tools</title>
-    <meta name="description" content="Access a collection of free online tools including age calculator, password generator, word and character counter, API tester, BMI calculator, box-shadow generator, color palette creator, countdown timer, data converter, EMI calculator, gradient generator, image compressor, pixel art maker, QR generator, resume builder, sticker maker, and stopwatch." />
-    <meta name="keywords" content="free online tools, age calculator, password generator, word counter, character counter, API tester, BMI calculator, box shadow generator, color palette tool, countdown timer, data converter, json to excel convertor, EMI calculator, gradient generator, image compressor, pixel art maker, QR code generator, resume builder, sticker maker, stopwatch" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        :root {
-            --primary: #004aad;
-            --secondary: #8b5cf6;
-            --success: #10b981;
-            --danger: #ef4444;
-            --warning: #f59e0b;
-            --info: #06b6d4;
-            --dark: #1f2937;
-            --light: #f8fafc;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Mobile Container */
-        .mobile-container {
-            max-width: 100%;
-            margin: 0 auto;
-            min-height: 100vh;
-            position: relative;
-        }
-
-        /* Categories */
-        .overall-container .categories {
-            padding: 15px 20px;
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .overall-container .category-btn {
-            padding: 10px 20px;
-            border: 2px solid #e5e7eb;
-            border-radius: 25px;
-            background: white;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-
-        .overall-container .category-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        /* Apps Grid - Updated for Card Layout */
-        .overall-container .apps-grid {
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            background: #f8fafc;
-            min-height: calc(100vh - 400px);
-        }
-
-        .overall-container .app-card {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            height: fit-content;
-        }
-
-        .overall-container .app-card:active {
-            transform: scale(0.98);
-        }
-
-        .overall-container .app-card-header {
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .overall-container .app-icon-wrapper {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            flex-shrink: 0;
-        }
-
-        .overall-container .app-icon-wrapper i {
-            font-size: 1.6rem;
-            color: white;
-        }
-
-        .overall-container .app-info {
-            flex: 1;
-        }
-
-        .overall-container .app-name {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--dark);
-        }
-
-        .overall-container .app-description {
-            font-size: 0.85rem;
-            color: #6b7280;
-            line-height: 1.4;
-        }
-
-        .overall-container .app-stats {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .overall-container .stat {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-
-        .overall-container .stat i {
-            font-size: 0.9rem;
-        }
-
-        .overall-container .app-card-body {
-            padding: 15px 20px;
-            background: #f8fafc;
-        }
-
-        .overall-container .result-preview {
-            font-size: 0.85rem;
-            color: #4b5563;
-            line-height: 1.5;
-        }
-
-        /* Color Variants */
-        .bg-primary { background: var(--primary); }
-        .bg-success { background: var(--success); }
-        .bg-danger { background: var(--danger); }
-        .bg-warning { background: var(--warning); }
-        .bg-info { background: var(--info); }
-        .bg-purple { background: #8b5cf6; box-shadow: 2px 2px 1px black !important;}
-        .bg-pink { background: #ec4899; }
-        .bg-indigo { background: #4f46e5; }
-        .bg-teal { background: #14b8a6; }
-        .bg-orange { background: #f97316; }
-        .bg-cyan { background: linear-gradient(45deg, #ff00d4, #beff00, #653ff0ff) }
-        .bg-emerald { background: #059669; }
-        .bg-rose { background: #e11d48; }
-        .bg-amber { background: #d97706; }
-        .bg-lime { background: #65a30d; }
-        .bg-violet { background: #7c3aed; }
-
-        /* Safe area for notch phones */
-        @supports(padding: max(0px)) {
-            .overall-container .bottom-nav {
-                padding-bottom: max(15px, env(safe-area-inset-bottom));
-            }
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 480px) {
-            .overall-container .apps-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (min-width: 496px) and (max-width: 768px) {
-            .mobile-container {
-                margin: 20px auto;
-                border-radius: 24px;
-                overflow: hidden;
-                min-height: calc(100vh - 40px);
-            }
-            
-            .overall-container .apps-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* Mobile layout visible only on mobile */
-        @media (min-width: 768px) {
-            .mobile-container {
-                display: none !important;
-            }
-        }
-
-        /* Desktop layout hidden on mobile */
-        @media (max-width: 767px) {
-            .desktop-view {
-                display: none !important;
-            }
-        }
-
-        .desktop-category-title {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin: 20px 10px 20px 10px;
-            color: var(--dark);
-        }
-
-        .desktop-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-            gap: 25px;
-            padding: 0 10px 20px 10px;
-        }
-
-    </style>
-</head>
+    <title>Free Online Student & Developer Tools | CollegeAll</title>
+    <meta name="description" content="Access a collection of free online tools including age calculator, password generator, word and character counter, API tester, BMI calculator, box-shadow generator, color palette creator, countdown timer, data converter, EMI calculator, gradient generator, image compressor, pixel art maker, QR generator, resume builder, sticker maker, and stopwatch.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Free Online Student & Developer Tools | CollegeAll">
+    <meta property="og:description" content="Access a collection of free online tools including age calculator, password generator, word and character counter, API tester, BMI calculator, box-shadow generator, color palette creator, countdown timer, data converter, EMI calculator, gradient generator, image compressor, pixel art maker, QR generator, resume builder, sticker maker, and stopwatch.">
+    <meta property="og:url" content="https://collegeall.com/tools/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Free Online Student & Developer Tools | CollegeAll">
+    <meta name="twitter:description" content="Access a collection of free online tools including age calculator, password generator, word and character counter, API tester, BMI calculator, box-shadow generator, color palette creator, countdown timer, data converter, EMI calculator, gradient generator, image compressor, pixel art maker, QR generator, resume builder, sticker maker, and stopwatch.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Online Student & Developer Tools",
+      "description": "Access a collection of free online tools including age calculator, password generator, word and character counter, API tester, BMI calculator, box-shadow generator, color palette creator, countdown timer, data converter, EMI calculator, gradient generator, image compressor, pixel art maker, QR generator, resume builder, sticker maker, and stopwatch.",
+      "url": "https://collegeall.com/tools/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="free online tools, age calculator, password generator, word counter, character counter, API tester, BMI calculator, box shadow generator, color palette tool, countdown timer, data converter, json to excel convertor, EMI calculator, gradient generator, image compressor, pixel art maker, QR code generator, resume builder, sticker maker, stopwatch" />    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <style>        :root {            --primary: #004aad;            --secondary: #8b5cf6;            --success: #10b981;            --danger: #ef4444;            --warning: #f59e0b;            --info: #06b6d4;            --dark: #1f2937;            --light: #f8fafc;        }        body {            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;            min-height: 100vh;            overflow-x: hidden;        }        /* Mobile Container */        .mobile-container {            max-width: 100%;            margin: 0 auto;            min-height: 100vh;            position: relative;        }        /* Categories */        .overall-container .categories {            padding: 15px 20px;            display: flex;            gap: 10px;            overflow-x: auto;            background: white;            border-bottom: 1px solid #e5e7eb;            -webkit-overflow-scrolling: touch;        }        .overall-container .category-btn {            padding: 10px 20px;            border: 2px solid #e5e7eb;            border-radius: 25px;            background: white;            font-size: 0.9rem;            white-space: nowrap;            transition: all 0.3s ease;        }        .overall-container .category-btn.active {            background: var(--primary);            color: white;            border-color: var(--primary);        }        /* Apps Grid - Updated for Card Layout */        .overall-container .apps-grid {            padding: 20px;            display: grid;            grid-template-columns: repeat(4, 1fr);            gap: 20px;            background: #f8fafc;            min-height: calc(100vh - 400px);        }        .overall-container .app-card {            background: white;            border-radius: 16px;            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);            overflow: hidden;            transition: all 0.3s ease;            text-decoration: none;            color: inherit;            display: block;            height: fit-content;        }        .overall-container .app-card:active {            transform: scale(0.98);        }        .overall-container .app-card-header {            padding: 20px;            display: flex;            align-items: center;            gap: 15px;            border-bottom: 1px solid #f1f5f9;        }        .overall-container .app-icon-wrapper {            width: 60px;            height: 60px;            border-radius: 16px;            display: flex;            align-items: center;            justify-content: center;            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);            flex-shrink: 0;        }        .overall-container .app-icon-wrapper i {            font-size: 1.6rem;            color: white;        }        .overall-container .app-info {            flex: 1;        }        .overall-container .app-name {            font-size: 1.1rem;            font-weight: 700;            margin-bottom: 5px;            color: var(--dark);        }        .overall-container .app-description {            font-size: 0.85rem;            color: #6b7280;            line-height: 1.4;        }        .overall-container .app-stats {            display: flex;            gap: 15px;            margin-top: 10px;        }        .overall-container .stat {            display: flex;            align-items: center;            gap: 5px;            font-size: 0.8rem;            color: #6b7280;        }        .overall-container .stat i {            font-size: 0.9rem;        }        .overall-container .app-card-body {            padding: 15px 20px;            background: #f8fafc;        }        .overall-container .result-preview {            font-size: 0.85rem;            color: #4b5563;            line-height: 1.5;        }        /* Color Variants */        .bg-primary { background: var(--primary); }        .bg-success { background: var(--success); }        .bg-danger { background: var(--danger); }        .bg-warning { background: var(--warning); }        .bg-info { background: var(--info); }        .bg-purple { background: #8b5cf6; box-shadow: 2px 2px 1px black !important;}        .bg-pink { background: #ec4899; }        .bg-indigo { background: #4f46e5; }        .bg-teal { background: #14b8a6; }        .bg-orange { background: #f97316; }        .bg-cyan { background: linear-gradient(45deg, #ff00d4, #beff00, #653ff0ff) }        .bg-emerald { background: #059669; }        .bg-rose { background: #e11d48; }        .bg-amber { background: #d97706; }        .bg-lime { background: #65a30d; }        .bg-violet { background: #7c3aed; }        /* Safe area for notch phones */        @supports(padding: max(0px)) {            .overall-container .bottom-nav {                padding-bottom: max(15px, env(safe-area-inset-bottom));            }        }        /* Responsive adjustments */        @media (max-width: 480px) {            .overall-container .apps-grid {                grid-template-columns: 1fr;            }        }        @media (min-width: 496px) and (max-width: 768px) {            .mobile-container {                margin: 20px auto;                border-radius: 24px;                overflow: hidden;                min-height: calc(100vh - 40px);            }            .overall-container .apps-grid {                grid-template-columns: repeat(3, 1fr);            }        }        /* Mobile layout visible only on mobile */        @media (min-width: 768px) {            .mobile-container {                display: none !important;            }        }        /* Desktop layout hidden on mobile */        @media (max-width: 767px) {            .desktop-view {                display: none !important;            }        }        .desktop-category-title {            font-size: 1.6rem;            font-weight: 800;            margin: 20px 10px 20px 10px;            color: var(--dark);        }        .desktop-grid {            display: grid;            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));            gap: 25px;            padding: 0 10px 20px 10px;        }    </style></head>
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 

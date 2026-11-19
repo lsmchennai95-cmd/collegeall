@@ -1,262 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Course Finder After 12th — Smart AI Recommendations</title>
+    <meta name="description" content="Advanced Course Finder after 12th with AI-powered recommendations. Select group, enter subject marks, pick interests — get personalized course suggestions and college pointers.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/course-finder.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Course Finder After 12th — Smart AI Recommendations">
+    <meta property="og:description" content="Advanced Course Finder after 12th with AI-powered recommendations. Select group, enter subject marks, pick interests — get personalized course suggestions and college pointers.">
+    <meta property="og:url" content="https://collegeall.com/tools/course-finder.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Course Finder After 12th — Smart AI Recommendations">
+    <meta name="twitter:description" content="Advanced Course Finder after 12th with AI-powered recommendations. Select group, enter subject marks, pick interests — get personalized course suggestions and college pointers.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Course Finder After 12th",
+      "description": "Advanced Course Finder after 12th with AI-powered recommendations. Select group, enter subject marks, pick interests — get personalized course suggestions and college pointers.",
+      "url": "https://collegeall.com/tools/course-finder.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+  <meta charset="utf-8" />  <meta name="viewport" content="width=device-width,initial-scale=1" />  <meta name="keywords" content="course finder after 12th, course recommendation, 12th group to courses, career guidance, AI course recommender" />  <!-- Bootstrap CSS -->  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">  <!-- Bootstrap Icons -->  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">  <style>    :root {      --card-radius: 14px;      --accent: #0d6efd;      --accent-light: #3b82f6;      --accent-dark: #1e40af;      --bg: #f4f7ff;      --success: #10b981;      --warning: #f59e0b;      --danger: #ef4444;    }    body {      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;      background: var(--bg);      min-height: 100vh;      color: #0f1724;      transition: background .25s, color .25s;    }    .app-card {      border-radius: var(--card-radius);      padding: 20px;      background: white;      box-shadow: 0 8px 30px rgba(13,110,253,0.06);      transition: transform 0.2s, box-shadow 0.2s;    }    .app-card:hover {      transform: translateY(-2px);      box-shadow: 0 12px 40px rgba(13,110,253,0.1);    }    .title {       font-weight: 700;       font-size: 1.25rem;       background: linear-gradient(90deg, var(--accent), var(--accent-light));      -webkit-background-clip: text;      -webkit-text-fill-color: transparent;    }    .muted { color: #6b7280; }    .result-item {       border-left: 4px solid rgba(13,110,253,0.12);       padding: 16px;       border-radius: 8px;       background: #fff;       transition: all 0.2s;    }    .result-item:hover {      border-left-color: var(--accent);      box-shadow: 0 4px 12px rgba(0,0,0,0.05);    }    .chip {       display: inline-block;       padding: 4px 10px;       border-radius: 999px;       background: #eef4ff;       margin-right: 6px;       margin-bottom: 6px;      font-size: .8rem;       color: var(--accent);       transition: all 0.2s;    }    .chip:hover {      background: var(--accent);      color: white;      cursor: pointer;    }    .history-box {       max-height: 220px;       overflow: auto;       border-left: 3px solid var(--accent);       padding-left: 12px;     }    .explain { font-size: .9rem; color: #374151; }    .progress {      height: 8px;      border-radius: 4px;    }    .match-score {      font-size: 0.85rem;      font-weight: 600;    }    .course-badge {      position: absolute;      top: 10px;      right: 10px;      font-size: 0.7rem;      padding: 2px 8px;    }    .ai-insight {      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);      border-left: 4px solid var(--accent);      padding: 12px;      border-radius: 8px;      margin-bottom: 16px;    }    .ai-icon {      color: var(--accent);      margin-right: 8px;    }    .subject-input-group {      position: relative;    }    .subject-score {      position: absolute;      right: 10px;      top: 38px;      font-size: 0.8rem;      color: var(--accent);      font-weight: 600;    }    .interest-cloud {      display: flex;      flex-wrap: wrap;      gap: 8px;      margin-bottom: 16px;    }    .interest-item {      padding: 6px 12px;      border-radius: 20px;      background: #f1f5f9;      color: #475569;      font-size: 0.85rem;      cursor: pointer;      transition: all 0.2s;    }    .interest-item:hover {      background: #e2e8f0;    }    .interest-item.selected {      background: var(--accent);      color: white;    }    .stats-card {      text-align: center;      padding: 12px;      border-radius: 8px;      background: #f8fafc;    }    .stats-value {      font-size: 1.5rem;      font-weight: 700;      color: var(--accent);    }    .stats-label {      font-size: 0.8rem;      color: #64748b;    }    .comparison-chart {      height: 200px;      margin: 20px 0;    }    .trend-indicator {      display: inline-flex;      align-items: center;      font-size: 0.8rem;      padding: 2px 6px;      border-radius: 4px;    }    .trend-up {      background: #dcfce7;      color: #166534;    }    .trend-down {      background: #fee2e2;      color: #991b1b;    }    body.dark-mode {      background: #071023;       color: #e6eef8;    }    body.dark-mode .app-card {       background: #07192b;       box-shadow: 0 8px 30px rgba(255,255,255,0.03);     }    body.dark-mode input,     body.dark-mode select,     body.dark-mode textarea {       background: #071827;       color: #e6eef8;       border-color: #233047;     }    body.dark-mode .chip {       background: rgba(96,165,250,0.12);       color: #93c5fd;     }    body.dark-mode .ai-insight {      background: linear-gradient(135deg, #0c4a6e, #1e3a8a);    }    body.dark-mode .interest-item {      background: #1e293b;      color: #cbd5e1;    }    body.dark-mode .interest-item:hover {      background: #334155;    }    body.dark-mode .interest-item.selected {      background: var(--accent);      color: white;    }    body.dark-mode .stats-card {      background: #1e293b;    }    .small-muted { color: #6b7280; }    @media (max-width: 540px) {      .app-card { padding: 16px; }    }  </style>    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <title>Course Finder After 12th — Smart AI Recommendations</title>
-  <meta name="description" content="Advanced Course Finder after 12th with AI-powered recommendations. Select group, enter subject marks, pick interests — get personalized course suggestions and college pointers." />
-  <meta name="keywords" content="course finder after 12th, course recommendation, 12th group to courses, career guidance, AI course recommender" />
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <style>
-    :root {
-      --card-radius: 14px;
-      --accent: #0d6efd;
-      --accent-light: #3b82f6;
-      --accent-dark: #1e40af;
-      --bg: #f4f7ff;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-    }
-    
-    body {
-      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: var(--bg);
-      min-height: 100vh;
-      color: #0f1724;
-      transition: background .25s, color .25s;
-    }
-    
-    .app-card {
-      border-radius: var(--card-radius);
-      padding: 20px;
-      background: white;
-      box-shadow: 0 8px 30px rgba(13,110,253,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .app-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(13,110,253,0.1);
-    }
-    
-    .title { 
-      font-weight: 700; 
-      font-size: 1.25rem; 
-      background: linear-gradient(90deg, var(--accent), var(--accent-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    .muted { color: #6b7280; }
-    
-    .result-item { 
-      border-left: 4px solid rgba(13,110,253,0.12); 
-      padding: 16px; 
-      border-radius: 8px; 
-      background: #fff; 
-      transition: all 0.2s;
-    }
-    
-    .result-item:hover {
-      border-left-color: var(--accent);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-    
-    .chip { 
-      display: inline-block; 
-      padding: 4px 10px; 
-      border-radius: 999px; 
-      background: #eef4ff; 
-      margin-right: 6px; 
-      margin-bottom: 6px;
-      font-size: .8rem; 
-      color: var(--accent); 
-      transition: all 0.2s;
-    }
-    
-    .chip:hover {
-      background: var(--accent);
-      color: white;
-      cursor: pointer;
-    }
-    
-    .history-box { 
-      max-height: 220px; 
-      overflow: auto; 
-      border-left: 3px solid var(--accent); 
-      padding-left: 12px; 
-    }
-    
-    .explain { font-size: .9rem; color: #374151; }
-    
-    .progress {
-      height: 8px;
-      border-radius: 4px;
-    }
-    
-    .match-score {
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    
-    .course-badge {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 0.7rem;
-      padding: 2px 8px;
-    }
-    
-    .ai-insight {
-      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-      border-left: 4px solid var(--accent);
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
-    
-    .ai-icon {
-      color: var(--accent);
-      margin-right: 8px;
-    }
-    
-    .subject-input-group {
-      position: relative;
-    }
-    
-    .subject-score {
-      position: absolute;
-      right: 10px;
-      top: 38px;
-      font-size: 0.8rem;
-      color: var(--accent);
-      font-weight: 600;
-    }
-    
-    .interest-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    
-    .interest-item {
-      padding: 6px 12px;
-      border-radius: 20px;
-      background: #f1f5f9;
-      color: #475569;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    
-    .interest-item:hover {
-      background: #e2e8f0;
-    }
-    
-    .interest-item.selected {
-      background: var(--accent);
-      color: white;
-    }
-    
-    .stats-card {
-      text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-      background: #f8fafc;
-    }
-    
-    .stats-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    
-    .stats-label {
-      font-size: 0.8rem;
-      color: #64748b;
-    }
-    
-    .comparison-chart {
-      height: 200px;
-      margin: 20px 0;
-    }
-    
-    .trend-indicator {
-      display: inline-flex;
-      align-items: center;
-      font-size: 0.8rem;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    
-    .trend-up {
-      background: #dcfce7;
-      color: #166534;
-    }
-    
-    .trend-down {
-      background: #fee2e2;
-      color: #991b1b;
-    }
-    
-    body.dark-mode {
-      background: #071023; 
-      color: #e6eef8;
-    }
-    
-    body.dark-mode .app-card { 
-      background: #07192b; 
-      box-shadow: 0 8px 30px rgba(255,255,255,0.03); 
-    }
-    
-    body.dark-mode input, 
-    body.dark-mode select, 
-    body.dark-mode textarea { 
-      background: #071827; 
-      color: #e6eef8; 
-      border-color: #233047; 
-    }
-    
-    body.dark-mode .chip { 
-      background: rgba(96,165,250,0.12); 
-      color: #93c5fd; 
-    }
-    
-    body.dark-mode .ai-insight {
-      background: linear-gradient(135deg, #0c4a6e, #1e3a8a);
-    }
-    
-    body.dark-mode .interest-item {
-      background: #1e293b;
-      color: #cbd5e1;
-    }
-    
-    body.dark-mode .interest-item:hover {
-      background: #334155;
-    }
-    
-    body.dark-mode .interest-item.selected {
-      background: var(--accent);
-      color: white;
-    }
-    
-    body.dark-mode .stats-card {
-      background: #1e293b;
-    }
-    
-    .small-muted { color: #6b7280; }
-    
-    @media (max-width: 540px) {
-      .app-card { padding: 16px; }
-    }
-  </style>
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 <body>
 

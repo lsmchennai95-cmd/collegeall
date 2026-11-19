@@ -226,7 +226,7 @@ function renderCourses() {
                             <p><strong>${course.University_name}</strong></p>
                             <p class="course-meta">Level: ${course.course_level} | Duration: ${course.years} years</p>
                             <p class="course-meta">Fee: ${course.fee.toLocaleString()}</p>
-                            <a href="./${course.url}">View Course →</a>
+                            <a href="${(appConfig.appUrl || '')}/${course.url.replace(/^\/+/, '').replace(/\/+$/, '')}/">View Course →</a>
                         </div>
                 `;
       });
@@ -775,7 +775,7 @@ async function otpVerify() {
   }
 
   if (!userId) {
-    alert("User ID not found. Please restart the process.");
+    if (typeof window.showToast === "function") { window.showToast("User ID not found. Please restart the process.", "warning"); }
     return;
   }
 
@@ -810,8 +810,8 @@ async function otpVerify() {
 
     if (status === 200) {
       // ✅ OTP verified successfully
-      alert("✅ OTP Verified Successfully!");
-      window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/thank-you/";
+      if (typeof window.showToast === "function") { window.showToast("OTP Verified Successfully! Redirecting...", "success"); }
+      setTimeout(() => { window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/thank-you/"; }, 1000);
     } else {
       // ❌ OTP failed or backend returned generic error
       otpError.textContent = message || "Invalid OTP. Please try again.";

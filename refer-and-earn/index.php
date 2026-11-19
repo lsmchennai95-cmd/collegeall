@@ -2,57 +2,41 @@
 <html lang="en">
 
 <head>
+    <title>Refer & Earn ₹4,000 | CollegeAll Referral Program</title>
+    <meta name="description" content="Invite friends to enroll in online degree programs through CollegeAll and earn ₹4,000 per successful referral. Learn more about our referral rewards today.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/refer-and-earn/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Refer & Earn ₹4,000 | CollegeAll Referral Program">
+    <meta property="og:description" content="Invite friends to enroll in online degree programs through CollegeAll and earn ₹4,000 per successful referral. Learn more about our referral rewards today.">
+    <meta property="og:url" content="https://collegeall.com/refer-and-earn/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Refer & Earn ₹4,000 | CollegeAll Referral Program">
+    <meta name="twitter:description" content="Invite friends to enroll in online degree programs through CollegeAll and earn ₹4,000 per successful referral. Learn more about our referral rewards today.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refer & Earn ₹4,000 | CollegeAll Referral Program</title>
-
-    <meta
-        name="description"
-        content="Refer a student to CollegeAll and unlock a ₹4,000 referral coupon after successful registration, fee payment, and verification. Submit your referral details today."
-    >
-
     <meta
         name="keywords"
         content="CollegeAll referral program, refer and earn ₹4000, student referral program, CollegeAll refer and earn, education referral program, ₹4000 referral coupon, student referral offer, CollegeAll coupon"
     >
-
-    <meta name="robots" content="index, follow">
     <meta name="author" content="CollegeAll">
     <meta name="theme-color" content="#004aad">
-
     <!-- Canonical -->
-    <link rel="canonical" href="https://collegeall.com/refer-and-earn">
-
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://collegeall.com/refer-and-earn">
-    <meta property="og:title" content="Refer & Earn ₹4,000 | CollegeAll Referral Program">
-    <meta
-        property="og:description"
-        content="Refer a student to CollegeAll and unlock a ₹4,000 referral coupon after successful registration, fee payment, and verification."
-    >
-    <meta property="og:image" content="https://collegeall.com/img/Logo/collegeallLogo.png">
     <meta property="og:image:alt" content="CollegeAll Refer & Earn ₹4,000">
-    <meta property="og:site_name" content="CollegeAll">
-
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Refer & Earn ₹4,000 | CollegeAll">
-    <meta
-        name="twitter:description"
-        content="Refer a student to CollegeAll and unlock a ₹4,000 referral coupon after successful registration and verification."
-    >
-    <meta name="twitter:image" content="https://collegeall.com/img/Logo/collegeallLogo.png">
-
     <link rel="shortcut icon" href="https://api.collegeall.com/Logo/fav.png" type="image/x-icon">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
     <script>
         tailwind.config = {
             theme: {
@@ -101,44 +85,36 @@
             }
         }
     </script>
-
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
             color: #0f172a;
             overflow-x: hidden;
         }
-
         /* ---------------------------------
            Floating Animation
         ---------------------------------- */
-
         .float-animation {
             animation: floating 5s ease-in-out infinite;
         }
-
         @keyframes floating {
             0%,
             100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-8px);
             }
         }
-
         /* Enhanced Background */
         .page-bg {
             background:
@@ -146,7 +122,6 @@
                 radial-gradient(circle at 90% 20%, rgba(255, 49, 49, 0.06), transparent 35%),
                 linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
         }
-
         /* Modern Hero Pattern */
         .hero-pattern {
             background-image:
@@ -155,12 +130,10 @@
             background-size: 40px 40px;
             animation: patternMove 20s linear infinite;
         }
-
         @keyframes patternMove {
             0% { background-position: 0 0; }
             100% { background-position: 40px 40px; }
         }
-
         /* Enhanced Ticket Design */
         .ticket {
             position: relative;
@@ -178,14 +151,12 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.28);
             transition: transform .25s ease, box-shadow .25s ease;
         }
-
         .ticket:hover {
             transform: translateY(-4px);
             box-shadow:
                 0 28px 55px rgba(201, 20, 28, 0.30),
                 inset 0 1px 0 rgba(255, 255, 255, 0.32);
         }
-
         .ticket::before,
         .ticket::after {
             content: "";
@@ -198,15 +169,12 @@
             transform: translateY(-50%);
             z-index: 2;
         }
-
         .ticket::before {
             left: -14px;
         }
-
         .ticket::after {
             right: -14px;
         }
-
         .ticket > .relative {
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.24);
@@ -215,7 +183,6 @@
             background: rgba(125, 0, 10, 0.10);
             overflow: hidden;
         }
-
         .ticket > .relative::before {
             content: "";
             position: absolute;
@@ -232,27 +199,22 @@
             transform: rotate(18deg);
             pointer-events: none;
         }
-
         .ticket-divider {
             border-top: 2px dashed rgba(255,255,255,0.55);
         }
-
         .ticket .rounded-xl.bg-white,
         .ticket .rounded-xl.bg-white\/15,
         .ticket .rounded-2xl.bg-white\/15 {
             box-shadow: 0 8px 18px rgba(111, 0, 8, 0.16);
         }
-
         .ticket::selection {
             background: rgba(255, 255, 255, 0.3);
         }
-
         /* Shimmer Effect */
         .shimmer {
             position: relative;
             overflow: hidden;
         }
-
         .shimmer::after {
             content: "";
             position: absolute;
@@ -263,22 +225,18 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             animation: shimmer 2s infinite;
         }
-
         @keyframes shimmer {
             100% { left: 100%; }
         }
-
         /* Form Input Enhancements */
         .form-input {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 2px solid #e2e8f0;
         }
-
         .form-input:hover {
             border-color: #cbd5e1;
             background: #f8fafc;
         }
-
         .form-input:focus {
             outline: none;
             border-color: #004aad;
@@ -286,14 +244,12 @@
             box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.1), 0 2px 8px rgba(0, 74, 173, 0.1);
             transform: translateY(-1px);
         }
-
         /* Button Styles */
         .primary-btn {
             position: relative;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .primary-btn::before {
             content: "";
             position: absolute;
@@ -306,38 +262,31 @@
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
-
         .primary-btn:hover::before {
             width: 300px;
             height: 300px;
         }
-
         .primary-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 20px 40px rgba(0, 74, 173, 0.3);
         }
-
         /* Card Hover Effects */
         .hover-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .hover-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-
         /* Success Animation */
         .success-check {
             animation: checkmark 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
         }
-
         @keyframes checkmark {
             0% { transform: scale(0); }
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
-
         /* Gradient Text */
         .gradient-text {
             background: linear-gradient(135deg, #004aad 0%, #ff3131 100%);
@@ -345,47 +294,38 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         /* Responsive Enhancements */
         @media (max-width: 640px) {
             .hero-pattern {
                 background-size: 24px 24px;
             }
-
             .ticket {
                 border-radius: 1.5rem;
                 padding: 1rem;
             }
-
             .ticket > .relative {
                 border-radius: 1rem;
                 padding: 1rem;
             }
-
             .ticket::before,
             .ticket::after {
                 width: 22px;
                 height: 22px;
             }
-
             .ticket::before {
                 left: -11px;
             }
-
             .ticket::after {
                 right: -11px;
             }
-
             .ticket-divider {
                 margin-top: 1.25rem;
                 margin-bottom: 1.25rem;
             }
-
             .ticket h2 {
                 font-size: 2.75rem;
                 line-height: 1;
             }
-
             .ticket .rounded-xl.bg-white {
                 padding-left: .7rem;
                 padding-right: .7rem;
@@ -393,6 +333,16 @@
             }
         }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body class="page-bg">

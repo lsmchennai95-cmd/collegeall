@@ -2,38 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College All</title>
-    <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '25443278008607273');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-</head>
+    <title>Expert Education Counselors | CollegeAll</title>
+    <meta name="description" content="Connect with verified education counselors at CollegeAll for personalized admission counseling, program comparison, and career guidance across top online universities.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/counselors/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Expert Education Counselors | CollegeAll">
+    <meta property="og:description" content="Connect with verified education counselors at CollegeAll for personalized admission counseling, program comparison, and career guidance across top online universities.">
+    <meta property="og:url" content="https://collegeall.com/counselors/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Expert Education Counselors | CollegeAll">
+    <meta name="twitter:description" content="Connect with verified education counselors at CollegeAll for personalized admission counseling, program comparison, and career guidance across top online universities.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta charset="UTF-8">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="theme-color" content="#ffffff">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="stylesheet" href="../index.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="        crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- Meta Pixel Code -->    <script>        !function(f,b,e,v,n,t,s)        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?        n.callMethod.apply(n,arguments):n.queue.push(arguments)};        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';        n.queue=[];t=b.createElement(e);t.async=!0;        t.src=v;s=b.getElementsByTagName(e)[0];        s.parentNode.insertBefore(t,s)}(window, document,'script',        'https://connect.facebook.net/en_US/fbevents.js');        fbq('init', '25443278008607273');        fbq('track', 'PageView');    </script>    <noscript><img height="1" width="1" style="display:none"    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"    /></noscript>    <!-- End Meta Pixel Code --></head>
 
 <body>
       <style>

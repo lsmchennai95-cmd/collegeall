@@ -1,227 +1,40 @@
-<?php 
-require_once __DIR__ . '/../config/bootstrap.php';
-require_once __DIR__ . '/../config/bootstrap.php'; ?>
+<?php require_once __DIR__ . '/../config/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-    <title>VisionCrafters – About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../index.css">
-
-    <style>
-        body {
-            font-family: "Inter", sans-serif;
-            background: #f4f4f4;
-        }
-
-        /* HERO TITLE */
-        .page-section-title {
-            margin-top: 60px;
-            font-size: 14px;
-            text-transform: uppercase;
-            color: #007b2e;
-            font-weight: 600;
-        }
-
-        .container .hero-section .hero-title {
-            font-size: 38px;
-            font-weight: 800;
-            line-height: 1.3;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        /* HERO IMAGE */
-        .container .hero-section .hero-image {
-            border-radius: 30px;
-            overflow: hidden;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        /* STATS SECTION */
-        .stats-box {
-            background: #f3eede;
-            border-radius: 30px;
-            padding: 25px 10px;
-            margin-top: 25px;
-        }
-
-        .stats-box .stats-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 3px;
-        }
-
-        .stats-box .stats-sub {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* STORY SECTION */
-        .story-section .story-section-title {
-            text-align: center;
-            color: #007b2e;
-            font-weight: 600;
-            margin-top: 50px;
-            margin-bottom: 10px;
-        }
-
-        .story-section .story-main-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .story-section .story-text {
-            font-size: 15px;
-            color: #444;
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .logo-section {
-            background: linear-gradient(90deg, #d7f8d6, #e8e4d3, #bcd7f4);
-            border-radius: 30px;
-            padding: 50px 40px;
-        }
-
-        .logo-section .logo-img {
-            width: 100%;
-            max-width: 350px;
-        }
-
-        .logo-section .logo-title {
-            font-size: 36px;
-            font-weight: 700;
-        }
-
-        .logo-section .logo-title span {
-            color: #1a73e8;
-        }
-
-        .logo-section .logo-desc {
-            font-size: 16px;
-            color: #555;
-            max-width: 550px;
-        }
-
-        .logo-section .btn-main {
-            background-color: #1a73e8;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .logo-section .btn-main:hover {
-            background-color: #0e5fcc;
-        }
-
-        .logo-section .btn-light-custom {
-            background: #ffffff;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 500;
-            border: 1px solid #dcdcdc;
-        }
-
-        .value-container .value-card {
-            border: 1px solid #bcd7f4;
-        }
-
-        .teams-container .team-card:hover {
-            background: #ebf5ffff;
-            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .video-container .video-card {
-            border-radius: 18px;
-            height: 300px;
-            overflow: hidden;
-            background: #fff;
-            padding: 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
-        }
-
-        .video-container .video-card .position-relative {
-            height: 300px;
-        }
-
-        .video-container .video-thumb {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            filter: brightness(0.75);
-        }
-
-        .video-container .play-btn {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            background: rgba(0, 0, 0, 0.55);
-            color: #fff;
-            padding: 10px 18px;
-            border-radius: 50px;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .video-container .testi-body {
-            padding: 25px;
-        }
-
-        .video-container .testi-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .video-container .testi-desc {
-            color: #6f6f6f;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .video-container .watch-link {
-            color: #0d6efd;
-            font-size: 15px;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .video-container .watch-link:hover {
-            text-decoration: underline;
-        }
-
-        .video-container .view-all {
-            border-radius: 30px;
-            padding: 10px 28px;
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        @media screen and (max-width: 496px) {
-            .video-container .video-card {
-                height: 550px;
-            }
-        }
-    </style>
-</head>
+    <title>About Us | CollegeAll - Online Degree & Higher Education Platform</title>
+    <meta name="description" content="Learn about CollegeAll's mission to make quality online degree education accessible to students and professionals across India through accredited university programs.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/about/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="About Us | CollegeAll - Online Degree & Higher Education Platform">
+    <meta property="og:description" content="Learn about CollegeAll's mission to make quality online degree education accessible to students and professionals across India through accredited university programs.">
+    <meta property="og:url" content="https://collegeall.com/about/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="About Us | CollegeAll - Online Degree & Higher Education Platform">
+    <meta name="twitter:description" content="Learn about CollegeAll's mission to make quality online degree education accessible to students and professionals across India through accredited university programs.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Us | CollegeAll - Online Degree & Higher Education Platform",
+      "description": "Learn about CollegeAll's mission to make quality online degree education accessible to students and professionals across India through accredited university programs.",
+      "url": "https://collegeall.com/about/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <link rel="stylesheet" href="../index.css">    <style>        body {            font-family: "Inter", sans-serif;            background: #f4f4f4;        }        /* HERO TITLE */        .page-section-title {            margin-top: 60px;            font-size: 14px;            text-transform: uppercase;            color: #007b2e;            font-weight: 600;        }        .container .hero-section .hero-title {            font-size: 38px;            font-weight: 800;            line-height: 1.3;            text-align: center;            margin-bottom: 25px;        }        /* HERO IMAGE */        .container .hero-section .hero-image {            border-radius: 30px;            overflow: hidden;            width: 100%;            margin: 0 auto;        }        /* STATS SECTION */        .stats-box {            background: #f3eede;            border-radius: 30px;            padding: 25px 10px;            margin-top: 25px;        }        .stats-box .stats-title {            font-size: 32px;            font-weight: 700;            margin-bottom: 3px;        }        .stats-box .stats-sub {            font-size: 14px;            color: #555;        }        /* STORY SECTION */        .story-section .story-section-title {            text-align: center;            color: #007b2e;            font-weight: 600;            margin-top: 50px;            margin-bottom: 10px;        }        .story-section .story-main-title {            text-align: center;            font-size: 30px;            font-weight: 800;            margin-bottom: 20px;        }        .story-section .story-text {            font-size: 15px;            color: #444;            max-width: 850px;            margin: 0 auto;            line-height: 1.6;        }        .logo-section {            background: linear-gradient(90deg, #d7f8d6, #e8e4d3, #bcd7f4);            border-radius: 30px;            padding: 50px 40px;        }        .logo-section .logo-img {            width: 100%;            max-width: 350px;        }        .logo-section .logo-title {            font-size: 36px;            font-weight: 700;        }        .logo-section .logo-title span {            color: #1a73e8;        }        .logo-section .logo-desc {            font-size: 16px;            color: #555;            max-width: 550px;        }        .logo-section .btn-main {            background-color: #1a73e8;            color: #fff;            padding: 12px 28px;            border-radius: 50px;            font-size: 16px;            font-weight: 500;        }        .logo-section .btn-main:hover {            background-color: #0e5fcc;        }        .logo-section .btn-light-custom {            background: #ffffff;            padding: 12px 28px;            border-radius: 50px;            font-size: 16px;            font-weight: 500;            border: 1px solid #dcdcdc;        }        .value-container .value-card {            border: 1px solid #bcd7f4;        }        .teams-container .team-card:hover {            background: #ebf5ffff;            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);            transform: translateY(-5px);            transition: all 0.3s ease;        }        .video-container .video-card {            border-radius: 18px;            height: 300px;            overflow: hidden;            background: #fff;            padding: 0;            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);        }        .video-container .video-card .position-relative {            height: 300px;        }        .video-container .video-thumb {            height: 100%;            width: 100%;            object-fit: cover;            filter: brightness(0.75);        }        .video-container .play-btn {            position: absolute;            bottom: 15px;            left: 15px;            background: rgba(0, 0, 0, 0.55);            color: #fff;            padding: 10px 18px;            border-radius: 50px;            font-size: 14px;            display: flex;            align-items: center;            gap: 6px;        }        .video-container .testi-body {            padding: 25px;        }        .video-container .testi-title {            font-size: 20px;            font-weight: 700;            margin-bottom: 8px;        }        .video-container .testi-desc {            color: #6f6f6f;            font-size: 15px;            line-height: 1.6;        }        .video-container .watch-link {            color: #0d6efd;            font-size: 15px;            font-weight: 500;            text-decoration: none;        }        .video-container .watch-link:hover {            text-decoration: underline;        }        .video-container .view-all {            border-radius: 30px;            padding: 10px 28px;            font-size: 15px;            font-weight: 500;        }        @media screen and (max-width: 496px) {            .video-container .video-card {                height: 550px;            }        }    </style></head>
 
 <body>
 

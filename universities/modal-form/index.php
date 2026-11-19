@@ -12,6 +12,8 @@ require_once __DIR__ . '/../../config/bootstrap.php';
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/toast.css'); ?>">
+    <script src="<?php echo asset_url('/assets/js/toast.js'); ?>"></script>
     <style>
         :root {
             --primary: #0046ad;
@@ -230,30 +232,13 @@ require_once __DIR__ . '/../../config/bootstrap.php';
         }
     </style>
  
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
- 
-        gtag('config', 'G-BED9GZX87Z');
-    </script>
+    
     <!--Start of Tawk.to Script-->
     <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
     <script id="zsiqscript"
         src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040%22
         defer=""></script>
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
- 
-        gtag('config', 'AW-17357684990');
-    </script>
+    
     <!--End of Tawk.to Script-->
     <script
         src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js%22
@@ -270,9 +255,18 @@ require_once __DIR__ . '/../../config/bootstrap.php';
     <link rel="preconnect" href="https://salesiq.zoho.in">
     <link rel="preconnect" href="https://salesiq.zohopublic.in">
     <link rel="preconnect" href="https://static.zohocdn.com">
-    <script type="text/javascript" async=""
-        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+    
  
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
  
 <body>

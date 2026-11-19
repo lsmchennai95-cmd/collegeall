@@ -3,210 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Countdown Timer</title>
-
     <meta name="description" content="Create a custom countdown timer online. Set days, hours, minutes, and seconds for events, launches, meetings, or reminders. Simple, fast, and shareable.">
-
-  <meta name="keywords" content="countdown timer, online countdown, event timer, timer online, countdown to date, launch countdown, countdown widget, countdown clock, meeting timer, reminder timer, free countdown">
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --accent: #7c3aed;
-            --muted: #94a3b8;
-            --glass: rgba(255, 255, 255, 0.03);
-        }
-
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: radial-gradient(1200px 600px at 10% 10%, rgba(124, 58, 237, 0.12), transparent),
-                linear-gradient(180deg, #020617 0%, #071029 100%);
-            color: #e6eef8;
-        }
-
-        .countdown-timer{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 32px;
-        }
-
-        .card {
-            width: min(880px, 96%);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            border-radius: 18px;
-            padding: 28px;
-            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .card .header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px
-        }
-
-        .card h1 {
-            font-size: 20px;
-            margin: 0
-        }
-
-        .card .controls {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .card input[type=datetime-local] {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            color: inherit;
-            padding: 8px 10px;
-            border-radius: 8px
-        }
-
-        .card .btn {
-            background: linear-gradient(180deg, var(--accent), #5b21b6);
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600
-        }
-
-        .card .btn.secondary {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        .card .btn.ghost {
-            background: transparent;
-            border: 1px dashed rgba(255, 255, 255, 0.03);
-            color: var(--muted)
-        }
-
-        .card .presets {
-            display: flex;
-            gap: 8px
-        }
-
-        .card .display {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin: 18px 0 10px
-        }
-
-        .card .segment {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            padding: 14px 18px;
-            border-radius: 12px;
-            min-width: 92px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.02)
-        }
-
-        .card .num {
-            font-size: 28px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: white;
-        }
-
-        .card .label {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 6px
-        }
-
-        .card .row {
-            display: flex;
-            gap: 12px;
-            align-items: center
-        }
-
-        .card .small {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .card .footer {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .card .flash {
-            animation: flash 0.6s ease-in-out alternate infinite
-        }
-
-        @keyframes flash {
-            from {
-                box-shadow: 0 0 0 rgba(124, 58, 237, 0);
-            }
-
-            to {
-                box-shadow: 0 0 40px rgba(124, 58, 237, 0.25)
-            }
-        }
-
-        .card .finished-banner {
-            display: inline-block;
-            padding: 6px 10px;
-            border-radius: 8px;
-            background: rgba(124, 58, 237, 0.12);
-            color: var(--accent);
-            font-weight: 700
-        }
-
-        .card .muted-note {
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .card .big-center {
-            display: flex;
-            align-items: center;
-            justify-content: center
-        }
-
-        .card .hidden {
-            display: none
-        }
-
-        /* responsive */
-        @media (max-width:520px) {
-            .display {
-                flex-wrap: wrap
-            }
-
-            .segment {
-                min-width: 42%
-            }
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/countdown-timer.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Countdown Timer">
+    <meta property="og:description" content="Create a custom countdown timer online. Set days, hours, minutes, and seconds for events, launches, meetings, or reminders. Simple, fast, and shareable.">
+    <meta property="og:url" content="https://collegeall.com/tools/countdown-timer.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Countdown Timer">
+    <meta name="twitter:description" content="Create a custom countdown timer online. Set days, hours, minutes, and seconds for events, launches, meetings, or reminders. Simple, fast, and shareable.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Countdown Timer",
+      "description": "Create a custom countdown timer online. Set days, hours, minutes, and seconds for events, launches, meetings, or reminders. Simple, fast, and shareable.",
+      "url": "https://collegeall.com/tools/countdown-timer.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">  <meta name="keywords" content="countdown timer, online countdown, event timer, timer online, countdown to date, launch countdown, countdown widget, countdown clock, meeting timer, reminder timer, free countdown">    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --bg: #0f1724;            --card: #0b1220;            --accent: #7c3aed;            --muted: #94a3b8;            --glass: rgba(255, 255, 255, 0.03);        }        html,        body {            height: 100%;        }        body {            margin: 0;            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;            background: radial-gradient(1200px 600px at 10% 10%, rgba(124, 58, 237, 0.12), transparent),                linear-gradient(180deg, #020617 0%, #071029 100%);            color: #e6eef8;        }        .countdown-timer{            display: flex;            align-items: center;            justify-content: center;            padding: 32px;        }        .card {            width: min(880px, 96%);            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));            border-radius: 18px;            padding: 28px;            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.7);            border: 1px solid rgba(255, 255, 255, 0.03);        }        .card .header {            display: flex;            flex-wrap: wrap;            gap: 16px;            align-items: center;            justify-content: space-between;            margin-bottom: 18px        }        .card h1 {            font-size: 20px;            margin: 0        }        .card .controls {            display: flex;            flex-wrap: wrap;            gap: 10px;            align-items: center;        }        .card input[type=datetime-local] {            background: var(--glass);            border: 1px solid rgba(255, 255, 255, 0.04);            color: inherit;            padding: 8px 10px;            border-radius: 8px        }        .card .btn {            background: linear-gradient(180deg, var(--accent), #5b21b6);            border: none;            color: white;            padding: 8px 12px;            border-radius: 10px;            cursor: pointer;            font-weight: 600        }        .card .btn.secondary {            background: transparent;            border: 1px solid rgba(255, 255, 255, 0.06);        }        .card .btn.ghost {            background: transparent;            border: 1px dashed rgba(255, 255, 255, 0.03);            color: var(--muted)        }        .card .presets {            display: flex;            gap: 8px        }        .card .display {            display: flex;            gap: 12px;            justify-content: center;            margin: 18px 0 10px        }        .card .segment {            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));            padding: 14px 18px;            border-radius: 12px;            min-width: 92px;            text-align: center;            border: 1px solid rgba(255, 255, 255, 0.02)        }        .card .num {            font-size: 28px;            font-weight: 700;            letter-spacing: 1px;            color: white;        }        .card .label {            font-size: 12px;            color: var(--muted);            margin-top: 6px        }        .card .row {            display: flex;            gap: 12px;            align-items: center        }        .card .small {            font-size: 13px;            color: var(--muted)        }        .card .footer {            display: flex;            gap: 10px;            align-items: center;            justify-content: space-between        }        .card .flash {            animation: flash 0.6s ease-in-out alternate infinite        }        @keyframes flash {            from {                box-shadow: 0 0 0 rgba(124, 58, 237, 0);            }            to {                box-shadow: 0 0 40px rgba(124, 58, 237, 0.25)            }        }        .card .finished-banner {            display: inline-block;            padding: 6px 10px;            border-radius: 8px;            background: rgba(124, 58, 237, 0.12);            color: var(--accent);            font-weight: 700        }        .card .muted-note {            color: var(--muted);            font-size: 13px        }        .card .big-center {            display: flex;            align-items: center;            justify-content: center        }        .card .hidden {            display: none        }        /* responsive */        @media (max-width:520px) {            .display {                flex-wrap: wrap            }            .segment {                min-width: 42%            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

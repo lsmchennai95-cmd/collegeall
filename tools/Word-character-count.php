@@ -3,193 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Word & Character Counter</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        :root {
-            --bg: #0f1724;
-            /* deep blue */
-            --card: #0b1220;
-            --muted: #9aa4b2;
-            --accent: #06b6d4;
-            --glass: rgba(255, 255, 255, 0.03);
-        }
-
-        .word-counter {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            background: linear-gradient(180deg, #071327 0%, #071b2a 100%);
-            color: #e6eef6;
-            -webkit-font-smoothing: antialiased;
-            padding: 32px;
-            min-height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .word-counter .wrap {
-            width: 100%;
-            max-width: 980px
-        }
-
-        .word-counter header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 18px
-        }
-
-        .word-counter header h1 {
-            font-size: 20px;
-            margin: 0
-        }
-
-        .word-counter .card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            border-radius: 12px;
-            padding: 18px;
-            box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
-        }
-
-        .word-counter .layout {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 16px
-        }
-
-        .word-counter textarea {
-            width: 100%;
-            min-height: 360px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            background: var(--glass);
-            color: inherit;
-            padding: 14px;
-            font-size: 15px;
-            resize: vertical
-        }
-
-        .word-counter .controls {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px
-        }
-
-        .word-counter button {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 8px 10px;
-            border-radius: 8px;
-            color: var(--muted);
-            cursor: pointer
-        }
-
-        .word-counter button.primary {
-            background: linear-gradient(90deg, var(--accent), #7dd3fc);
-            color: #042a2d;
-            border: 0
-        }
-
-        .word-counter .stats {
-            display: flex;
-            flex-direction: column;
-            gap: 10px
-        }
-
-        .word-counter .stat-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-radius: 8px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
-        }
-
-        .word-counter .stat-title {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .word-counter .stat-value {
-            font-weight: 600
-        }
-
-        .word-counter .small {
-            font-size: 12px;
-            color: var(--muted)
-        }
-
-        .word-counter .progress {
-            height: 8px;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 999px;
-            overflow: hidden
-        }
-
-        .word-counter .progress>i {
-            display: block;
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), #60a5fa);
-            width: 0%
-        }
-
-        .word-counter .footer-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 10px
-        }
-
-        .word-counter .input-row {
-            display: flex;
-            gap: 8px;
-            align-items: center
-        }
-
-        .word-counter label {
-            font-size: 12px;
-            color: var(--muted)
-        }
-
-        .word-counter input[type=number] {
-            width: 84px;
-            padding: 8px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            background: transparent;
-            color: inherit
-        }
-
-        .word-counter .meta {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 8px
-        }
-
-        @media (max-width:880px) {
-            .word-counter .layout {
-                grid-template-columns: 1fr;
-            }
-
-            .word-counter .card {
-                padding: 12px
-            }
-
-            .word-counter .wrap {
-                padding: 12px
-            }
-        }
-    </style>
-</head>
+    <meta name="description" content="Free online word count and character counter. Instantly count words, characters, sentences, paragraphs, and estimated reading time.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/Word-character-count.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Word & Character Counter">
+    <meta property="og:description" content="Free online word count and character counter. Instantly count words, characters, sentences, paragraphs, and estimated reading time.">
+    <meta property="og:url" content="https://collegeall.com/tools/Word-character-count.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Word & Character Counter">
+    <meta name="twitter:description" content="Free online word count and character counter. Instantly count words, characters, sentences, paragraphs, and estimated reading time.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Word & Character Counter",
+      "description": "Free online word count and character counter. Instantly count words, characters, sentences, paragraphs, and estimated reading time.",
+      "url": "https://collegeall.com/tools/Word-character-count.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <style>        :root {            --bg: #0f1724;            /* deep blue */            --card: #0b1220;            --muted: #9aa4b2;            --accent: #06b6d4;            --glass: rgba(255, 255, 255, 0.03);        }        .word-counter {            margin: 0;            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;            background: linear-gradient(180deg, #071327 0%, #071b2a 100%);            color: #e6eef6;            -webkit-font-smoothing: antialiased;            padding: 32px;            min-height: 100vh;            display: flex;            align-items: flex-start;            justify-content: center;        }        .word-counter .wrap {            width: 100%;            max-width: 980px        }        .word-counter header {            display: flex;            align-items: center;            gap: 16px;            margin-bottom: 18px        }        .word-counter header h1 {            font-size: 20px;            margin: 0        }        .word-counter .card {            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));            border-radius: 12px;            padding: 18px;            box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);        }        .word-counter .layout {            display: grid;            grid-template-columns: 1fr 320px;            gap: 16px        }        .word-counter textarea {            width: 100%;            min-height: 360px;            border-radius: 8px;            border: 1px solid rgba(255, 255, 255, 0.04);            background: var(--glass);            color: inherit;            padding: 14px;            font-size: 15px;            resize: vertical        }        .word-counter .controls {            display: flex;            gap: 8px;            flex-wrap: wrap;            margin-top: 10px        }        .word-counter button {            background: transparent;            border: 1px solid rgba(255, 255, 255, 0.06);            padding: 8px 10px;            border-radius: 8px;            color: var(--muted);            cursor: pointer        }        .word-counter button.primary {            background: linear-gradient(90deg, var(--accent), #7dd3fc);            color: #042a2d;            border: 0        }        .word-counter .stats {            display: flex;            flex-direction: column;            gap: 10px        }        .word-counter .stat-row {            display: flex;            justify-content: space-between;            align-items: center;            padding: 10px;            border-radius: 8px;            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));        }        .word-counter .stat-title {            font-size: 13px;            color: var(--muted)        }        .word-counter .stat-value {            font-weight: 600        }        .word-counter .small {            font-size: 12px;            color: var(--muted)        }        .word-counter .progress {            height: 8px;            background: rgba(255, 255, 255, 0.04);            border-radius: 999px;            overflow: hidden        }        .word-counter .progress>i {            display: block;            height: 100%;            background: linear-gradient(90deg, var(--accent), #60a5fa);            width: 0%        }        .word-counter .footer-actions {            display: flex;            flex-direction: column;            gap: 8px;            margin-top: 10px        }        .word-counter .input-row {            display: flex;            gap: 8px;            align-items: center        }        .word-counter label {            font-size: 12px;            color: var(--muted)        }        .word-counter input[type=number] {            width: 84px;            padding: 8px;            border-radius: 8px;            border: 1px solid rgba(255, 255, 255, 0.04);            background: transparent;            color: inherit        }        .word-counter .meta {            font-size: 12px;            color: var(--muted);            margin-top: 8px        }        @media (max-width:880px) {            .word-counter .layout {                grid-template-columns: 1fr;            }            .word-counter .card {                padding: 12px            }            .word-counter .wrap {                padding: 12px            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

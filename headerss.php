@@ -4,6 +4,8 @@ if (!defined('COLLEGEALL_BOOTSTRAPPED')) {
 }
 echo render_app_config_script();
 ?>
+<link rel="stylesheet" href="<?php echo asset_url('/assets/css/toast.css'); ?>">
+<script src="<?php echo asset_url('/assets/js/toast.js'); ?>"></script>
 <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom scrollbar to match 'no-scrollbar' utility */

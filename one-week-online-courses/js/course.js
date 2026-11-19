@@ -280,7 +280,7 @@ async function handleSubmit(event) {
         console.log("DATA: ", formData);
         
 
-        const response = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/course_leads", {
+        const response = await fetch((window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl ? window.APP_CONFIG.apiBaseUrl : (appConfig.apiBaseUrl || "https://api.collegeall.com")) + "/api/v1/course_leads", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
@@ -291,19 +291,42 @@ async function handleSubmit(event) {
 
         loadingSpinner.style.display = "none";
 
-        if (result.status === 200) {
+        if ((result.status === 200 || !result.error) && result.data?.insertedId) {
             sessionStorage.setItem("insert_id", result.data.insertedId);
+            if (typeof window.showToast === "function") {
+                window.showToast("Enrollment initiated! Please verify your mobile number.", "success");
+            }
             showOtpSection(contact.value.trim(), finalAmount);
         } else {
-            alert("❌ Something went wrong while creating your enrollment.");
             enrollmentForm.style.display = "block";
+            const rawMsg = (result && result.message) ? String(result.message) : "Something went wrong while creating your enrollment.";
+            const lowerMsg = rawMsg.toLowerCase();
+            const isDuplicateEmail = lowerMsg.includes("already exists") || lowerMsg.includes("already registered") || (lowerMsg.includes("email") && lowerMsg.includes("exist"));
+
+            if (isDuplicateEmail) {
+                if (typeof window.showToast === "function") {
+                    window.showToast(rawMsg, "warning");
+                }
+                const emailInput = document.getElementById("email") || (fullName && fullName.form ? fullName.form.querySelector('input[type="email"]') : null);
+                if (emailInput) {
+                    emailInput.classList.add("is-invalid");
+                    emailInput.focus();
+                }
+            } else {
+                const toastType = (result.status === 400 || result.status === 422) ? "warning" : "error";
+                if (typeof window.showToast === "function") {
+                    window.showToast(rawMsg, toastType);
+                }
+            }
         }
 
     } catch (error) {
         console.error("❌ Error:", error);
-        alert("❌ Something went wrong. Please try again.");
         loadingSpinner.style.display = "none";
         enrollmentForm.style.display = "block";
+        if (typeof window.showToast === "function") {
+            window.showToast("Something went wrong while connecting to the server. Please try again.", "error");
+        }
     }
 }
 
@@ -332,11 +355,14 @@ async function verifyOtp(contact, amount) {
 
     if (otp.length !== 4) {
         otpError.textContent = "Please enter a valid 4-digit OTP.";
+        if (typeof window.showToast === "function") {
+            window.showToast("Please enter a valid 4-digit OTP.", "warning");
+        }
         return;
     }
 
     try {
-        const verifyResponse = await fetch("' + (appConfig.apiBaseUrl || 'https://api.collegeall.com') + '/api/v1/course-verify-otp", {
+        const verifyResponse = await fetch((window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl ? window.APP_CONFIG.apiBaseUrl : (appConfig.apiBaseUrl || "https://api.collegeall.com")) + "/api/v1/course-verify-otp", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ user_id: inserId ,otp: otp })
@@ -345,18 +371,28 @@ async function verifyOtp(contact, amount) {
         const verifyResult = await verifyResponse.json();
         console.log("OTP Verify Result:", verifyResult);
 
-        if (verifyResult.status === 200) {
+        if (verifyResult.status === 200 || !verifyResult.error) {
+            if (typeof window.showToast === "function") {
+                window.showToast("OTP Verified Successfully!", "success");
+            }
             if (amount <= 0) {
                 window.location.href = "../thank-you/";
             } else {
                 openRazorpay(amount, contact);
             }
         } else {
-            otpError.textContent = "Invalid or expired OTP. Try again.";
+            const err = verifyResult.message || "Invalid or expired OTP. Try again.";
+            otpError.textContent = err;
+            if (typeof window.showToast === "function") {
+                window.showToast(err, "warning");
+            }
         }
     } catch (error) {
         otpError.textContent = "Something went wrong while verifying OTP.";
         console.error(error);
+        if (typeof window.showToast === "function") {
+            window.showToast("Something went wrong while verifying OTP.", "error");
+        }
     }
 }
 

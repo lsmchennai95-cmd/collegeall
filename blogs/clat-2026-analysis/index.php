@@ -7,608 +7,46 @@ require_once __DIR__ . '/../../config/bootstrap.php';
 <html class="no-js" lang="zxx">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CLAT 2026 Exam Analysis: Section-Wise Difficulty & Good Attempts</title>
-  <meta name="description"
-    content="CLAT 2026 exam analysis with section-wise difficulty, good attempts (105+), toughest sections, scoring areas, and key takeaways for aspirants.">
-  <meta name="keywords"
-    content="CLAT 2026 analysis, CLAT 2026 section wise difficulty, CLAT 2026 good attempts, CLAT exam review, CLAT GK analysis, CLAT legal reasoning, CLAT logical reasoning, CLAT quantitative techniques, CLAT 2026 paper analysis">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-  <style>
-    .blog-editor-container {
-      padding: 20px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .toolbar {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: #f8f9fa;
-      border-radius: 10px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .add-section-buttons {
-      display: flex;
-      gap: 10px;
-      margin-left: auto;
-    }
-
-
-
-    .blog-hero-image {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
-    }
-
-    .blog-content {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    }
-
-    .benefit-card {
-      background: #fff;
-      border-left: 4px solid #4361ee !important;
-      border-radius: 12px;
-      padding: 2rem 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .benefit-icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 1.5rem;
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.8rem;
-    }
-
-    .benefit-card .benefit-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-card .benefit-content {
-      color: #6c757d;
-      line-height: 1.6;
-    }
-
-    .specialization-card {
-      background: #fff;
-      border: 1px solid #e9ecef;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .specialization-card:hover {
-      border-color: #4361ee;
-      box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
-    }
-
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .highlight-item {
-      background: #f8f9fa;
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .highlight-label {
-      font-size: 0.9rem;
-      color: #6c757d;
-      margin-bottom: 0.5rem;
-    }
-
-    .highlight-value {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #2c3e50;
-    }
-
-    .blog-header {
-      padding: 2.5rem 2.5rem 1rem;
-      border-bottom: 1px solid #e9ecef;
-    }
-
-    .blog-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #2c3e50;
-      line-height: 1.3;
-      margin-bottom: 1rem;
-    }
-
-    .blog-meta {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      color: #6c757d;
-      font-size: 0.95rem;
-    }
-
-    .blog-body {
-      padding: 2rem 2.5rem;
-    }
-
-    .blog-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      border-radius: 2px;
-    }
-
-    .blog-text {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #4a5568;
-      margin-bottom: 1.5rem;
-    }
-
-    .highlight-text {
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);
-      border-left: 4px solid #4361ee;
-      padding: 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      margin: 1.5rem 0;
-    }
-
-    .sidebar-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #f1f3f4;
-    }
-
-    .sidebar-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    .sidebar-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 40px;
-      height: 3px;
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      border-radius: 2px;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      color: white;
-      padding: 3rem 2.5rem;
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .cta-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .cta-description {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-
-    .cta-button {
-      background: white;
-      color: #4361ee;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-    }
-
-    .news-poster {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .news-poster img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .news-poster:hover img {
-      transform: scale(1.05);
-    }
-
-    .list-group-item {
-      border: none !important;
-      border-bottom: 1px solid #e9ecef !important;
-      transition: all 0.3s ease;
-    }
-
-    .list-group-item:hover {
-      background: #f8f9fa;
-      transform: translateX(5px);
-    }
-
-    .list-group-item:last-child {
-      border-bottom: none !important;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-
-    table th,
-    table td {
-      border: 1px solid #dee2e6;
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    table th {
-      background: #f8f9fa;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .blog-editor-container {
-        padding: 10px;
-      }
-
-      .toolbar {
-        flex-direction: column;
-      }
-
-      .blog-hero-image {
-        height: auto;
-      }
-
-      .blog-header {
-        padding: 1.5rem 1rem 0.75rem;
-      }
-
-      .blog-body {
-        padding: 1rem;
-      }
-
-      .blog-title {
-        font-size: 1.8rem;
-      }
-
-      .blog-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-      }
-
-      .section-title {
-        font-size: 1.4rem;
-      }
-
-      .cta-section {
-        padding: 2rem 1.5rem;
-      }
-
-      .cta-title {
-        font-size: 1.6rem;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .blog-content {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    .benefit-card,
-    .specialization-card,
-    .feature-item {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    /* Footer */
-
-    .footer-modern {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #f8fafc;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .footer-modern::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #004aad, transparent);
-    }
-
-    .footer-modern .footer-brand {
-      margin-bottom: 2rem;
-    }
-
-    .footer-modern .footer-logo {
-      background: white;
-      border-radius: 8px;
-      padding: 12px;
-      display: inline-block;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-modern .footer-logo img {
-      height: 35px;
-    }
-
-    .footer-modern .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-modern .social-link {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #f8fafc;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .footer-modern .social-link:hover {
-      background: #004aad;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    }
-
-    .footer-modern .footer-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .footer-modern .footer-title {
-      color: #f8fafc;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-      position: relative;
-      padding-bottom: 0.75rem;
-    }
-
-    .footer-modern .footer-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 40px;
-      height: 2px;
-      background: #004aad;
-      border-radius: 2px;
-    }
-
-    .footer-modern .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-modern .footer-links li {
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-modern .footer-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .footer-modern .footer-links a:hover {
-      color: #f8fafc;
-      padding-left: 5px;
-    }
-
-    .footer-modern .contact-info {
-      margin-bottom: 2rem;
-    }
-
-    .footer-modern .phone-number {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #f8fafc;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .footer-modern .whatsapp-btn {
-      background: #25D366;
-      border: none;
-      border-radius: 8px;
-      padding: 12px 20px;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-    }
-
-    .footer-modern .whatsapp-btn:hover {
-      background: #128C7E;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-      color: white;
-    }
-
-    .footer-modern .courses-columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer-modern .course-category {
-      margin-bottom: 2rem;
-    }
-
-    .footer-modern .footer-bottom {
-      border-top: 1px solid #334155;
-      padding: 1.5rem 0;
-      margin-top: 2rem;
-    }
-
-    .footer-modern .footer-bottom-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-modern .legal-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .footer-modern .legal-links a {
-      color: #94a3b8;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-    }
-
-    .footer-modern .legal-links a:hover {
-      color: #f8fafc;
-    }
-
-    .footer-modern .copyright {
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .footer-modern .footer-bottom-content {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .footer-modern .legal-links {
-        justify-content: center;
-      }
-
-      .footer-modern .courses-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-modern .social-links {
-        justify-content: center;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .footer-modern .footer-title {
-        font-size: 1rem;
-      }
-
-      .footer-modern .footer-links a {
-        font-size: 0.85rem;
-      }
-
-      .footer-modern .legal-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-  </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
-     crossorigin="anonymous"></script>
-</head>
+    <title>CLAT 2026 Exam Analysis: Section-Wise Difficulty & Good Attempts</title>
+    <meta name="description" content="CLAT 2026 exam analysis with section-wise difficulty, good attempts (105+), toughest sections, scoring areas, and key takeaways for aspirants.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/clat-2026-analysis/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="CLAT 2026 Exam Analysis: Section-Wise Difficulty & Good Attempts">
+    <meta property="og:description" content="CLAT 2026 exam analysis with section-wise difficulty, good attempts (105+), toughest sections, scoring areas, and key takeaways for aspirants.">
+    <meta property="og:url" content="https://collegeall.com/blogs/clat-2026-analysis/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="CLAT 2026 Exam Analysis: Section-Wise Difficulty & Good Attempts">
+    <meta name="twitter:description" content="CLAT 2026 exam analysis with section-wise difficulty, good attempts (105+), toughest sections, scoring areas, and key takeaways for aspirants.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "CLAT 2026 Exam Analysis: Section-Wise Difficulty & Good Attempts",
+      "description": "CLAT 2026 exam analysis with section-wise difficulty, good attempts (105+), toughest sections, scoring areas, and key takeaways for aspirants.",
+      "url": "https://collegeall.com/blogs/clat-2026-analysis/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://collegeall.com/blogs/clat-2026-analysis/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://api.collegeall.com/Logo/collegeallLogo.png"
+        }
+      },
+      "image": "https://api.collegeall.com/Logo/og-image.png"
+    }
+    </script>
+  <meta charset="utf-8">  <meta http-equiv="x-ua-compatible" content="ie=edge">  <meta name="keywords"    content="CLAT 2026 analysis, CLAT 2026 section wise difficulty, CLAT 2026 good attempts, CLAT exam review, CLAT GK analysis, CLAT legal reasoning, CLAT logical reasoning, CLAT quantitative techniques, CLAT 2026 paper analysis">  <meta name="viewport" content="width=device-width, initial-scale=1">  <link rel="manifest" href="site.webmanifest">  <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">  <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">  <style>    .blog-editor-container {      padding: 20px;      max-width: 1400px;      margin: 0 auto;    }    .toolbar {      margin-bottom: 20px;      padding: 15px;      background: #f8f9fa;      border-radius: 10px;      display: flex;      gap: 10px;      align-items: center;      flex-wrap: wrap;    }    .add-section-buttons {      display: flex;      gap: 10px;      margin-left: auto;    }    .blog-hero-image {      width: 100%;      height: 400px;      object-fit: cover;      border-radius: 15px 15px 0 0;    }    .blog-content {      background: #fff;      border-radius: 15px;      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);      overflow: hidden;    }    .benefit-card {      background: #fff;      border-left: 4px solid #4361ee !important;      border-radius: 12px;      padding: 2rem 1.5rem;      transition: all 0.3s ease;      position: relative;      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);    }    .benefit-icon {      width: 70px;      height: 70px;      margin: 0 auto 1.5rem;      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      border-radius: 50%;      display: flex;      align-items: center;      justify-content: center;      color: white;      font-size: 1.8rem;    }    .benefit-card .benefit-title {      font-size: 1.2rem;      font-weight: 600;      color: #2c3e50;      margin-bottom: 1rem;    }    .benefit-card .benefit-content {      color: #6c757d;      line-height: 1.6;    }    .specialization-card {      background: #fff;      border: 1px solid #e9ecef;      border-radius: 12px;      padding: 1.5rem;      margin-bottom: 1rem;      transition: all 0.3s ease;    }    .specialization-card:hover {      border-color: #4361ee;      box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);    }    .highlights-grid {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));      gap: 1rem;      margin: 2rem 0;    }    .highlight-item {      background: #f8f9fa;      border-radius: 10px;      padding: 1.5rem;      text-align: center;    }    .highlight-label {      font-size: 0.9rem;      color: #6c757d;      margin-bottom: 0.5rem;    }    .highlight-value {      font-size: 1.1rem;      font-weight: 600;      color: #2c3e50;    }    .blog-header {      padding: 2.5rem 2.5rem 1rem;      border-bottom: 1px solid #e9ecef;    }    .blog-title {      font-size: 2.5rem;      font-weight: 700;      color: #2c3e50;      line-height: 1.3;      margin-bottom: 1rem;    }    .blog-meta {      display: flex;      align-items: center;      gap: 1.5rem;      color: #6c757d;      font-size: 0.95rem;    }    .blog-body {      padding: 2rem 2.5rem;    }    .blog-section {      margin-bottom: 2.5rem;    }    .section-title {      font-size: 1.8rem;      font-weight: 700;      color: #2c3e50;      margin-bottom: 1.5rem;      position: relative;      padding-bottom: 0.5rem;    }    .section-title::after {      content: '';      position: absolute;      bottom: 0;      left: 0;      width: 60px;      height: 3px;      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      border-radius: 2px;    }    .blog-text {      font-size: 1.1rem;      line-height: 1.7;      color: #4a5568;      margin-bottom: 1.5rem;    }    .highlight-text {      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);      border-left: 4px solid #4361ee;      padding: 1.5rem;      border-radius: 8px;      font-weight: 500;      margin: 1.5rem 0;    }    .sidebar-card {      background: #fff;      border-radius: 15px;      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);      padding: 1.5rem;      margin-bottom: 2rem;      border: 1px solid #f1f3f4;    }    .sidebar-title {      font-size: 1.3rem;      font-weight: 700;      color: #2c3e50;      margin-bottom: 1.5rem;      position: relative;      padding-bottom: 0.5rem;    }    .sidebar-title::after {      content: '';      position: absolute;      bottom: 0;      left: 0;      width: 40px;      height: 3px;      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      border-radius: 2px;    }    .cta-section {      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      color: white;      padding: 3rem 2.5rem;      border-radius: 15px;      text-align: center;    }    .cta-title {      font-size: 2rem;      font-weight: 700;      margin-bottom: 1rem;    }    .cta-description {      font-size: 1.1rem;      margin-bottom: 2rem;      opacity: 0.9;    }    .cta-button {      background: white;      color: #4361ee;      border: none;      padding: 12px 30px;      border-radius: 50px;      font-weight: 600;      font-size: 1.1rem;      transition: all 0.3s ease;    }    .cta-button:hover {      transform: translateY(-3px);      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);    }    .news-poster {      border-radius: 12px;      overflow: hidden;      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);    }    .news-poster img {      width: 100%;      height: auto;      transition: transform 0.3s ease;    }    .news-poster:hover img {      transform: scale(1.05);    }    .list-group-item {      border: none !important;      border-bottom: 1px solid #e9ecef !important;      transition: all 0.3s ease;    }    .list-group-item:hover {      background: #f8f9fa;      transform: translateX(5px);    }    .list-group-item:last-child {      border-bottom: none !important;    }    table {      width: 100%;      border-collapse: collapse;      margin: 1rem 0;    }    table th,    table td {      border: 1px solid #dee2e6;      padding: 0.75rem;      text-align: left;    }    table th {      background: #f8f9fa;      font-weight: 600;    }    @media (max-width: 768px) {      .blog-editor-container {        padding: 10px;      }      .toolbar {        flex-direction: column;      }      .blog-hero-image {        height: auto;      }      .blog-header {        padding: 1.5rem 1rem 0.75rem;      }      .blog-body {        padding: 1rem;      }      .blog-title {        font-size: 1.8rem;      }      .blog-meta {        flex-direction: column;        align-items: flex-start;        gap: 0.75rem;      }      .section-title {        font-size: 1.4rem;      }      .cta-section {        padding: 2rem 1.5rem;      }      .cta-title {        font-size: 1.6rem;      }    }    @keyframes fadeInUp {      from {        opacity: 0;        transform: translateY(30px);      }      to {        opacity: 1;        transform: translateY(0);      }    }    .blog-content {      animation: fadeInUp 0.6s ease-out;    }    .benefit-card,    .specialization-card,    .feature-item {      animation: fadeInUp 0.6s ease-out;    }    /* Footer */    .footer-modern {      background: linear-gradient(135deg, #0f172a, #020617);      color: #f8fafc;      position: relative;      overflow: hidden;    }    .footer-modern::before {      content: '';      position: absolute;      top: 0;      left: 0;      right: 0;      height: 1px;      background: linear-gradient(90deg, transparent, #004aad, transparent);    }    .footer-modern .footer-brand {      margin-bottom: 2rem;    }    .footer-modern .footer-logo {      background: white;      border-radius: 8px;      padding: 12px;      display: inline-block;      margin-bottom: 1.5rem;    }    .footer-modern .footer-logo img {      height: 35px;    }    .footer-modern .social-links {      display: flex;      gap: 1rem;      margin-bottom: 2rem;    }    .footer-modern .social-link {      width: 44px;      height: 44px;      border-radius: 50%;      background: rgba(255, 255, 255, 0.1);      display: flex;      align-items: center;      justify-content: center;      color: #f8fafc;      text-decoration: none;      transition: all 0.3s ease;      border: 1px solid rgba(255, 255, 255, 0.2);    }    .footer-modern .social-link:hover {      background: #004aad;      transform: translateY(-2px);      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);    }    .footer-modern .footer-section {      margin-bottom: 2.5rem;    }    .footer-modern .footer-title {      color: #f8fafc;      font-weight: 600;      margin-bottom: 1.5rem;      font-size: 1.1rem;      position: relative;      padding-bottom: 0.75rem;    }    .footer-modern .footer-title::after {      content: '';      position: absolute;      bottom: 0;      left: 0;      width: 40px;      height: 2px;      background: #004aad;      border-radius: 2px;    }    .footer-modern .footer-links {      list-style: none;      padding: 0;      margin: 0;    }    .footer-modern .footer-links li {      margin-bottom: 0.75rem;    }    .footer-modern .footer-links a {      color: #94a3b8;      text-decoration: none;      transition: all 0.3s ease;      font-size: 0.9rem;      line-height: 1.4;    }    .footer-modern .footer-links a:hover {      color: #f8fafc;      padding-left: 5px;    }    .footer-modern .contact-info {      margin-bottom: 2rem;    }    .footer-modern .phone-number {      font-size: 1.25rem;      font-weight: 600;      color: #f8fafc;      margin-bottom: 1.5rem;      display: flex;      align-items: center;      gap: 0.5rem;    }    .footer-modern .whatsapp-btn {      background: #25D366;      border: none;      border-radius: 8px;      padding: 12px 20px;      color: white;      font-weight: 600;      text-decoration: none;      display: inline-flex;      align-items: center;      gap: 0.75rem;      transition: all 0.3s ease;      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);    }    .footer-modern .whatsapp-btn:hover {      background: #128C7E;      transform: translateY(-2px);      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);      color: white;    }    .footer-modern .courses-columns {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));      gap: 2rem;    }    .footer-modern .course-category {      margin-bottom: 2rem;    }    .footer-modern .footer-bottom {      border-top: 1px solid #334155;      padding: 1.5rem 0;      margin-top: 2rem;    }    .footer-modern .footer-bottom-content {      display: flex;      justify-content: space-between;      align-items: center;      flex-wrap: wrap;      gap: 1rem;    }    .footer-modern .legal-links {      display: flex;      gap: 2rem;    }    .footer-modern .legal-links a {      color: #94a3b8;      text-decoration: none;      font-size: 0.9rem;      transition: color 0.3s ease;    }    .footer-modern .legal-links a:hover {      color: #f8fafc;    }    .footer-modern .copyright {      color: #94a3b8;      font-size: 0.9rem;    }    /* Responsive Design */    @media (max-width: 768px) {      .footer-modern .footer-bottom-content {        flex-direction: column;        text-align: center;      }      .footer-modern .legal-links {        justify-content: center;      }      .footer-modern .courses-columns {        grid-template-columns: 1fr;      }      .footer-modern .social-links {        justify-content: center;      }    }    @media (max-width: 576px) {      .footer-modern .footer-title {        font-size: 1rem;      }      .footer-modern .footer-links a {        font-size: 0.85rem;      }      .footer-modern .legal-links {        flex-direction: column;        gap: 1rem;      }    }  </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"     crossorigin="anonymous"></script></head>
 
 <body>
   <?php include COLLEGEALL_ROOT . '/header.php'; ?>

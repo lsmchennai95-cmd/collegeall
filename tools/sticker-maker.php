@@ -1,105 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Sticker Maker</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #8b5cf6;
-            --secondary-color: #7c3aed;
-        }
+    <meta name="description" content="Free online sticker creator. Design custom text, emoji, and shape stickers with rich colors and effects to download for chat and social media.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/sticker-maker.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Advanced Sticker Maker">
+    <meta property="og:description" content="Free online sticker creator. Design custom text, emoji, and shape stickers with rich colors and effects to download for chat and social media.">
+    <meta property="og:url" content="https://collegeall.com/tools/sticker-maker.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Advanced Sticker Maker">
+    <meta name="twitter:description" content="Free online sticker creator. Design custom text, emoji, and shape stickers with rich colors and effects to download for chat and social media.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Advanced Sticker Maker",
+      "description": "Free online sticker creator. Design custom text, emoji, and shape stickers with rich colors and effects to download for chat and social media.",
+      "url": "https://collegeall.com/tools/sticker-maker.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <style>        :root {            --primary-color: #8b5cf6;            --secondary-color: #7c3aed;        }        .sticker-container {            background: white;            border-radius: 20px;            box-shadow: 0 15px 50px rgba(0,0,0,0.1);            padding: 30px;            margin: 20px 0;        }        .editor-area {            border: 3px dashed #e2e8f0;            border-radius: 15px;            padding: 20px;            background: #f8fafc;            min-height: 500px;        }        .tool-panel {            background: #f1f5f9;            border-radius: 15px;            padding: 20px;            height: 100%;        }        .sticker-preview {            width: 300px;            height: 300px;            margin: 0 auto;            border: 2px solid #e2e8f0;            border-radius: 20px;            overflow: hidden;            background: white;            box-shadow: 0 10px 25px rgba(0,0,0,0.1);        }        .tool-btn {            width: 50px;            height: 50px;            border: 2px solid #e2e8f0;            border-radius: 10px;            display: flex;            align-items: center;            justify-content: center;            cursor: pointer;            transition: all 0.3s ease;            background: white;        }        .tool-btn:hover, .tool-btn.active {            border-color: var(--primary-color);            background: var(--primary-color);            color: white;            transform: translateY(-2px);        }        .color-picker {            width: 40px;            height: 40px;            border-radius: 50%;            border: 3px solid white;            box-shadow: 0 2px 5px rgba(0,0,0,0.2);            cursor: pointer;        }        .text-tool {            background: white;            border-radius: 10px;            padding: 15px;            box-shadow: 0 5px 15px rgba(0,0,0,0.1);        }        .filter-option {            border-radius: 10px;            overflow: hidden;            cursor: pointer;            transition: transform 0.3s ease;        }        .filter-option:hover {            transform: scale(1.05);        }        .canvas-container {            position: relative;            border: 1px solid #e2e8f0;            border-radius: 10px;            overflow: hidden;        }    </style>    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        .sticker-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin: 20px 0;
-        }
-
-        .editor-area {
-            border: 3px dashed #e2e8f0;
-            border-radius: 15px;
-            padding: 20px;
-            background: #f8fafc;
-            min-height: 500px;
-        }
-
-        .tool-panel {
-            background: #f1f5f9;
-            border-radius: 15px;
-            padding: 20px;
-            height: 100%;
-        }
-
-        .sticker-preview {
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            border: 2px solid #e2e8f0;
-            border-radius: 20px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .tool-btn {
-            width: 50px;
-            height: 50px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        .tool-btn:hover, .tool-btn.active {
-            border-color: var(--primary-color);
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .color-picker {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-
-        .text-tool {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .filter-option {
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .filter-option:hover {
-            transform: scale(1.05);
-        }
-
-        .canvas-container {
-            position: relative;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-    </style>
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 <body class="bg-light">
     <div class="container py-5">

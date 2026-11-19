@@ -1,0 +1,173 @@
+/**
+ * CollegeAll Production Toast Notification System
+ * Lightweight, accessible, zero-dependency toast notifications.
+ */
+
+/* Container */
+#collegeall-toast-container {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 420px;
+    width: calc(100% - 48px);
+    pointer-events: none;
+}
+
+@media (max-width: 576px) {
+    #collegeall-toast-container {
+        top: 16px;
+        left: 16px;
+        right: 16px;
+        width: calc(100% - 32px);
+        max-width: none;
+    }
+}
+
+/* Individual Toast Card */
+.ca-toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14), 0 4px 10px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #3b82f6;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #1f2937;
+    pointer-events: auto;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(110%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+@media (max-width: 576px) {
+    .ca-toast {
+        transform: translateY(-120%);
+    }
+}
+
+.ca-toast.ca-toast-show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 576px) {
+    .ca-toast.ca-toast-show {
+        transform: translateY(0);
+    }
+}
+
+.ca-toast.ca-toast-hide {
+    opacity: 0;
+    transform: translateX(110%);
+}
+
+@media (max-width: 576px) {
+    .ca-toast.ca-toast-hide {
+        transform: translateY(-120%);
+    }
+}
+
+/* Toast Variants */
+/* Success: Green */
+.ca-toast-success {
+    border-left-color: #10b981;
+}
+.ca-toast-success .ca-toast-icon-wrapper {
+    color: #059669;
+    background-color: #ecfdf5;
+}
+
+/* Warning: Amber */
+.ca-toast-warning {
+    border-left-color: #f59e0b;
+}
+.ca-toast-warning .ca-toast-icon-wrapper {
+    color: #d97706;
+    background-color: #fffbeb;
+}
+
+/* Error: Red */
+.ca-toast-error {
+    border-left-color: #ef4444;
+}
+.ca-toast-error .ca-toast-icon-wrapper {
+    color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* Info: Blue */
+.ca-toast-info {
+    border-left-color: #3b82f6;
+}
+.ca-toast-info .ca-toast-icon-wrapper {
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+/* Icon */
+.ca-toast-icon-wrapper {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+.ca-toast-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Body */
+.ca-toast-body {
+    flex-grow: 1;
+    min-width: 0;
+}
+.ca-toast-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+    margin-bottom: 2px;
+}
+.ca-toast-message {
+    color: #4b5563;
+    font-size: 13.5px;
+    word-break: break-word;
+}
+
+/* Close Button */
+.ca-toast-close {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #9ca3af;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, background-color 0.15s ease;
+    margin-top: -2px;
+    margin-right: -4px;
+}
+.ca-toast-close:hover {
+    color: #374151;
+    background-color: #f3f4f6;
+}
+.ca-toast-close svg {
+    width: 16px;
+    height: 16px;
+}

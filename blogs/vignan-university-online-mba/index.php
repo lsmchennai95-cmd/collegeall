@@ -2,929 +2,46 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Vignan's University Online MBA | UGC & AICTE Approved | Flexible Learning</title>
-
-    <!-- Meta Description -->
-    <meta name="description" content="Vignan's University Online MBA - UGC & AICTE approved program with flexible learning, industry-aligned curriculum, and expert faculty. Choose from multiple specializations.">
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="Vignan's University Online MBA, UGC approved online MBA, AICTE approved MBA, online MBA India, flexible MBA program, MBA specializations, HR management MBA, affordable online MBA">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-
-        /* Navbar start */
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
-        }
-
-        .search-input {
-            border: none;
-            outline: none;
-            background: transparent;
-            width: 100%;
-            padding: .6rem 1rem;
-        }
-
-        .search-container {
-            border: 1px solid #e5e7eb;
-            border-radius: 24px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .navbar .search-btn {
-            background: none;
-        }
-
-        .btn-ai {
-            background: linear-gradient(135deg, #f03535, #d03e24);
-            color: #fff;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            border-radius: 0 !important;
-            padding: 10px 20px !important;
-        }
-
-        .btn-ai:hover {
-            background: linear-gradient(135deg, #d03e24, #951d1d);
-            color: #fff;
-        }
-
-        .signup-btn {
-            background: var(--primary);
-            color: #fff;
-            border-radius: 0 !important;
-            padding: 10px 20px !important;
-        }
-
-        .signin-btn {
-            border: 1px solid var(--primary) !important;
-            color: var(--primary);
-            border-radius: 0 !important;
-            padding: 10px 20px !important;
-        }
-
-        .signin-btn:hover {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        .signup-btn:hover {
-            background-color: #003c8b;
-            color: #fff;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        .offcanvas .close-btn{
-            background: none;
-            position: absolute;
-            right: 20px;
-            top: 10px;
-        }
-
-        @media(max-width:991px) {
-            .navbar-collapse {
-                display: none !important;
-            }
-        }
-
-        .mobile-action-btns {
-            border-bottom: 1px solid #86888a;
-        }
-
-        .mobile-action-btns .mobile-action-btn {
-            display: flex;
-            align-items: center;
-            gap: .55rem;
-            padding: .65rem 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            width: 100%;
-        }
-
-        .mobile-action-btns .mobile-action-ai {
-            color: #000000 !important;
-        }
-
-        .mobile-action-btns .mobile-action-normal {
-            color: #111 !important;
-        }
-
-        .mobile-action-btns .mobile-action-normal:hover {
-            background: #eceff1;
-        }
-
-        .tools-menu {
-            background: none;
-            border: none;
-        }
-
-        .tools-menu .tools-list{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
-        }
-
-        .tools-menu .tool-icon {
-            padding: 5px;
-            transition:.2s;
-        }
-
-        .tool-icon:hover{
-            background:#e9ecef;
-        }
-
-        .tools-dropdown {
-            padding: 10px;
-            font-weight: bold;
-        }
-
-        /* Navbar End */
-
-        /* Footer */
-
-        .footer-modern {
-            background: linear-gradient(135deg, #0f172a, #020617);
-            color: #f8fafc;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .footer-modern::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #004aad, transparent);
-        }
-
-        .footer-modern .footer-brand {
-            margin-bottom: 2rem;
-        }
-
-        .footer-modern .footer-logo {
-            background: white;
-            border-radius: 8px;
-            padding: 12px;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-modern .footer-logo img {
-            height: 35px;
-        }
-
-        .footer-modern .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-modern .social-link {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #f8fafc;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .footer-modern .social-link:hover {
-            background: #004aad;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        .footer-modern .footer-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .footer-modern .footer-title {
-            color: #f8fafc;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            position: relative;
-            padding-bottom: 0.75rem;
-        }
-
-        .footer-modern .footer-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background: #004aad;
-            border-radius: 2px;
-        }
-
-        .footer-modern .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-modern .footer-links li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-modern .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .footer-modern .footer-links a:hover {
-            color: #f8fafc;
-            padding-left: 5px;
-        }
-
-        .footer-modern .contact-info {
-            margin-bottom: 2rem;
-        }
-
-        .footer-modern .phone-number {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #f8fafc;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .footer-modern .whatsapp-btn {
-            background: #25D366;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 20px;
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-
-        .footer-modern .whatsapp-btn:hover {
-            background: #128C7E;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            color: white;
-        }
-
-        .footer-modern .courses-columns {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-modern .course-category {
-            margin-bottom: 2rem;
-        }
-
-        .footer-modern .footer-bottom {
-            border-top: 1px solid #334155;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-
-        .footer-modern .footer-bottom-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-modern .legal-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-modern .legal-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-modern .legal-links a:hover {
-            color: #f8fafc;
-        }
-
-        .footer-modern .copyright {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .footer-modern .footer-bottom-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-modern .legal-links {
-                justify-content: center;
-            }
-
-            .footer-modern .courses-columns {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-modern .social-links {
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .footer-modern .footer-title {
-                font-size: 1rem;
-            }
-
-            .footer-modern .footer-links a {
-                font-size: 0.85rem;
-            }
-
-            .footer-modern .legal-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        /* Custom Styles for Blog Content */
-        .blog-content {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        .blog-hero-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 15px 15px 0 0;
-        }
-
-        .blog-header {
-            padding: 2.5rem 2.5rem 1rem;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .blog-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c3e50;
-            line-height: 1.3;
-            margin-bottom: 1rem;
-        }
-
-        .blog-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            color: #6c757d;
-            font-size: 0.95rem;
-        }
-
-        .blog-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .blog-body {
-            padding: 2rem 2.5rem;
-        }
-
-        .blog-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .blog-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            border-radius: 2px;
-        }
-
-        .blog-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-        }
-
-        .highlight-text {
-            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);
-            border-left: 4px solid #4361ee;
-            padding: 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
-            margin: 1.5rem 0;
-        }
-
-        /* Benefits Grid */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .benefit-card {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: #4361ee;
-        }
-
-        .benefit-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .benefit-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 0.75rem;
-        }
-
-        .benefit-content {
-            color: #4a5568;
-            line-height: 1.6;
-        }
-
-        /* Specializations */
-        .specialization-card {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .specialization-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-color: #4361ee;
-        }
-
-        .specialization-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            border-radius: 2px 0 0 2px;
-        }
-
-        /* Program Highlights */
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .highlight-item {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid #e9ecef;
-        }
-
-        .highlight-label {
-            font-size: 0.9rem;
-            color: #6c757d;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .highlight-value {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        /* Career Opportunities */
-        .career-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .career-item {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .career-item:hover {
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .career-item:hover .career-role {
-            color: white;
-        }
-
-        .career-role {
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 0;
-        }
-
-        /* University Features */
-        .features-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-
-        .feature-icon {
-            color: #4361ee;
-            font-size: 1.2rem;
-            margin-top: 0.2rem;
-        }
-
-        .feature-content {
-            flex: 1;
-        }
-
-        /* Sidebar Styles */
-        .sidebar-card {
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid #f1f3f4;
-        }
-
-        .sidebar-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .sidebar-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            border-radius: 2px;
-        }
-
-        .social-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .social-stat-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .social-stat-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .social-info {
-            flex: 1;
-        }
-
-        .social-count {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        .social-label {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-
-        .news-poster {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-poster img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .news-poster:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Call to Action */
-        .cta-section {
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            color: white;
-            padding: 3rem 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .cta-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .cta-description {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .cta-button {
-            background: white;
-            color: #4361ee;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .blog-title {
-                font-size: 2.2rem;
-            }
-            
-            .blog-body {
-                padding: 1.5rem 2rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .blog-hero-image {
-                height: 300px;
-            }
-            
-            .blog-title {
-                font-size: 2rem;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
-            }
-            
-            .blog-text {
-                font-size: 1.05rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .blog-header {
-                padding: 2rem 1.5rem 1rem;
-            }
-            
-            .blog-body {
-                padding: 1.5rem;
-            }
-            
-            .blog-title {
-                font-size: 1.8rem;
-            }
-            
-            .blog-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.75rem;
-            }
-            
-            .section-title {
-                font-size: 1.4rem;
-            }
-            
-            .benefit-card {
-                padding: 1.25rem;
-            }
-            
-            .cta-section {
-                padding: 2rem 1.5rem;
-            }
-            
-            .cta-title {
-                font-size: 1.6rem;
-            }
-            
-            .highlights-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .career-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .blog-hero-image {
-                height: 250px;
-            }
-            
-            .blog-header {
-                padding: 1.5rem 1rem 0.75rem;
-            }
-            
-            .blog-body {
-                padding: 1rem;
-            }
-            
-            .blog-title {
-                font-size: 1.6rem;
-            }
-            
-            .section-title {
-                font-size: 1.3rem;
-            }
-            
-            .blog-text {
-                font-size: 1rem;
-            }
-            
-            .highlight-text {
-                padding: 1rem;
-            }
-            
-            .cta-section {
-                padding: 1.5rem 1rem;
-            }
-            
-            .cta-title {
-                font-size: 1.4rem;
-            }
-            
-            .cta-button {
-                width: 100%;
-            }
-            
-            .career-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .blog-content {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        .benefit-card, .specialization-card, .career-item {
-            animation: fadeInUp 0.6s ease-out;
-        }
-    </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
-     crossorigin="anonymous"></script>
-</head>
+    <meta name="description" content="Vignan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/vignan-university-online-mba/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Vignan's University Online MBA | UGC & AICTE Approved | Flexible Learning">
+    <meta property="og:description" content="Vignan">
+    <meta property="og:url" content="https://collegeall.com/blogs/vignan-university-online-mba/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Vignan's University Online MBA | UGC & AICTE Approved | Flexible Learning">
+    <meta name="twitter:description" content="Vignan">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Vignan's University Online MBA | UGC & AICTE Approved | Flexible Learning",
+      "description": "Vignan",
+      "url": "https://collegeall.com/blogs/vignan-university-online-mba/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://collegeall.com/blogs/vignan-university-online-mba/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://api.collegeall.com/Logo/collegeallLogo.png"
+        }
+      },
+      "image": "https://api.collegeall.com/Logo/og-image.png"
+    }
+    </script>
+    <meta charset="utf-8">    <meta http-equiv="x-ua-compatible" content="ie=edge">    <!-- Meta Description -->    <!-- Meta Keywords -->    <meta name="keywords" content="Vignan's University Online MBA, UGC approved online MBA, AICTE approved MBA, online MBA India, flexible MBA program, MBA specializations, HR management MBA, affordable online MBA">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="manifest" href="site.webmanifest">    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <!-- Font Awesome CDN -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <style>        /* Navbar start */        .navbar {            background: #fff;            box-shadow: 0 2px 4px rgba(0, 0, 0, .05);        }        .search-input {            border: none;            outline: none;            background: transparent;            width: 100%;            padding: .6rem 1rem;        }        .search-container {            border: 1px solid #e5e7eb;            border-radius: 24px;            display: flex;            align-items: center;            overflow: hidden;        }        .navbar .search-btn {            background: none;        }        .btn-ai {            background: linear-gradient(135deg, #f03535, #d03e24);            color: #fff;            font-weight: 600;            display: flex;            align-items: center;            gap: .5rem;            border-radius: 0 !important;            padding: 10px 20px !important;        }        .btn-ai:hover {            background: linear-gradient(135deg, #d03e24, #951d1d);            color: #fff;        }        .signup-btn {            background: var(--primary);            color: #fff;            border-radius: 0 !important;            padding: 10px 20px !important;        }        .signin-btn {            border: 1px solid var(--primary) !important;            color: var(--primary);            border-radius: 0 !important;            padding: 10px 20px !important;        }        .signin-btn:hover {            background: var(--primary);            color: #fff;        }        .signup-btn:hover {            background-color: #003c8b;            color: #fff;        }        .navbar-toggler:focus {            box-shadow: none;        }        .offcanvas .close-btn{            background: none;            position: absolute;            right: 20px;            top: 10px;        }        @media(max-width:991px) {            .navbar-collapse {                display: none !important;            }        }        .mobile-action-btns {            border-bottom: 1px solid #86888a;        }        .mobile-action-btns .mobile-action-btn {            display: flex;            align-items: center;            gap: .55rem;            padding: .65rem 1rem;            font-weight: 600;            text-decoration: none;            width: 100%;        }        .mobile-action-btns .mobile-action-ai {            color: #000000 !important;        }        .mobile-action-btns .mobile-action-normal {            color: #111 !important;        }        .mobile-action-btns .mobile-action-normal:hover {            background: #eceff1;        }        .tools-menu {            background: none;            border: none;        }        .tools-menu .tools-list{            display: flex;            flex-direction: column;            gap: 10px;            width: 100%;        }        .tools-menu .tool-icon {            padding: 5px;            transition:.2s;        }        .tool-icon:hover{            background:#e9ecef;        }        .tools-dropdown {            padding: 10px;            font-weight: bold;        }        /* Navbar End */        /* Footer */        .footer-modern {            background: linear-gradient(135deg, #0f172a, #020617);            color: #f8fafc;            position: relative;            overflow: hidden;        }        .footer-modern::before {            content: '';            position: absolute;            top: 0;            left: 0;            right: 0;            height: 1px;            background: linear-gradient(90deg, transparent, #004aad, transparent);        }        .footer-modern .footer-brand {            margin-bottom: 2rem;        }        .footer-modern .footer-logo {            background: white;            border-radius: 8px;            padding: 12px;            display: inline-block;            margin-bottom: 1.5rem;        }        .footer-modern .footer-logo img {            height: 35px;        }        .footer-modern .social-links {            display: flex;            gap: 1rem;            margin-bottom: 2rem;        }        .footer-modern .social-link {            width: 44px;            height: 44px;            border-radius: 50%;            background: rgba(255, 255, 255, 0.1);            display: flex;            align-items: center;            justify-content: center;            color: #f8fafc;            text-decoration: none;            transition: all 0.3s ease;            border: 1px solid rgba(255, 255, 255, 0.2);        }        .footer-modern .social-link:hover {            background: #004aad;            transform: translateY(-2px);            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);        }        .footer-modern .footer-section {            margin-bottom: 2.5rem;        }        .footer-modern .footer-title {            color: #f8fafc;            font-weight: 600;            margin-bottom: 1.5rem;            font-size: 1.1rem;            position: relative;            padding-bottom: 0.75rem;        }        .footer-modern .footer-title::after {            content: '';            position: absolute;            bottom: 0;            left: 0;            width: 40px;            height: 2px;            background: #004aad;            border-radius: 2px;        }        .footer-modern .footer-links {            list-style: none;            padding: 0;            margin: 0;        }        .footer-modern .footer-links li {            margin-bottom: 0.75rem;        }        .footer-modern .footer-links a {            color: #94a3b8;            text-decoration: none;            transition: all 0.3s ease;            font-size: 0.9rem;            line-height: 1.4;        }        .footer-modern .footer-links a:hover {            color: #f8fafc;            padding-left: 5px;        }        .footer-modern .contact-info {            margin-bottom: 2rem;        }        .footer-modern .phone-number {            font-size: 1.25rem;            font-weight: 600;            color: #f8fafc;            margin-bottom: 1.5rem;            display: flex;            align-items: center;            gap: 0.5rem;        }        .footer-modern .whatsapp-btn {            background: #25D366;            border: none;            border-radius: 8px;            padding: 12px 20px;            color: white;            font-weight: 600;            text-decoration: none;            display: inline-flex;            align-items: center;            gap: 0.75rem;            transition: all 0.3s ease;            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);        }        .footer-modern .whatsapp-btn:hover {            background: #128C7E;            transform: translateY(-2px);            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);            color: white;        }        .footer-modern .courses-columns {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));            gap: 2rem;        }        .footer-modern .course-category {            margin-bottom: 2rem;        }        .footer-modern .footer-bottom {            border-top: 1px solid #334155;            padding: 1.5rem 0;            margin-top: 2rem;        }        .footer-modern .footer-bottom-content {            display: flex;            justify-content: space-between;            align-items: center;            flex-wrap: wrap;            gap: 1rem;        }        .footer-modern .legal-links {            display: flex;            gap: 2rem;        }        .footer-modern .legal-links a {            color: #94a3b8;            text-decoration: none;            font-size: 0.9rem;            transition: color 0.3s ease;        }        .footer-modern .legal-links a:hover {            color: #f8fafc;        }        .footer-modern .copyright {            color: #94a3b8;            font-size: 0.9rem;        }        /* Responsive Design */        @media (max-width: 768px) {            .footer-modern .footer-bottom-content {                flex-direction: column;                text-align: center;            }            .footer-modern .legal-links {                justify-content: center;            }            .footer-modern .courses-columns {                grid-template-columns: 1fr;            }            .footer-modern .social-links {                justify-content: center;            }        }        @media (max-width: 576px) {            .footer-modern .footer-title {                font-size: 1rem;            }            .footer-modern .footer-links a {                font-size: 0.85rem;            }            .footer-modern .legal-links {                flex-direction: column;                gap: 1rem;            }        }        /* Custom Styles for Blog Content */        .blog-content {            background: #fff;            border-radius: 15px;            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);            overflow: hidden;        }        .blog-hero-image {            width: 100%;            height: 400px;            object-fit: cover;            border-radius: 15px 15px 0 0;        }        .blog-header {            padding: 2.5rem 2.5rem 1rem;            border-bottom: 1px solid #e9ecef;        }        .blog-title {            font-size: 2.5rem;            font-weight: 700;            color: #2c3e50;            line-height: 1.3;            margin-bottom: 1rem;        }        .blog-meta {            display: flex;            align-items: center;            gap: 1.5rem;            color: #6c757d;            font-size: 0.95rem;        }        .blog-meta-item {            display: flex;            align-items: center;            gap: 0.5rem;        }        .blog-body {            padding: 2rem 2.5rem;        }        .blog-section {            margin-bottom: 2.5rem;        }        .blog-section:last-child {            margin-bottom: 0;        }        .section-title {            font-size: 1.8rem;            font-weight: 700;            color: #2c3e50;            margin-bottom: 1.5rem;            position: relative;            padding-bottom: 0.5rem;        }        .section-title::after {            content: '';            position: absolute;            bottom: 0;            left: 0;            width: 60px;            height: 3px;            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            border-radius: 2px;        }        .blog-text {            font-size: 1.1rem;            line-height: 1.7;            color: #4a5568;            margin-bottom: 1.5rem;        }        .highlight-text {            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);            border-left: 4px solid #4361ee;            padding: 1.5rem;            border-radius: 8px;            font-weight: 500;            margin: 1.5rem 0;        }        /* Benefits Grid */        .benefits-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));            gap: 1.5rem;            margin: 2rem 0;        }        .benefit-card {            background: #fff;            border: 1px solid #e9ecef;            border-radius: 12px;            padding: 1.5rem;            text-align: center;            transition: all 0.3s ease;            position: relative;        }        .benefit-card:hover {            transform: translateY(-5px);            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);            border-color: #4361ee;        }        .benefit-icon {            width: 70px;            height: 70px;            border-radius: 50%;            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            display: flex;            align-items: center;            justify-content: center;            margin: 0 auto 1rem;            color: white;            font-size: 1.5rem;        }        .benefit-title {            font-size: 1.2rem;            font-weight: 600;            color: #2c3e50;            margin-bottom: 0.75rem;        }        .benefit-content {            color: #4a5568;            line-height: 1.6;        }        /* Specializations */        .specialization-card {            background: #fff;            border: 1px solid #e9ecef;            border-radius: 12px;            padding: 1.5rem;            margin-bottom: 1rem;            transition: all 0.3s ease;            position: relative;        }        .specialization-card:hover {            transform: translateX(5px);            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);            border-color: #4361ee;        }        .specialization-card::before {            content: '';            position: absolute;            left: 0;            top: 0;            height: 100%;            width: 4px;            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            border-radius: 2px 0 0 2px;        }        /* Program Highlights */        .highlights-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));            gap: 1rem;            margin: 2rem 0;        }        .highlight-item {            background: #f8f9fa;            border-radius: 10px;            padding: 1.5rem;            text-align: center;            border: 1px solid #e9ecef;        }        .highlight-label {            font-size: 0.9rem;            color: #6c757d;            margin-bottom: 0.5rem;            text-transform: uppercase;            letter-spacing: 0.5px;        }        .highlight-value {            font-size: 1.2rem;            font-weight: 600;            color: #2c3e50;        }        /* Career Opportunities */        .career-grid {            display: grid;            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));            gap: 1rem;            margin: 2rem 0;        }        .career-item {            background: #fff;            border: 1px solid #e9ecef;            border-radius: 8px;            padding: 1rem;            text-align: center;            transition: all 0.3s ease;        }        .career-item:hover {            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            color: white;            transform: translateY(-3px);        }        .career-item:hover .career-role {            color: white;        }        .career-role {            font-weight: 600;            color: #2c3e50;            margin: 0;        }        /* University Features */        .features-list {            list-style: none;            padding: 0;        }        .feature-item {            display: flex;            align-items: flex-start;            gap: 1rem;            margin-bottom: 1rem;            padding: 1rem;            background: #f8f9fa;            border-radius: 8px;            transition: all 0.3s ease;        }        .feature-item:hover {            background: #e9ecef;            transform: translateX(5px);        }        .feature-icon {            color: #4361ee;            font-size: 1.2rem;            margin-top: 0.2rem;        }        .feature-content {            flex: 1;        }        /* Sidebar Styles */        .sidebar-card {            background: #fff;            border-radius: 15px;            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);            padding: 1.5rem;            margin-bottom: 2rem;            border: 1px solid #f1f3f4;        }        .sidebar-title {            font-size: 1.3rem;            font-weight: 700;            color: #2c3e50;            margin-bottom: 1.5rem;            position: relative;            padding-bottom: 0.5rem;        }        .sidebar-title::after {            content: '';            position: absolute;            bottom: 0;            left: 0;            width: 40px;            height: 3px;            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            border-radius: 2px;        }        .social-stats {            display: flex;            flex-direction: column;            gap: 1rem;        }        .social-stat-item {            display: flex;            align-items: center;            gap: 1rem;            padding: 1rem;            background: #f8f9fa;            border-radius: 10px;            transition: all 0.3s ease;        }        .social-stat-item:hover {            background: #e9ecef;            transform: translateX(5px);        }        .social-icon {            width: 50px;            height: 50px;            border-radius: 50%;            display: flex;            align-items: center;            justify-content: center;            color: white;            font-size: 1.2rem;        }        .social-info {            flex: 1;        }        .social-count {            font-size: 1.3rem;            font-weight: 700;            color: #2c3e50;        }        .social-label {            font-size: 0.9rem;            color: #6c757d;        }        .news-poster {            border-radius: 12px;            overflow: hidden;            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);        }        .news-poster img {            width: 100%;            height: auto;            transition: transform 0.3s ease;        }        .news-poster:hover img {            transform: scale(1.05);        }        /* Call to Action */        .cta-section {            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);            color: white;            padding: 3rem 2.5rem;            border-radius: 15px;            text-align: center;            margin-top: 3rem;        }        .cta-title {            font-size: 2rem;            font-weight: 700;            margin-bottom: 1rem;        }        .cta-description {            font-size: 1.1rem;            margin-bottom: 2rem;            opacity: 0.9;        }        .cta-button {            background: white;            color: #4361ee;            border: none;            padding: 12px 30px;            border-radius: 50px;            font-weight: 600;            font-size: 1.1rem;            transition: all 0.3s ease;        }        .cta-button:hover {            transform: translateY(-3px);            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);        }        /* Responsive Design */        @media (max-width: 1200px) {            .blog-title {                font-size: 2.2rem;            }            .blog-body {                padding: 1.5rem 2rem;            }        }        @media (max-width: 992px) {            .blog-hero-image {                height: 300px;            }            .blog-title {                font-size: 2rem;            }            .section-title {                font-size: 1.6rem;            }            .blog-text {                font-size: 1.05rem;            }            .benefits-grid {                grid-template-columns: 1fr;            }        }        @media (max-width: 768px) {            .blog-header {                padding: 2rem 1.5rem 1rem;            }            .blog-body {                padding: 1.5rem;            }            .blog-title {                font-size: 1.8rem;            }            .blog-meta {                flex-direction: column;                align-items: flex-start;                gap: 0.75rem;            }            .section-title {                font-size: 1.4rem;            }            .benefit-card {                padding: 1.25rem;            }            .cta-section {                padding: 2rem 1.5rem;            }            .cta-title {                font-size: 1.6rem;            }            .highlights-grid {                grid-template-columns: 1fr;            }            .career-grid {                grid-template-columns: repeat(2, 1fr);            }        }        @media (max-width: 576px) {            .blog-hero-image {                height: 250px;            }            .blog-header {                padding: 1.5rem 1rem 0.75rem;            }            .blog-body {                padding: 1rem;            }            .blog-title {                font-size: 1.6rem;            }            .section-title {                font-size: 1.3rem;            }            .blog-text {                font-size: 1rem;            }            .highlight-text {                padding: 1rem;            }            .cta-section {                padding: 1.5rem 1rem;            }            .cta-title {                font-size: 1.4rem;            }            .cta-button {                width: 100%;            }            .career-grid {                grid-template-columns: 1fr;            }        }        /* Animation */        @keyframes fadeInUp {            from {                opacity: 0;                transform: translateY(30px);            }            to {                opacity: 1;                transform: translateY(0);            }        }        .blog-content {            animation: fadeInUp 0.6s ease-out;        }        .benefit-card, .specialization-card, .career-item {            animation: fadeInUp 0.6s ease-out;        }    </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"     crossorigin="anonymous"></script></head>
     
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

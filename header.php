@@ -3,7 +3,10 @@ if (!defined('COLLEGEALL_BOOTSTRAPPED')) {
     require_once __DIR__ . '/config/bootstrap.php';
 }
 echo render_app_config_script();
+require_once __DIR__ . '/includes/google-tracking.php';
 ?>
+<link rel="stylesheet" href="<?php echo asset_url('/assets/css/toast.css'); ?>">
+<script src="<?php echo asset_url('/assets/js/toast.js'); ?>"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNHD5DRD" height="0" width="0"

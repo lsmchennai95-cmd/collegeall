@@ -3,348 +3,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-  <title>Universal Data Converter — JSON, CSV & Excel to JSON / PHP / SQL (Client-Side Tool)</title>
-  <meta name="description" content="Convert JSON, CSV, and Excel files directly in your browser with this fast client-side data converter. Generate JSON, PHP arrays, MySQL INSERT queries, Python lists, and CSV exports — no server required. Upload or paste your data and download all formats instantly." />
-  <meta name="keywords" content="json to php converter, json to sql converter, excel to json converter, csv to json converter, csv to sql converter, excel to sql converter, json to python list, data converter tool, client-side data converter, online data format converter, json converter, csv converter, excel converter, mysql insert generator, php array generator">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-  <style>
-    :root {
-      --primary-color: #004aad;
-      --secondary-color: #2074ff;
-      --accent-color: #ff3131;
-      --light-color: #f8f9fa;
-      --dark-color: #343a40;
-      --success-color: #51cf66;
-      --warning-color: #ffc107;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-      --border-radius: 12px;
-      --transition: all 0.18s ease;
-      --mono: "Courier New", monospace;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
-      color: var(--dark-color);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .data-converter .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .data-converter header {
-      background: #fff;
-      padding: 24px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .data-converter header::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    }
-
-    .data-converter header h1 {
-      color: var(--primary-color);
-      margin-bottom: 6px;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-    }
-
-    .data-converter .description {
-      color: #6c757d;
-      margin: 0 auto;
-      max-width: 900px;
-      font-size: 1rem;
-    }
-
-    .data-converter .panel {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    .data-converter .card {
-      background: #fff;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      flex: 1 1 360px;
-      min-width: 300px;
-    }
-
-    .data-converter h2 {
-      color: var(--secondary-color);
-      margin: 0 0 12px 0;
-      font-size: 1.2rem;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .data-converter label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #333;
-    }
-
-    .data-converter input[type="text"],
-    textarea,
-    select {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #e6e9ef;
-      font-size: 14px;
-      background: linear-gradient(180deg, #fff, #fbfdff);
-    }
-
-    .data-converter textarea {
-      min-height: 140px;
-      font-family: var(--mono);
-      resize: vertical;
-    }
-
-    .data-converter .file-input-wrapper {
-      position: relative;
-      overflow: hidden;
-      display: block;
-    }
-
-    .data-converter .file-input-button {
-      border: 2px dashed #adb5bd;
-      padding: 12px;
-      border-radius: 10px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--dark-color);
-      background: #f8f9fa;
-      font-weight: 700;
-    }
-
-    .data-converter .file-input-wrapper input[type=file] {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      cursor: pointer;
-    }
-
-    .data-converter .file-name {
-      margin-top: 10px;
-      color: #6c757d;
-      font-size: 14px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .data-converter .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .data-converter .checkbox-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .data-converter .actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 14px;
-      flex-wrap: wrap;
-    }
-
-    .data-converter button {
-      border: none;
-      padding: 12px 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 14px;
-      background: var(--primary-color);
-      color: #fff;
-    }
-
-    .data-converter button.ghost {
-      background: transparent;
-      color: var(--primary-color);
-      border: 1px solid rgba(74, 111, 165, 0.12);
-      box-shadow: none;
-    }
-
-    .data-converter button.secondary {
-      background: #6c757d;
-    }
-
-    .data-converter button.success {
-      background: var(--success-color);
-      color: #000;
-    }
-
-    .data-converter button.warning {
-      background: var(--warning-color);
-      color: #000;
-    }
-
-    .data-converter .result {
-      margin-top: 16px;
-      display: none;
-    }
-
-    .data-converter .output-section {
-      margin-top: 12px;
-      border-radius: 8px;
-      border: 1px solid #eee;
-      padding: 12px;
-      background: #fbfdff;
-    }
-
-    .data-converter .output-section h4 {
-      margin: 0 0 8px 0;
-      color: var(--secondary-color);
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .data-converter .preview {
-      margin-top: 14px;
-      max-height: 300px;
-      overflow: auto;
-      border-radius: 8px;
-      border: 1px solid #eee;
-      padding: 12px;
-      background: #fff;
-    }
-
-    .data-converter table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-    }
-
-    .data-converter th,
-    td {
-      border: 1px solid #eee;
-      padding: 8px;
-      text-align: left;
-    }
-
-    .data-converter th {
-      background: #f6f8fb;
-      position: sticky;
-      top: 0;
-    }
-
-    .data-converter .instructions {
-      background: #e7f3ff;
-      padding: 14px;
-      margin-top: 18px;
-      border-radius: 8px;
-      border-left: 4px solid var(--primary-color);
-    }
-
-    .data-converter .status-indicator {
-      display: inline-flex;
-      gap: 6px;
-      align-items: center;
-      padding: 6px 10px;
-      border-radius: 18px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-
-    .data-converter .status-ready {
-      background: #d4edda;
-      color: #155724;
-    }
-
-    .data-converter .status-waiting {
-      background: #fff3cd;
-      color: #856404;
-    }
-
-    .toast {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--success-color);
-      color: #fff;
-      padding: 12px 16px;
-      border-radius: 8px;
-      box-shadow: var(--shadow-lg);
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      transform: translateY(100px);
-      opacity: 0;
-      transition: var(--transition);
-      z-index: 9999;
-    }
-
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .toast.error {
-      background: var(--accent-color);
-    }
-
-    @media (max-width:760px) {
-      .panel {
-        flex-direction: column;
-      }
-
-      .card {
-        width: 100%;
+    <title>Universal Data Converter — JSON, CSV & Excel to JSON / PHP / SQL (Client-Side Tool)</title>
+    <meta name="description" content="Convert JSON, CSV, and Excel files directly in your browser with this fast client-side data converter. Generate JSON, PHP arrays, MySQL INSERT queries, Python lists, and CSV exports — no server required. Upload or paste your data and download all formats instantly.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/data-convertor.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Universal Data Converter — JSON, CSV & Excel to JSON / PHP / SQL (Client-Side Tool)">
+    <meta property="og:description" content="Convert JSON, CSV, and Excel files directly in your browser with this fast client-side data converter. Generate JSON, PHP arrays, MySQL INSERT queries, Python lists, and CSV exports — no server required. Upload or paste your data and download all formats instantly.">
+    <meta property="og:url" content="https://collegeall.com/tools/data-convertor.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Universal Data Converter — JSON, CSV & Excel to JSON / PHP / SQL (Client-Side Tool)">
+    <meta name="twitter:description" content="Convert JSON, CSV, and Excel files directly in your browser with this fast client-side data converter. Generate JSON, PHP arrays, MySQL INSERT queries, Python lists, and CSV exports — no server required. Upload or paste your data and download all formats instantly.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Universal Data Converter",
+      "description": "Convert JSON, CSV, and Excel files directly in your browser with this fast client-side data converter. Generate JSON, PHP arrays, MySQL INSERT queries, Python lists, and CSV exports — no server required. Upload or paste your data and download all formats instantly.",
+      "url": "https://collegeall.com/tools/data-convertor.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
       }
     }
-  </style>
-</head>
+    </script>
+  <meta charset="utf-8" />  <meta name="viewport" content="width=device-width,initial-scale=1" />  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">  <meta name="keywords" content="json to php converter, json to sql converter, excel to json converter, csv to json converter, csv to sql converter, excel to sql converter, json to python list, data converter tool, client-side data converter, online data format converter, json converter, csv converter, excel converter, mysql insert generator, php array generator">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">  <style>    :root {      --primary-color: #004aad;      --secondary-color: #2074ff;      --accent-color: #ff3131;      --light-color: #f8f9fa;      --dark-color: #343a40;      --success-color: #51cf66;      --warning-color: #ffc107;      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);      --border-radius: 12px;      --transition: all 0.18s ease;      --mono: "Courier New", monospace;    }    * {      box-sizing: border-box;    }    html,    body {      height: 100%;    }    body {      margin: 0;      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;      background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);      color: var(--dark-color);      -webkit-font-smoothing: antialiased;      -moz-osx-font-smoothing: grayscale;    }    .data-converter .container {      max-width: 1200px;      margin: 0 auto;    }    .data-converter header {      background: #fff;      padding: 24px;      border-radius: var(--border-radius);      box-shadow: var(--shadow);      text-align: center;      margin-bottom: 20px;      position: relative;      overflow: hidden;    }    .data-converter header::before {      content: "";      position: absolute;      left: 0;      top: 0;      width: 100%;      height: 4px;      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));    }    .data-converter header h1 {      color: var(--primary-color);      margin-bottom: 6px;      font-size: clamp(1.6rem, 3vw, 2.2rem);    }    .data-converter .description {      color: #6c757d;      margin: 0 auto;      max-width: 900px;      font-size: 1rem;    }    .data-converter .panel {      display: flex;      gap: 20px;      flex-wrap: wrap;      margin-top: 18px;    }    .data-converter .card {      background: #fff;      padding: 18px;      border-radius: 12px;      box-shadow: var(--shadow);      flex: 1 1 360px;      min-width: 300px;    }    .data-converter h2 {      color: var(--secondary-color);      margin: 0 0 12px 0;      font-size: 1.2rem;      display: flex;      gap: 10px;      align-items: center;    }    .data-converter label {      display: block;      margin-bottom: 8px;      font-weight: 600;      color: #333;    }    .data-converter input[type="text"],    textarea,    select {      width: 100%;      padding: 12px;      border-radius: 8px;      border: 1px solid #e6e9ef;      font-size: 14px;      background: linear-gradient(180deg, #fff, #fbfdff);    }    .data-converter textarea {      min-height: 140px;      font-family: var(--mono);      resize: vertical;    }    .data-converter .file-input-wrapper {      position: relative;      overflow: hidden;      display: block;    }    .data-converter .file-input-button {      border: 2px dashed #adb5bd;      padding: 12px;      border-radius: 10px;      display: flex;      gap: 8px;      align-items: center;      justify-content: center;      cursor: pointer;      color: var(--dark-color);      background: #f8f9fa;      font-weight: 700;    }    .data-converter .file-input-wrapper input[type=file] {      position: absolute;      left: 0;      top: 0;      width: 100%;      height: 100%;      opacity: 0;      cursor: pointer;    }    .data-converter .file-name {      margin-top: 10px;      color: #6c757d;      font-size: 14px;      display: flex;      gap: 8px;      align-items: center;    }    .data-converter .checkbox-group {      display: flex;      flex-wrap: wrap;      gap: 10px;      margin-top: 8px;    }    .data-converter .checkbox-item {      display: flex;      align-items: center;      gap: 8px;    }    .data-converter .actions {      display: flex;      gap: 10px;      margin-top: 14px;      flex-wrap: wrap;    }    .data-converter button {      border: none;      padding: 12px 16px;      border-radius: 10px;      cursor: pointer;      font-weight: 700;      font-size: 14px;      background: var(--primary-color);      color: #fff;    }    .data-converter button.ghost {      background: transparent;      color: var(--primary-color);      border: 1px solid rgba(74, 111, 165, 0.12);      box-shadow: none;    }    .data-converter button.secondary {      background: #6c757d;    }    .data-converter button.success {      background: var(--success-color);      color: #000;    }    .data-converter button.warning {      background: var(--warning-color);      color: #000;    }    .data-converter .result {      margin-top: 16px;      display: none;    }    .data-converter .output-section {      margin-top: 12px;      border-radius: 8px;      border: 1px solid #eee;      padding: 12px;      background: #fbfdff;    }    .data-converter .output-section h4 {      margin: 0 0 8px 0;      color: var(--secondary-color);      display: flex;      gap: 8px;      align-items: center;    }    .data-converter .preview {      margin-top: 14px;      max-height: 300px;      overflow: auto;      border-radius: 8px;      border: 1px solid #eee;      padding: 12px;      background: #fff;    }    .data-converter table {      width: 100%;      border-collapse: collapse;      font-size: 13px;    }    .data-converter th,    td {      border: 1px solid #eee;      padding: 8px;      text-align: left;    }    .data-converter th {      background: #f6f8fb;      position: sticky;      top: 0;    }    .data-converter .instructions {      background: #e7f3ff;      padding: 14px;      margin-top: 18px;      border-radius: 8px;      border-left: 4px solid var(--primary-color);    }    .data-converter .status-indicator {      display: inline-flex;      gap: 6px;      align-items: center;      padding: 6px 10px;      border-radius: 18px;      font-weight: 700;      font-size: 13px;    }    .data-converter .status-ready {      background: #d4edda;      color: #155724;    }    .data-converter .status-waiting {      background: #fff3cd;      color: #856404;    }    .toast {      position: fixed;      bottom: 20px;      right: 20px;      background: var(--success-color);      color: #fff;      padding: 12px 16px;      border-radius: 8px;      box-shadow: var(--shadow-lg);      display: flex;      gap: 10px;      align-items: center;      transform: translateY(100px);      opacity: 0;      transition: var(--transition);      z-index: 9999;    }    .toast.show {      transform: translateY(0);      opacity: 1;    }    .toast.error {      background: var(--accent-color);    }    @media (max-width:760px) {      .panel {        flex-direction: column;      }      .card {        width: 100%;      }    }  </style></head>
 
 <body>
   <?php include COLLEGEALL_ROOT . '/header.php'; ?>

@@ -2,9 +2,24 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+    <title>CollegeAll - Your Gateway to Higher Education</title>
+    <meta name="description" content="Apply for accredited online undergraduate and postgraduate degree programs from leading Indian universities with CollegeAll.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://collegeall.com/landing/01072026/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="CollegeAll - Your Gateway to Higher Education">
+    <meta property="og:description" content="Apply for accredited online undergraduate and postgraduate degree programs from leading Indian universities with CollegeAll.">
+    <meta property="og:url" content="https://collegeall.com/landing/01072026/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="CollegeAll - Your Gateway to Higher Education">
+    <meta name="twitter:description" content="Apply for accredited online undergraduate and postgraduate degree programs from leading Indian universities with CollegeAll.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CollegeAll - Your Gateway to Higher Education</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -48,33 +63,13 @@
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=934599835700729&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
-
-
-
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-BED9GZX87Z');
-  </script>
+  
   <!--Start of Tawk.to Script-->
   <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
   <script id="zsiqscript"
     src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"
     defer=""></script>
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17357684990');
-  </script>
+  
   <!--End of Tawk.to Script-->
   <script
     src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"
@@ -91,33 +86,14 @@
   <link rel="preconnect" href="https://salesiq.zoho.in">
   <link rel="preconnect" href="https://salesiq.zohopublic.in">
   <link rel="preconnect" href="https://static.zohocdn.com">
-  <script type="text/javascript" async=""
-    src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-BED9GZX87Z');
-  </script>
+  
+  
   <!--Start of Tawk.to Script-->
   <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
   <script id="zsiqscript"
     src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"
     defer=""></script>
-  <!-- Google tag (gtag.js) -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17357684990');
-  </script>
+  
   <!--End of Tawk.to Script-->
   <script
     src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"
@@ -134,8 +110,7 @@
   <link rel="preconnect" href="https://salesiq.zoho.in">
   <link rel="preconnect" href="https://salesiq.zohopublic.in">
   <link rel="preconnect" href="https://static.zohocdn.com">
-  <script type="text/javascript" async=""
-    src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
+  
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -154,6 +129,16 @@
       border-radius: 20px;
     }
   </style>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body class="bg-white font-sans">

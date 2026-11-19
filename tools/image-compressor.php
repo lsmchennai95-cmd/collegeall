@@ -2,79 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Image Compressor — Reduce Image Size Online (JPG, PNG, WebP) Fast</title>
     <meta name="description" content="Compress JPG, PNG, and WebP images online without losing quality. Upload multiple images, set quality, resize dimensions, choose output format, and download all compressed files instantly. Fast processing, drag-and-drop upload, and smart size savings.">
-    <meta name="keywords" content="mage compressor, online image compressor, compress jpg, compress png, compress webp, reduce image size online, image resize and compress, batch image compressor, photo compressor online, image optimization tool, free image compressor">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        :root {
-            --primary-color: #4361ee;
-            --secondary-color: #3a0ca3;
-            --accent-color: #7209b7;
-            --light-color: #f8f9fa;
-            --dark-color: #212529;
-        }
-
-        .compressor-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin: 20px 0;
-        }
-
-        .upload-area {
-            border: 3px dashed #4361ee;
-            border-radius: 15px;
-            padding: 40px 20px;
-            text-align: center;
-            background: #f8f9ff;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .upload-area:hover {
-            background: #eef2ff;
-            transform: translateY(-2px);
-        }
-
-        .preview-container {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .compression-stats {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 25px;
-        }
-
-        .progress-ring {
-            transform: rotate(-90deg);
-        }
-
-        .compression-options {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-        }
-
-        #qualityRange {
-            appearance: auto;
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/image-compressor.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Image Compressor — Reduce Image Size Online (JPG, PNG, WebP) Fast">
+    <meta property="og:description" content="Compress JPG, PNG, and WebP images online without losing quality. Upload multiple images, set quality, resize dimensions, choose output format, and download all compressed files instantly. Fast processing, drag-and-drop upload, and smart size savings.">
+    <meta property="og:url" content="https://collegeall.com/tools/image-compressor.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Image Compressor — Reduce Image Size Online (JPG, PNG, WebP) Fast">
+    <meta name="twitter:description" content="Compress JPG, PNG, and WebP images online without losing quality. Upload multiple images, set quality, resize dimensions, choose output format, and download all compressed files instantly. Fast processing, drag-and-drop upload, and smart size savings.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Image Compressor",
+      "description": "Compress JPG, PNG, and WebP images online without losing quality. Upload multiple images, set quality, resize dimensions, choose output format, and download all compressed files instantly. Fast processing, drag-and-drop upload, and smart size savings.",
+      "url": "https://collegeall.com/tools/image-compressor.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="mage compressor, online image compressor, compress jpg, compress png, compress webp, reduce image size online, image resize and compress, batch image compressor, photo compressor online, image optimization tool, free image compressor">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <style>        :root {            --primary-color: #4361ee;            --secondary-color: #3a0ca3;            --accent-color: #7209b7;            --light-color: #f8f9fa;            --dark-color: #212529;        }        .compressor-container {            background: white;            border-radius: 20px;            box-shadow: 0 15px 50px rgba(0,0,0,0.1);            padding: 30px;            margin: 20px 0;        }        .upload-area {            border: 3px dashed #4361ee;            border-radius: 15px;            padding: 40px 20px;            text-align: center;            background: #f8f9ff;            cursor: pointer;            transition: all 0.3s ease;        }        .upload-area:hover {            background: #eef2ff;            transform: translateY(-2px);        }        .preview-container {            position: relative;            border-radius: 15px;            overflow: hidden;            box-shadow: 0 5px 15px rgba(0,0,0,0.1);        }        .compression-stats {            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            color: white;            border-radius: 15px;            padding: 25px;        }        .progress-ring {            transform: rotate(-90deg);        }        .compression-options {            background: #f8f9fa;            border-radius: 15px;            padding: 25px;        }        #qualityRange {            appearance: auto;        }    </style></head>
 <body class="bg-light">
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="container py-5">

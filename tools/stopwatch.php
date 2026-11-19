@@ -3,206 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Stopwatch — Online Timer with Laps, CSV Export & Split Time Tracking</title>
     <meta name="description" content="Use this free online stopwatch to track time accurately with lap recording, split tracking, pause/resume, and CSV export. Fast, responsive, keyboard-friendly, and ideal for productivity, workouts, events, and timing tasks.">
-    <meta name="keywords" content="stopwatch online, stopwatch timer, lap timer, online stopwatch with laps, stopwatch csv export, time tracker online, split time stopwatch, web stopwatch, free stopwatch tool, timer with laps">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --accent: #6ee7b7;
-            --muted: #94a3b8;
-            --glass: rgba(255, 255, 255, 0.04);
-            --radius: 14px;
-            --glass-2: rgba(255, 255, 255, 0.02);
-        }
-
-        .wrap {
-            min-height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .wrap .card {
-            width: 920px;
-            max-width: 96vw;
-            background: linear-gradient(180deg, var(--card), rgba(11, 18, 32, 0.9));
-            border-radius: var(--radius);
-            padding: 28px;
-            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
-            display: grid;
-            grid-template-columns: 1fr 360px;
-            gap: 20px
-        }
-
-        .wrap .header {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 12px
-        }
-
-        .wrap .title {
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 0.2px;
-            color: var(--accent);
-        }
-
-        .wrap .subtitle {
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .wrap .display {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            gap: 14px;
-            align-items: center;
-            justify-content: center;
-            padding: 22px;
-            border-radius: 12px;
-            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
-            backdrop-filter: blur(4px)
-        }
-
-        .wrap .time {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
-            font-size: 48px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .wrap .controls {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center
-        }
-
-        .wrap button {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            color: var(--accent);
-            padding: 10px 14px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform .12s ease, opacity .12s
-        }
-
-        .wrap button:active {
-            transform: translateY(1px)
-        }
-
-        .wrap button.secondary {
-            background: transparent;
-            color: var(--muted);
-            border: 1px dashed rgba(255, 255, 255, 0.03);
-            font-weight: 600
-        }
-
-        .wrap button.positive {
-            background: linear-gradient(90deg, #10b981, #34d399);
-            color: #021018;
-            border: 0
-        }
-
-        .wrap button.warn {
-            background: linear-gradient(90deg, #f97316, #fb923c);
-            color: #2b0f00;
-            border: 0
-        }
-
-        .wrap .right-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 12px
-        }
-
-        .wrap .panel {
-            background: var(--glass-2);
-            padding: 14px;
-            border-radius: 12px;
-            min-height: 120px;
-            overflow: auto
-        }
-
-        .wrap .laps {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px
-        }
-
-        .wrap .lap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px;
-            border-radius: 8px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
-            border: 1px solid rgba(255, 255, 255, 0.01)
-        }
-
-        .wrap .lap strong {
-            font-family: ui-monospace, monospace
-        }
-
-        .wrap .lap small {
-            color: var(--muted);
-            font-size: 12px
-        }
-
-        .wrap .actions {
-            display: flex;
-            gap: 8px;
-            align-items: center
-        }
-
-        .wrap .meta {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .wrap .toolbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center
-        }
-
-        .wrap .search {
-            width: 100%;
-            padding: 8px;
-            border-radius: 10px;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            color: inherit
-        }
-
-        @media (max-width:880px) {
-            .wrap .card {
-                grid-template-columns: 1fr
-            }
-
-            .wrap .time{
-                font-size: 24px;
-            }
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/stopwatch.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Stopwatch — Online Timer with Laps, CSV Export & Split Time Tracking">
+    <meta property="og:description" content="Use this free online stopwatch to track time accurately with lap recording, split tracking, pause/resume, and CSV export. Fast, responsive, keyboard-friendly, and ideal for productivity, workouts, events, and timing tasks.">
+    <meta property="og:url" content="https://collegeall.com/tools/stopwatch.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Stopwatch — Online Timer with Laps, CSV Export & Split Time Tracking">
+    <meta name="twitter:description" content="Use this free online stopwatch to track time accurately with lap recording, split tracking, pause/resume, and CSV export. Fast, responsive, keyboard-friendly, and ideal for productivity, workouts, events, and timing tasks.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Stopwatch",
+      "description": "Use this free online stopwatch to track time accurately with lap recording, split tracking, pause/resume, and CSV export. Fast, responsive, keyboard-friendly, and ideal for productivity, workouts, events, and timing tasks.",
+      "url": "https://collegeall.com/tools/stopwatch.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="stopwatch online, stopwatch timer, lap timer, online stopwatch with laps, stopwatch csv export, time tracker online, split time stopwatch, web stopwatch, free stopwatch tool, timer with laps">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <style>        :root {            --bg: #0f1724;            --card: #0b1220;            --accent: #6ee7b7;            --muted: #94a3b8;            --glass: rgba(255, 255, 255, 0.04);            --radius: 14px;            --glass-2: rgba(255, 255, 255, 0.02);        }        .wrap {            min-height: 100%;            display: flex;            align-items: center;            justify-content: center;        }        .wrap .card {            width: 920px;            max-width: 96vw;            background: linear-gradient(180deg, var(--card), rgba(11, 18, 32, 0.9));            border-radius: var(--radius);            padding: 28px;            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);            display: grid;            grid-template-columns: 1fr 360px;            gap: 20px        }        .wrap .header {            display: flex;            flex-wrap: wrap;            flex-direction: column;            gap: 12px        }        .wrap .title {            font-size: 20px;            font-weight: 700;            letter-spacing: 0.2px;            color: var(--accent);        }        .wrap .subtitle {            color: var(--muted);            font-size: 13px        }        .wrap .display {            display: flex;            flex-wrap: wrap;            flex-direction: column;            gap: 14px;            align-items: center;            justify-content: center;            padding: 22px;            border-radius: 12px;            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);            backdrop-filter: blur(4px)        }        .wrap .time {            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;            font-size: 48px;            font-weight: 700;            color: white;        }        .wrap .controls {            display: flex;            gap: 10px;            flex-wrap: wrap;            justify-content: center        }        .wrap button {            background: var(--glass);            border: 1px solid rgba(255, 255, 255, 0.03);            color: var(--accent);            padding: 10px 14px;            border-radius: 10px;            font-weight: 700;            cursor: pointer;            transition: transform .12s ease, opacity .12s        }        .wrap button:active {            transform: translateY(1px)        }        .wrap button.secondary {            background: transparent;            color: var(--muted);            border: 1px dashed rgba(255, 255, 255, 0.03);            font-weight: 600        }        .wrap button.positive {            background: linear-gradient(90deg, #10b981, #34d399);            color: #021018;            border: 0        }        .wrap button.warn {            background: linear-gradient(90deg, #f97316, #fb923c);            color: #2b0f00;            border: 0        }        .wrap .right-panel {            display: flex;            flex-direction: column;            gap: 12px        }        .wrap .panel {            background: var(--glass-2);            padding: 14px;            border-radius: 12px;            min-height: 120px;            overflow: auto        }        .wrap .laps {            list-style: none;            margin: 0;            padding: 0;            display: flex;            flex-direction: column;            gap: 8px        }        .wrap .lap {            display: flex;            justify-content: space-between;            align-items: center;            padding: 8px;            border-radius: 8px;            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);            border: 1px solid rgba(255, 255, 255, 0.01)        }        .wrap .lap strong {            font-family: ui-monospace, monospace        }        .wrap .lap small {            color: var(--muted);            font-size: 12px        }        .wrap .actions {            display: flex;            gap: 8px;            align-items: center        }        .wrap .meta {            font-size: 13px;            color: var(--muted)        }        .wrap .toolbar {            display: flex;            justify-content: space-between;            align-items: center        }        .wrap .search {            width: 100%;            padding: 8px;            border-radius: 10px;            background: transparent;            border: 1px solid rgba(255, 255, 255, 0.02);            color: inherit        }        @media (max-width:880px) {            .wrap .card {                grid-template-columns: 1fr            }            .wrap .time{                font-size: 24px;            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

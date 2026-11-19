@@ -1,17 +1,8 @@
 <?php
-/**
- * CollegeAll Environment Loader
- * Handles loading and parsing .env file safely without external dependencies.
- */
+ 
 
 if (!function_exists('env')) {
-    /**
-     * Get an environment variable with optional default value.
-     *
-     * @param string $key
-     * @param mixed $default
-     * @return mixed
-     */
+    
     function env(string $key, $default = null) {
         $val = getenv($key);
         if ($val !== false) {
@@ -28,12 +19,7 @@ if (!function_exists('env')) {
 }
 
 if (!function_exists('parse_env_value')) {
-    /**
-     * Normalize boolean and null string values.
-     *
-     * @param mixed $val
-     * @return mixed
-     */
+     
     function parse_env_value($val) {
         if (!is_string($val)) {
             return $val;
@@ -58,12 +44,7 @@ if (!function_exists('parse_env_value')) {
 }
 
 if (!function_exists('load_dotenv')) {
-    /**
-     * Load environment variables from a .env file.
-     *
-     * @param string $filePath
-     * @return bool
-     */
+    
     function load_dotenv(string $filePath): bool {
         if (!file_exists($filePath)) {
             return false;

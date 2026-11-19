@@ -34,8 +34,9 @@
     <meta property="og:description"
         content="Get your MBA, MCA or BBA online from leading universities with College All. Affordable, flexible, and recognized degrees.">
     <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
-    <meta property="og:url" content="https://www.collegeall.com">
-    <meta property="og:site_name" content="College All">
+    <meta property="og:url" content="<?php echo canonical_url('/'); ?>">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -45,35 +46,26 @@
     <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
     <meta name="twitter:site" content="@CollegeAll">
 
-    <!-- Robots -->
+    <!-- Canonical & Robots -->
     <meta name="robots" content="index, follow">
-    <meta property="og:site_name" content="collegeall">
+    <link rel="canonical" href="<?php echo canonical_url('/'); ?>">
 
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-BED9GZX87Z');
+    <!-- JSON-LD Structured Data: Organization & WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            <?php echo json_encode(schema_organization(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>,
+            <?php echo json_encode(schema_website(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+        ]
+    }
     </script>
+
     <!--Start of Tawk.to Script-->
     <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
     <script id="zsiqscript"
         src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"
         defer=""></script>
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17357684990');
-    </script>
-    <!--End of Tawk.to Script-->
     <script
         src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"
         type="module" id="zsiqscript"></script>
@@ -89,51 +81,6 @@
     <link rel="preconnect" href="https://salesiq.zoho.in">
     <link rel="preconnect" href="https://salesiq.zohopublic.in">
     <link rel="preconnect" href="https://static.zohocdn.com">
-    <script type="text/javascript" async=""
-        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-BED9GZX87Z');
-    </script>
-    <!--Start of Tawk.to Script-->
-    <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
-    <script id="zsiqscript"
-        src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"
-        defer=""></script>
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17357684990');
-    </script>
-    <!--End of Tawk.to Script-->
-    <script
-        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"
-        type="module" id="zsiqscript"></script>
-    <script
-        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float.6oxmOj-1LlWpBG0Y32uXBBFcM03Y6QJpjb5zovjkQ4EUYOiCF65QS5mXs8O3NReZ.js"
-        type="nomodule" id="zsiqscript"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://css.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/css/float.j4IQ5NS9yIbjoXqwszMx1vHYVv0z7PoN_dm5TUmt0uhI7AkN5U2jVhDoruy4YwNF.css">
-    <link rel="preconnect" href="https://js.zohocdn.com">
-    <link rel="preconnect" href="https://css.zohocdn.com">
-    <link rel="preconnect" href="https://in2-files.zohopublic.in">
-    <link rel="preconnect" href="https://salesiq.zohopublic.in">
-    <link rel="preconnect" href="https://salesiq.zoho.in">
-    <link rel="preconnect" href="https://salesiq.zohopublic.in">
-    <link rel="preconnect" href="https://static.zohocdn.com">
-    <script type="text/javascript" async=""
-        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
         crossorigin="anonymous"></script>
@@ -156,7 +103,7 @@
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=1631654661184491&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
-    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PS38BM3S"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date()); </script>
+    
  
 </head>
 
@@ -1135,7 +1082,7 @@
                             sessionStorage.setItem("userId", result.data.insertId);
                             return fetch("./verify-otp/");
                         } else {
-                            alert(result.message)
+                            if (typeof window.showToast === 'function') { const isWarn = /already|exist|duplicate|invalid/i.test(result.message || ''); window.showToast(result.message || 'Registration failed.', isWarn ? 'warning' : 'error'); }
                         }
 
 
@@ -1148,7 +1095,7 @@
                     })
                     .catch(error => {
                         console.error("Error:", error);
-                        alert("❌ " + error.message);
+                        if (typeof window.showToast === 'function') { window.showToast('Connection error: ' + error.message, 'error'); }
                     });
             }
 

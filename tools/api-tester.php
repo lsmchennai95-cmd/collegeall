@@ -2,74 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>API Tester — Online REST API Client with Auth, Headers & JSON Formatter</title>
     <meta name="description" content="Test any REST API online with this advanced API Tester. Send GET, POST, PUT, DELETE, or PATCH requests with custom headers, JSON body, authentication (Bearer, Basic, API Key), timeout control, and live response formatting. Save request history and collections for fast reuse.">
-    <meta name="keywords" content="api tester, online api tester, rest api client, json api tester, test api online, api tool, http request tester, postman alternative, api headers tester, bearer token tester, api key tester, basic auth api test, debug api online, web api testing tool">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-
-    <style>
-        :root {
-            --primary-color: #4361ee;
-            --secondary-color: #3a0ca3;
-        }
-
-        .api-tester-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
-            padding: 30px;
-            margin: 20px 0;
-        }
-
-        .method-badge {
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        .method-get { background: #d4edda; color: #155724; }
-        .method-post { background: #d1ecf1; color: #0c5460; }
-        .method-put { background: #fff3cd; color: #856404; }
-        .method-delete { background: #f8d7da; color: #721c24; }
-        .method-patch { background: #e2e3e5; color: #383d41; }
-
-        .response-area {
-            min-height: 300px;
-            max-height: 500px;
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-        }
-
-        .history-item {
-            border-left: 4px solid #4361ee;
-            padding: 10px 15px;
-            margin: 5px 0;
-            background: #f8f9fa;
-            border-radius: 0 8px 8px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .history-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-
-        .tab-pane {
-            padding: 20px;
-            border: 1px solid #dee2e6;
-            border-top: none;
-            border-radius: 0 0 8px 8px;
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/api-tester.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="API Tester — Online REST API Client with Auth, Headers & JSON Formatter">
+    <meta property="og:description" content="Test any REST API online with this advanced API Tester. Send GET, POST, PUT, DELETE, or PATCH requests with custom headers, JSON body, authentication (Bearer, Basic, API Key), timeout control, and live response formatting. Save request history and collections for fast reuse.">
+    <meta property="og:url" content="https://collegeall.com/tools/api-tester.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="API Tester — Online REST API Client with Auth, Headers & JSON Formatter">
+    <meta name="twitter:description" content="Test any REST API online with this advanced API Tester. Send GET, POST, PUT, DELETE, or PATCH requests with custom headers, JSON body, authentication (Bearer, Basic, API Key), timeout control, and live response formatting. Save request history and collections for fast reuse.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "API Tester",
+      "description": "Test any REST API online with this advanced API Tester. Send GET, POST, PUT, DELETE, or PATCH requests with custom headers, JSON body, authentication (Bearer, Basic, API Key), timeout control, and live response formatting. Save request history and collections for fast reuse.",
+      "url": "https://collegeall.com/tools/api-tester.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="api tester, online api tester, rest api client, json api tester, test api online, api tool, http request tester, postman alternative, api headers tester, bearer token tester, api key tester, basic auth api test, debug api online, web api testing tool">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --primary-color: #4361ee;            --secondary-color: #3a0ca3;        }        .api-tester-container {            background: white;            border-radius: 20px;            box-shadow: 0 15px 50px rgba(0,0,0,0.1);            padding: 30px;            margin: 20px 0;        }        .method-badge {            padding: 8px 16px;            border-radius: 8px;            font-weight: 600;        }        .method-get { background: #d4edda; color: #155724; }        .method-post { background: #d1ecf1; color: #0c5460; }        .method-put { background: #fff3cd; color: #856404; }        .method-delete { background: #f8d7da; color: #721c24; }        .method-patch { background: #e2e3e5; color: #383d41; }        .response-area {            min-height: 300px;            max-height: 500px;            font-family: 'Courier New', monospace;            font-size: 14px;        }        .history-item {            border-left: 4px solid #4361ee;            padding: 10px 15px;            margin: 5px 0;            background: #f8f9fa;            border-radius: 0 8px 8px 0;            cursor: pointer;            transition: all 0.3s ease;        }        .history-item:hover {            background: #e9ecef;            transform: translateX(5px);        }        .tab-pane {            padding: 20px;            border: 1px solid #dee2e6;            border-top: none;            border-radius: 0 0 8px 8px;        }    </style></head>
 <body class="bg-light">
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>
     <div class="container py-5">

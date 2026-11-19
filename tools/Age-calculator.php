@@ -3,313 +3,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-  <!-- Meta Title -->
-  <title>Age Calculator Online – Calculate Your Age Accurately in Seconds</title>
-
-  <!-- Meta Description -->
-  <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes using our free online Age Calculator. Fast, accurate, and easy to use—just enter your date of birth and get instant results.">
-
-  <!-- Meta Keywords -->
-  <meta name="keywords" content="age calculator, age calculator online, calculate age, date of birth calculator, DOB calculator, age finder, birthday calculator, exact age calculator, online age tool, age in years months days, age counter, how old am I calculator, digital age calculator, free age calculator">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-  <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0f1724;
-      --card: #0b1220;
-      --muted: #9aa6bf;
-      --accent: #60a5fa;
-      --glass: rgba(255, 255, 255, 0.03)
-    }
-
-    /* Navbar start */
-  .navbar {
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
-  }
-
-  .search-input {
-      border: none;
-      outline: none;
-      background: transparent;
-      width: 100%;
-      padding: .6rem 1rem;
-  }
-
-  .search-container {
-      border: 1px solid #e5e7eb;
-      border-radius: 24px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-  }
-
-  .navbar .search-btn {
-      background: none;
-  }
-
-  .btn-ai {
-      background: linear-gradient(135deg, #f03535, #d03e24);
-      color: #fff;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      border-radius: 0 !important;
-      padding: 10px 20px !important;
-  }
-
-  .btn-ai:hover {
-      background: linear-gradient(135deg, #d03e24, #951d1d);
-      color: #fff;
-  }
-
-  .signup-btn {
-      background: var(--primary);
-      color: #fff;
-      border-radius: 0 !important;
-      padding: 10px 20px !important;
-  }
-
-  .signin-btn {
-      border: 1px solid var(--primary) !important;
-      color: var(--primary);
-      border-radius: 0 !important;
-      padding: 10px 20px !important;
-  }
-
-  .signin-btn:hover {
-      background: var(--primary);
-      color: #fff;
-  }
-
-  .signup-btn:hover {
-      background-color: #003c8b;
-      color: #fff;
-  }
-
-  .navbar-toggler:focus {
-      box-shadow: none;
-  }
-
-  .offcanvas .close-btn{
-      background: none;
-      position: absolute;
-      right: 20px;
-      top: 10px;
-  }
-
-  @media(max-width:991px) {
-      .navbar-collapse {
-          display: none !important;
-      }
-  }
-
-  .mobile-action-btns {
-      border-bottom: 1px solid #86888a;
-  }
-
-  .mobile-action-btns .mobile-action-btn {
-      display: flex;
-      align-items: center;
-      gap: .55rem;
-      padding: .65rem 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      width: 100%;
-  }
-
-  .mobile-action-btns .mobile-action-ai {
-      color: #000000 !important;
-  }
-
-  .mobile-action-btns .mobile-action-normal {
-      color: #111 !important;
-  }
-
-  .mobile-action-btns .mobile-action-normal:hover {
-      background: #eceff1;
-  }
-
-  .tools-menu {
-      background: none;
-      border: none;
-  }
-
-  .tools-menu .tools-list{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-  }
-
-  .tools-menu .tool-icon {
-      padding: 5px;
-      transition:.2s;
-  }
-
-  .tool-icon:hover{
-      background:#e9ecef;
-  }
-
-  .tools-dropdown {
-      padding: 10px;
-      font-weight: bold;
-  }
-
-  /* Navbar End */
-
-  body {
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      margin: 0;
-      background: linear-gradient(180deg, #071025 0%, #081227 40%, #041018 100%);
-      color: #e6eef8;
-  }
-    .age-calculator {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .wrap {
-      max-width: 920px;
-      width: 100%;
-      height: 100%;
-    }
-
-    .wrap header {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 18px
-    }
-
-    .wrap h1 {
-      font-size: 20px;
-      margin: 0
-    }
-
-    .wrap p.lead {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px
-    }
-
-    .wrap .card {
-      background: var(--card);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
-    }
-
-    .wrap .grid {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 16px
-    }
-
-    .wrap label {
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 6px
-    }
-
-    .wrap input[type=date] {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--muted);
-    }
-
-    .wrap .meta {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 8px
-    }
-
-    .wrap .results {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 12px
-    }
-
-    .wrap .result {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-      padding: 12px;
-      border-radius: 10px;
-      text-align: center;
-      color: var(--muted);
-    }
-
-    .wrap .result .big {
-      font-size: 22px;
-      font-weight: 600
-    }
-
-    .wrap .muted {
-      color: var(--muted);
-      font-size: 13px
-    }
-
-    .wrap .countdown {
-      font-variant-numeric: tabular-nums;
-      font-size: 18px;
-      font-weight: 600
-    }
-
-    .wrap .controls {
-      display: flex;
-      gap: 8px;
-      margin-top: 12px
-    }
-
-    .wrap button {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--muted);
-      padding: 8px 12px;
-      border-radius: 10px;
-      cursor: pointer; 
-    }
-
-    .wrap .btn-accent {
-      border-color: transparent;
-      background: linear-gradient(90deg, #2563eb, #06b6d4);
-      color: white
-    };
-
-    .wrap .footer {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 13px
-    }
-
-    .wrap .tz {
-      font-size: 12px;
-      color: var(--muted)
-    }
-
-    .wrap pre {
-      white-space: pre-wrap
-    }
-
-    @media (max-width:720px) {
-      .wrap .grid {
-        grid-template-columns: 1fr
+    <title>Age Calculator Online – Calculate Your Age Accurately in Seconds</title>
+    <meta name="description" content="Calculate your exact age in years, months, days, hours, and minutes using our free online Age Calculator. Fast, accurate, and easy to use—just enter your date of birth and get instant results.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/Age-calculator.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Age Calculator Online – Calculate Your Age Accurately in Seconds">
+    <meta property="og:description" content="Calculate your exact age in years, months, days, hours, and minutes using our free online Age Calculator. Fast, accurate, and easy to use—just enter your date of birth and get instant results.">
+    <meta property="og:url" content="https://collegeall.com/tools/Age-calculator.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Age Calculator Online – Calculate Your Age Accurately in Seconds">
+    <meta name="twitter:description" content="Calculate your exact age in years, months, days, hours, and minutes using our free online Age Calculator. Fast, accurate, and easy to use—just enter your date of birth and get instant results.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Age Calculator Online",
+      "description": "Calculate your exact age in years, months, days, hours, and minutes using our free online Age Calculator. Fast, accurate, and easy to use—just enter your date of birth and get instant results.",
+      "url": "https://collegeall.com/tools/Age-calculator.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
       }
     }
-  </style>
-</head>
+    </script>
+  <meta charset="utf-8" />  <meta name="viewport" content="width=device-width,initial-scale=1" />  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">  <!-- Meta Title -->  <!-- Meta Description -->  <!-- Meta Keywords -->  <meta name="keywords" content="age calculator, age calculator online, calculate age, date of birth calculator, DOB calculator, age finder, birthday calculator, exact age calculator, online age tool, age in years months days, age counter, how old am I calculator, digital age calculator, free age calculator">  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>  <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">  <style>    :root {      --bg: #0f1724;      --card: #0b1220;      --muted: #9aa6bf;      --accent: #60a5fa;      --glass: rgba(255, 255, 255, 0.03)    }    /* Navbar start */  .navbar {      background: #fff;      box-shadow: 0 2px 4px rgba(0, 0, 0, .05);  }  .search-input {      border: none;      outline: none;      background: transparent;      width: 100%;      padding: .6rem 1rem;  }  .search-container {      border: 1px solid #e5e7eb;      border-radius: 24px;      display: flex;      align-items: center;      overflow: hidden;  }  .navbar .search-btn {      background: none;  }  .btn-ai {      background: linear-gradient(135deg, #f03535, #d03e24);      color: #fff;      font-weight: 600;      display: flex;      align-items: center;      gap: .5rem;      border-radius: 0 !important;      padding: 10px 20px !important;  }  .btn-ai:hover {      background: linear-gradient(135deg, #d03e24, #951d1d);      color: #fff;  }  .signup-btn {      background: var(--primary);      color: #fff;      border-radius: 0 !important;      padding: 10px 20px !important;  }  .signin-btn {      border: 1px solid var(--primary) !important;      color: var(--primary);      border-radius: 0 !important;      padding: 10px 20px !important;  }  .signin-btn:hover {      background: var(--primary);      color: #fff;  }  .signup-btn:hover {      background-color: #003c8b;      color: #fff;  }  .navbar-toggler:focus {      box-shadow: none;  }  .offcanvas .close-btn{      background: none;      position: absolute;      right: 20px;      top: 10px;  }  @media(max-width:991px) {      .navbar-collapse {          display: none !important;      }  }  .mobile-action-btns {      border-bottom: 1px solid #86888a;  }  .mobile-action-btns .mobile-action-btn {      display: flex;      align-items: center;      gap: .55rem;      padding: .65rem 1rem;      font-weight: 600;      text-decoration: none;      width: 100%;  }  .mobile-action-btns .mobile-action-ai {      color: #000000 !important;  }  .mobile-action-btns .mobile-action-normal {      color: #111 !important;  }  .mobile-action-btns .mobile-action-normal:hover {      background: #eceff1;  }  .tools-menu {      background: none;      border: none;  }  .tools-menu .tools-list{      display: flex;      flex-direction: column;      gap: 10px;      width: 100%;  }  .tools-menu .tool-icon {      padding: 5px;      transition:.2s;  }  .tool-icon:hover{      background:#e9ecef;  }  .tools-dropdown {      padding: 10px;      font-weight: bold;  }  /* Navbar End */  body {    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;      margin: 0;      background: linear-gradient(180deg, #071025 0%, #081227 40%, #041018 100%);      color: #e6eef8;  }    .age-calculator {      display: flex;      align-items: center;      justify-content: center;    }    .wrap {      max-width: 920px;      width: 100%;      height: 100%;    }    .wrap header {      display: flex;      gap: 16px;      align-items: center;      margin-bottom: 18px    }    .wrap h1 {      font-size: 20px;      margin: 0    }    .wrap p.lead {      margin: 0;      color: var(--muted);      font-size: 13px    }    .wrap .card {      background: var(--card);      border-radius: 14px;      padding: 18px;      box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);    }    .wrap .grid {      display: grid;      grid-template-columns: 320px 1fr;      gap: 16px    }    .wrap label {      display: block;      font-size: 13px;      color: var(--muted);      margin-bottom: 6px    }    .wrap input[type=date] {      width: 100%;      padding: 10px 12px;      border-radius: 8px;      border: 1px solid rgba(255, 255, 255, 0.04);      color: var(--muted);    }    .wrap .meta {      font-size: 13px;      color: var(--muted);      margin-top: 8px    }    .wrap .results {      display: grid;      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));      gap: 12px    }    .wrap .result {      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));      padding: 12px;      border-radius: 10px;      text-align: center;      color: var(--muted);    }    .wrap .result .big {      font-size: 22px;      font-weight: 600    }    .wrap .muted {      color: var(--muted);      font-size: 13px    }    .wrap .countdown {      font-variant-numeric: tabular-nums;      font-size: 18px;      font-weight: 600    }    .wrap .controls {      display: flex;      gap: 8px;      margin-top: 12px    }    .wrap button {      background: transparent;      border: 1px solid var(--accent);      color: var(--muted);      padding: 8px 12px;      border-radius: 10px;      cursor: pointer;     }    .wrap .btn-accent {      border-color: transparent;      background: linear-gradient(90deg, #2563eb, #06b6d4);      color: white    };    .wrap .footer {      margin-top: 12px;      color: var(--muted);      font-size: 13px    }    .wrap .tz {      font-size: 12px;      color: var(--muted)    }    .wrap pre {      white-space: pre-wrap    }    @media (max-width:720px) {      .wrap .grid {        grid-template-columns: 1fr      }    }  </style></head>
 
 <body>
   <?php include COLLEGEALL_ROOT . '/header.php'; ?>

@@ -2,215 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CollegeAll Search</title>
+    <title>Search Colleges, Courses & Degrees | CollegeAll</title>
+    <meta name="description" content="Search and compare accredited online MBA, MCA, BBA, and degree programs from premier Indian universities on CollegeAll.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://collegeall.com/search/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Search Colleges, Courses & Degrees | CollegeAll">
+    <meta property="og:description" content="Search and compare accredited online MBA, MCA, BBA, and degree programs from premier Indian universities on CollegeAll.">
+    <meta property="og:url" content="https://collegeall.com/search/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Search Colleges, Courses & Degrees | CollegeAll">
+    <meta name="twitter:description" content="Search and compare accredited online MBA, MCA, BBA, and degree programs from premier Indian universities on CollegeAll.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+  <meta charset="UTF-8" />  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png" />  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />  <style>    body {      margin: 0;      font-family: Arial, sans-serif;      background-color: #fff;      display: flex;      flex-direction: column;      align-items: center;      padding-top: 80px;    }    header {      display: flex;      flex-direction: column;      gap: 20px;      align-items: center;      padding: 20px 40px;      position: relative;    }    header img {      height: 50px;      cursor: pointer;    }    .search-bar {      flex: 1;      margin-left: 40px;      display: flex;      align-items: center;      border: 1px solid #dfe1e5;      border-radius: 24px;      padding: 15px;      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);      min-width: 500px;      width: 100%;    }    .search-bar i {      color: #9aa0a6;      font-size: 18px;      margin-right: 10px;    }    .search-bar input {      border: none;      outline: none;      flex: 1;      font-size: 16px;    }    #suggestionBox {      position: absolute;      top: 125px;      width: 90%;      background: #fff;      border-radius: 12px;      max-height: 300px;      overflow-y: auto;      display: none;      z-index: 9999;      box-shadow: 0 8px 24px rgba(0, 0, 0, .12);      border: 1px solid #e3e7ef;      backdrop-filter: blur(8px);      transition: all .18s ease;    }    #suggestionBox li {      list-style: none;      padding: 12px 18px;      font-size: 14px;      color: #222;      cursor: pointer;      display: flex;      align-items: center;      gap: 10px;    }    #suggestionBox li:hover {      background: #f5f7fb;    }    #suggestionBox li i {      font-size: 14px;      opacity: .6;    }    #suggestionBox::-webkit-scrollbar {      width: 6px;    }    #suggestionBox::-webkit-scrollbar-thumb {      border-radius: 20px;      background: rgba(0, 0, 0, 0.14);    }    #suggestionBox::-webkit-scrollbar-thumb:hover {      background: rgba(0, 0, 0, 0.22);    }    .results {      max-width: 700px;      margin: 30px auto;      padding: 0 20px;    }    .result-item {      margin-bottom: 30px;    }    .result-item a.title {      color: #1a0dab;      font-size: 18px;      text-decoration: none;    }    .result-item a.title:hover {      text-decoration: underline;    }    .result-item .url {      color: #006621;      font-size: 14px;      margin-bottom: 3px;    }    .result-item p {      color: #4d5156;      font-size: 14px;      margin-top: 5px;      line-height: 1.5;    }    .empty {      text-align: center;      margin-top: 40px;      color: #70757a;    }    .pagination {      display: flex;      justify-content: center;      margin: 40px 0 60px;      align-items: center;      gap: 6px;      flex-wrap: wrap;    }    .pagination button {      background: none;      border: none;      color: #1a0dab;      font-size: 14px;      cursor: pointer;      padding: 5px 8px;    }    .pagination button.active {      color: #000;      font-weight: bold;      text-decoration: underline;    }    .pagination button:hover {      text-decoration: underline;    }    .pagination button:disabled {      color: #999;      cursor: not-allowed;    }    footer {      text-align: center;      padding: 20px 0;      color: #70757a;      font-size: 13px;      border-top: 1px solid #ebebeb;    }    @media (max-width: 600px) {      header {        flex-direction: column;        align-items: center;        gap: 10px;        padding: 15px 20px;      }      .search-bar {        margin-left: 0 !important;        min-width: auto;      }      .search-bar i {        font-size: 14px;      }      .results {        padding: 0 10px;      }    }  </style>    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 80px;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-      padding: 20px 40px;
-      position: relative;
-    }
-
-    header img {
-      height: 50px;
-      cursor: pointer;
-    }
-
-    .search-bar {
-      flex: 1;
-      margin-left: 40px;
-      display: flex;
-      align-items: center;
-      border: 1px solid #dfe1e5;
-      border-radius: 24px;
-      padding: 15px;
-      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-      min-width: 500px;
-      width: 100%;
-    }
-
-    .search-bar i {
-      color: #9aa0a6;
-      font-size: 18px;
-      margin-right: 10px;
-    }
-
-    .search-bar input {
-      border: none;
-      outline: none;
-      flex: 1;
-      font-size: 16px;
-    }
-
-    #suggestionBox {
-      position: absolute;
-      top: 125px;
-      width: 90%;
-      background: #fff;
-      border-radius: 12px;
-      max-height: 300px;
-      overflow-y: auto;
-      display: none;
-      z-index: 9999;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
-      border: 1px solid #e3e7ef;
-      backdrop-filter: blur(8px);
-      transition: all .18s ease;
-    }
-
-    #suggestionBox li {
-      list-style: none;
-      padding: 12px 18px;
-      font-size: 14px;
-      color: #222;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    #suggestionBox li:hover {
-      background: #f5f7fb;
-    }
-
-    #suggestionBox li i {
-      font-size: 14px;
-      opacity: .6;
-    }
-
-    #suggestionBox::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    #suggestionBox::-webkit-scrollbar-thumb {
-      border-radius: 20px;
-      background: rgba(0, 0, 0, 0.14);
-    }
-
-    #suggestionBox::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.22);
-    }
-
-    .results {
-      max-width: 700px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .result-item {
-      margin-bottom: 30px;
-    }
-
-    .result-item a.title {
-      color: #1a0dab;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    .result-item a.title:hover {
-      text-decoration: underline;
-    }
-
-    .result-item .url {
-      color: #006621;
-      font-size: 14px;
-      margin-bottom: 3px;
-    }
-
-    .result-item p {
-      color: #4d5156;
-      font-size: 14px;
-      margin-top: 5px;
-      line-height: 1.5;
-    }
-
-    .empty {
-      text-align: center;
-      margin-top: 40px;
-      color: #70757a;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0 60px;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .pagination button {
-      background: none;
-      border: none;
-      color: #1a0dab;
-      font-size: 14px;
-      cursor: pointer;
-      padding: 5px 8px;
-    }
-
-    .pagination button.active {
-      color: #000;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    .pagination button:hover {
-      text-decoration: underline;
-    }
-
-    .pagination button:disabled {
-      color: #999;
-      cursor: not-allowed;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      color: #70757a;
-      font-size: 13px;
-      border-top: 1px solid #ebebeb;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 15px 20px;
-      }
-
-      .search-bar {
-        margin-left: 0 !important;
-        min-width: auto;
-      }
-
-      .search-bar i {
-        font-size: 14px;
-      }
-
-      .results {
-        padding: 0 10px;
-      }
-    }
-  </style>
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body>

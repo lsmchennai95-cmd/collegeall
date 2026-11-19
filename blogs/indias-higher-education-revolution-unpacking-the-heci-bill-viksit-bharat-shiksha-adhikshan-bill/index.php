@@ -4,36 +4,67 @@
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India's Higher Education Revolution: Unpacking the HECI Bill (Viksit Bharat Shiksha Adhikshan Bill)</title>
     <meta name="description" content="Explore the transformative HECI Bill, now the Viksit Bharat Shiksha Adhikshan Bill, set to revolutionize Indian higher education by creating a single regulator. Understand its aims, benefits, and potential challenges.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/indias-higher-education-revolution-unpacking-the-heci-bill-viksit-bharat-shiksha-adhikshan-bill/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="India's Higher Education Revolution: Unpacking the HECI Bill (Viksit Bharat Shiksha Adhikshan Bill)">
+    <meta property="og:description" content="Explore the transformative HECI Bill, now the Viksit Bharat Shiksha Adhikshan Bill, set to revolutionize Indian higher education by creating a single regulator. Understand its aims, benefits, and potential challenges.">
+    <meta property="og:url" content="https://collegeall.com/blogs/indias-higher-education-revolution-unpacking-the-heci-bill-viksit-bharat-shiksha-adhikshan-bill/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="India's Higher Education Revolution: Unpacking the HECI Bill (Viksit Bharat Shiksha Adhikshan Bill)">
+    <meta name="twitter:description" content="Explore the transformative HECI Bill, now the Viksit Bharat Shiksha Adhikshan Bill, set to revolutionize Indian higher education by creating a single regulator. Understand its aims, benefits, and potential challenges.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "India's Higher Education Revolution: Unpacking the HECI Bill (Viksit Bharat Shiksha Adhikshan Bill)",
+      "description": "Explore the transformative HECI Bill, now the Viksit Bharat Shiksha Adhikshan Bill, set to revolutionize Indian higher education by creating a single regulator. Understand its aims, benefits, and potential challenges.",
+      "url": "https://collegeall.com/blogs/indias-higher-education-revolution-unpacking-the-heci-bill-viksit-bharat-shiksha-adhikshan-bill/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://collegeall.com/blogs/indias-higher-education-revolution-unpacking-the-heci-bill-viksit-bharat-shiksha-adhikshan-bill/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://api.collegeall.com/Logo/collegeallLogo.png"
+        }
+      },
+      "image": "https://api.collegeall.com/Logo/og-image.png"
+    }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HECI Bill, Viksit Bharat Shiksha Adhikshan Bill, Indian higher education, NEP 2020, UGC, AICTE, NCTE, education reform, single regulator, accreditation, funding, India education news">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
       body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
       a { text-decoration: none; }
-      
     .blog-hero-image { width: 100%; height: 400px; object-fit: cover; border-radius: 15px 15px 0 0; margin-bottom: 2rem; }
     .blog-content { background: #fff; border-radius: 15px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08); overflow: hidden; margin-bottom: 3rem; }
     .blog-body { padding: 2rem; }
     .blog-title { font-weight: 800; color: #2c3e50; }
-    
     /* Component: Benefit Card (Simple Checklist/Summary) */
     .benefit-card { background: #fff; border-left: 4px solid #4361ee !important; border-radius: 12px; padding: 1.5rem; transition: all 0.3s ease; position: relative; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); margin-bottom: 1rem; }
-    
     /* Component: Benefit Item (Q&A, Detailed Points) */
     .benefit-item { background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; transition: all 0.3s ease; position: relative; animation: fadeInUp 0.6s ease-out; }
     .benefit-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem; color: #1e293b; }
     .benefit-content { color: #475569; line-height: 1.6; }
     .benefit-item::before { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px; background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%); border-radius: 2px 0 0 2px; }
-    
     .highlight-text { background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%); border-left: 4px solid #4361ee; padding: 1.5rem; border-radius: 8px; font-weight: 500; margin: 1.5rem 0; }
     .section-title { font-size: 1.8rem; font-weight: 700; color: #2c3e50; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
     .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%); border-radius: 2px; }
@@ -45,9 +76,7 @@
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
     table th, table td { border: 1px solid #dee2e6; padding: 0.75rem; text-align: left; }
     table th { background: #f8f9fa; font-weight: 600; }
-    
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
     /* Dropdown specific styles */
     .navbar-nav .nav-item .dropdown-menu-wide { width: 650px; padding: 0; border: 1px solid #e0e0e0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden; }
     .navbar-nav .nav-item .dropdown-body { display: flex; min-height: 350px; }
@@ -65,14 +94,11 @@
     .uni-list::-webkit-scrollbar, .course-list::-webkit-scrollbar { width: 6px; }
     .uni-list::-webkit-scrollbar-track, .course-list::-webkit-scrollbar-track { background: #f1f1f1; }
     .uni-list::-webkit-scrollbar-thumb, .course-list::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
-    
     /* Navbar Styles */
     .navbar { background: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, .05); }
     .search-input { border: none; outline: none; background: transparent; width: 100%; padding: .6rem 1rem; }
     .search-container { border: 1px solid #e5e7eb; border-radius: 24px; display: flex; align-items: center; overflow: hidden; }
     .navbar .search-btn { background: none; }
-
-      
 .footer-modern { background: linear-gradient(135deg, #0f172a, #020617); color: #f8fafc; position: relative; overflow: hidden; }
 .footer-modern::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, #004aad, transparent); }
 .footer-modern .footer-brand { margin-bottom: 2rem; }
@@ -101,10 +127,19 @@
 .footer-modern .legal-links a:hover { color: #f8fafc; }
 .footer-modern .copyright { color: #94a3b8; font-size: 0.9rem; }
 @media (max-width: 768px) { .footer-modern .footer-bottom-content { flex-direction: column; text-align: center; } .footer-modern .legal-links { justify-content: center; } .footer-modern .courses-columns { grid-template-columns: 1fr; } .footer-modern .social-links { justify-content: center; } }
-
     </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
      crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 <body>
 

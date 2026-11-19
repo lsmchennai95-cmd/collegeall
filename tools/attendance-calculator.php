@@ -3,107 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-
-    <!-- SEO Meta -->
     <title>Attendance Calculator | Required Classes & Projection Tool</title>
-    <meta name="description"
-        content="Advanced Attendance Calculator — compute your current attendance, classes needed to reach a target percentage, allowed misses, and simulate upcoming sessions. Mobile-friendly and accurate.">
-    <meta name="keywords"
-        content="attendance calculator, classes needed, attendance percentage, attendance tracker, percentage to attend, allowed absences, attendance planner, student attendance tool">
-
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-
-    <style>
-        :root {
-            --card-radius: 18px;
-            --primary: #0d6efd;
-            --bg: #f4f7ff;
-        }
-
-        body {
-            min-height: 100vh;
-            transition: background .25s, color .25s;
-        }
-
-        .attendance-container .app-card {
-            border-radius: var(--card-radius);
-            padding: 28px;
-            background: #fff;
-            box-shadow: 0 8px 30px rgba(13, 110, 253, .06);
-            transition: transform .18s ease;
-        }
-
-        .attendance-container .app-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .attendance-container .title {
-            font-weight: 700;
-            font-size: 1.35rem;
-        }
-
-        .attendance-container .muted {
-            color: #6b7280;
-        }
-
-        .attendance-container .history-box {
-            max-height: 220px;
-            overflow: auto;
-            border-left: 3px solid var(--primary);
-            padding-left: 14px;
-        }
-
-        /* small helper styles */
-        .attendance-container .result-badge {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        /* Dark mode */
-        body.dark-mode {
-            background: #0b1220;
-            color: #e6eef8;
-        }
-
-        .dark-mode .app-card {
-            background: #0f1724;
-            box-shadow: 0 8px 30px rgba(255, 255, 255, .03);
-        }
-
-        .dark-mode .input-box,
-        .dark-mode label,
-        .dark-mode select {
-            background: #091226;
-            color: #e6eef8;
-            border-color: #1f2937;
-        }
-
-        .dark-mode .history-box {
-            border-left-color: #60a5fa;
-        }
-
-        .btn-ghost {
-            background: transparent;
-            border: 1px solid rgba(13, 110, 253, .12);
-        }
-
-        @media (max-width:575px) {
-            .app-card {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
+    <meta name="description" content="Advanced Attendance Calculator — compute your current attendance, classes needed to reach a target percentage, allowed misses, and simulate upcoming sessions. Mobile-friendly and accurate.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/attendance-calculator.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Attendance Calculator | Required Classes & Projection Tool">
+    <meta property="og:description" content="Advanced Attendance Calculator — compute your current attendance, classes needed to reach a target percentage, allowed misses, and simulate upcoming sessions. Mobile-friendly and accurate.">
+    <meta property="og:url" content="https://collegeall.com/tools/attendance-calculator.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Attendance Calculator | Required Classes & Projection Tool">
+    <meta name="twitter:description" content="Advanced Attendance Calculator — compute your current attendance, classes needed to reach a target percentage, allowed misses, and simulate upcoming sessions. Mobile-friendly and accurate.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Attendance Calculator",
+      "description": "Advanced Attendance Calculator — compute your current attendance, classes needed to reach a target percentage, allowed misses, and simulate upcoming sessions. Mobile-friendly and accurate.",
+      "url": "https://collegeall.com/tools/attendance-calculator.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <!-- SEO Meta -->    <meta name="keywords"        content="attendance calculator, classes needed, attendance percentage, attendance tracker, percentage to attend, allowed absences, attendance planner, student attendance tool">    <!-- Bootstrap -->    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">    <!-- Font -->    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --card-radius: 18px;            --primary: #0d6efd;            --bg: #f4f7ff;        }        body {            min-height: 100vh;            transition: background .25s, color .25s;        }        .attendance-container .app-card {            border-radius: var(--card-radius);            padding: 28px;            background: #fff;            box-shadow: 0 8px 30px rgba(13, 110, 253, .06);            transition: transform .18s ease;        }        .attendance-container .app-card:hover {            transform: translateY(-4px);        }        .attendance-container .title {            font-weight: 700;            font-size: 1.35rem;        }        .attendance-container .muted {            color: #6b7280;        }        .attendance-container .history-box {            max-height: 220px;            overflow: auto;            border-left: 3px solid var(--primary);            padding-left: 14px;        }        /* small helper styles */        .attendance-container .result-badge {            font-size: 1rem;            font-weight: 600;        }        /* Dark mode */        body.dark-mode {            background: #0b1220;            color: #e6eef8;        }        .dark-mode .app-card {            background: #0f1724;            box-shadow: 0 8px 30px rgba(255, 255, 255, .03);        }        .dark-mode .input-box,        .dark-mode label,        .dark-mode select {            background: #091226;            color: #e6eef8;            border-color: #1f2937;        }        .dark-mode .history-box {            border-left-color: #60a5fa;        }        .btn-ghost {            background: transparent;            border: 1px solid rgba(13, 110, 253, .12);        }        @media (max-width:575px) {            .app-card {                padding: 20px;            }        }    </style></head>
 
 <body>
 

@@ -7,7 +7,7 @@
 
     <!-- Primary Meta Tags -->
     <title>LIBA Online PGDM | Leadership & Excellence</title>
-    <meta name="title" content="LIBA Online PGDM | Leadership & Excellence" />
+    
     <meta name="description"
         content="AICTE approved Online PGDM from LIBA, ranked among top 10 B-schools. 108 credits, 3 capstones, 6 specialisations. Jesuit legacy of leadership with ethics. Admissions open for June 2026." />
     <meta name="keywords"
@@ -18,7 +18,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://iop.liba.edu/" />
+    <meta property="og:url" content="https://collegeall.com/online-pgdm/" />
     <meta property="og:title" content="LIBA Online PGDM | Leadership & Excellence" />
     <meta property="og:description"
         content="AICTE approved Online PGDM from LIBA, ranked among top 10 B-schools. Jesuit legacy of leadership with ethics. Admissions open for June 2026." />
@@ -28,7 +28,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://iop.liba.edu/" />
+    <meta property="twitter:url" content="https://collegeall.com/online-pgdm/" />
     <meta property="twitter:title" content="LIBA Online PGDM | Leadership & Excellence" />
     <meta property="twitter:description"
         content="AICTE approved Online PGDM from LIBA, ranked among top 10 B-schools. Jesuit legacy of leadership with ethics. Admissions open for June 2026." />
@@ -36,7 +36,7 @@
 
     <!-- Additional Meta Tags -->
     <meta name="theme-color" content="#003366" />
-    <link rel="canonical" href="https://iop.liba.edu/" />
+    <link rel="canonical" href="https://collegeall.com/online-pgdm/" />
 
     <!-- Google Font: Inter -->
     <link
@@ -1487,6 +1487,37 @@
             }
         }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "LIBA Online PGDM - Leadership & Excellence",
+      "description": "AICTE approved Online PGDM from LIBA, ranked among top 10 B-schools. 108 credits, 3 capstones, 6 specialisations.",
+      "url": "https://collegeall.com/online-pgdm/",
+      "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "Loyola Institute of Business Administration (LIBA)",
+        "url": "https://collegeall.com/online-pgdm/"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "2 Years"
+      }
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body>

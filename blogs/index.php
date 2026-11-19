@@ -3,62 +3,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>College All - Blog </title>
-    <meta name="description" content="Stay updated with the latest news, trends, and updates from top colleges and universities across India. Explore blogs on admissions, courses, scholarships, placements, and more.">
-    <meta name="keywords" content="CollegeAll Blog, College News, Admission 2025, Indian Colleges, Top Universities, MBA, Engineering, BBA, Scholarships, Education Trends, Career Guidance">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/index.css">
-
-    <!-- Meta Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '25443278008607273');
-        fbq('track', 'PageView');
+    <title>CollegeAll Education Blog | News, Admissions & Career Guidance</title>
+    <meta name="description" content="Stay updated with latest college admissions, entrance exams, online degree programs, scholarship opportunities, and career trends across Indian universities.">
+    <meta name="keywords" content="CollegeAll Blog, College News, Admission 2026, Indian Colleges, Top Universities, MBA, MCA, BBA, Scholarships, Education Trends, Career Guidance">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="CollegeAll Education Blog | News, Admissions & Career Guidance">
+    <meta property="og:description" content="Stay updated with latest college admissions, entrance exams, online degree programs, scholarship opportunities, and career trends across Indian universities.">
+    <meta property="og:url" content="https://collegeall.com/blogs/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="CollegeAll Education Blog | News, Admissions & Career Guidance">
+    <meta name="twitter:description" content="Stay updated with latest college admissions, entrance exams, online degree programs, scholarship opportunities, and career trends across Indian universities.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "CollegeAll Education Blog | News, Admissions & Career Guidance",
+      "description": "Stay updated with latest college admissions, entrance exams, online degree programs, scholarship opportunities, and career trends across Indian universities.",
+      "url": "https://collegeall.com/blogs/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
-     crossorigin="anonymous"></script>
-</head>
+    <meta charset="utf-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta http-equiv="x-ua-compatible" content="ie=edge">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="manifest" href="site.webmanifest">    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <!-- Fonts -->    <link rel="preconnect" href="https://fonts.googleapis.com">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <!-- Icons -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <!-- Custom CSS -->    <link rel="stylesheet" href="assets/css/index.css">    <!-- Meta Pixel Code -->    <script>        ! function(f, b, e, v, n, t, s) {            if (f.fbq) return;            n = f.fbq = function() {                n.callMethod ?                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)            };            if (!f._fbq) f._fbq = n;            n.push = n;            n.loaded = !0;            n.version = '2.0';            n.queue = [];            t = b.createElement(e);            t.async = !0;            t.src = v;            s = b.getElementsByTagName(e)[0];            s.parentNode.insertBefore(t, s)        }(window, document, 'script',            'https://connect.facebook.net/en_US/fbevents.js');        fbq('init', '25443278008607273');        fbq('track', 'PageView');    </script>    <noscript><img height="1" width="1" style="display:none"            src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1" /></noscript>    <!-- End Meta Pixel Code --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"     crossorigin="anonymous"></script></head>
 
 <body class="main-blog">
     <!-- Header -->

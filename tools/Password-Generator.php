@@ -3,324 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Password Generator</title>
     <meta name="description" content="Generate ultra-secure passwords instantly with this advanced online password generator. Customize length, symbols, numbers, uppercase/lowercase characters, avoid ambiguous characters, and get real-time strength analysis. No data stored — everything runs locally in your browser.">
-    <meta name="keywords" content="password generator, strong password generator, secure password generator, random password maker, online password tool, create strong passwords, password strength checker, crypto secure password, custom password generator, offline password generator, web crypto password generator">
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --muted: #9aa4b2;
-            --accent: #6ee7b7;
-            --danger: #ff7b7b;
-            --glass: rgba(255, 255, 255, 0.03);
-            --radius: 12px;
-            --gap: 14px;
-            --max-width: 920px;
-            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
-        }
-
-        .password-generator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .password-generator .container {
-            width: 100%;
-            max-width: var(--max-width);
-        }
-
-        .password-generator .card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-            border-radius: var(--radius);
-            padding: 22px;
-            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);
-            backdrop-filter: blur(6px);
-        }
-
-        .password-generator header {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            margin-bottom: 18px
-        }
-
-        .password-generator .logo {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--accent), #60a5fa);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #04202a
-        }
-
-        .password-generator h1 {
-            font-size: 20px;
-            margin: 0
-        }
-
-        .password-generator p.lead {
-            margin: 0;
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .password-generator .grid {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 18px
-        }
-
-        @media (max-width:880px) {
-            .password-generator .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Left column: generator */
-        .password-generator .panel {
-            background: var(--card);
-            padding: 18px;
-            border-radius: 12px
-        }
-
-        .password-generator .output {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--glass);
-            padding: 14px;
-            border-radius: 10px;
-            font-family: var(--mono);
-            font-size: 16px
-        }
-
-        .password-generator .pwd-text {
-            flex: 1;
-            word-break: break-all
-        }
-
-        .password-generator .controls {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 12px
-        }
-
-        .password-generator .row {
-            display: flex;
-            gap: 12px;
-            align-items: center
-        }
-
-        .password-generator .control {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 10px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between
-        }
-
-        .password-generator input[type=range] {
-            width: 100%
-        }
-
-        .password-generator label.small {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .password-generator .toggles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            color: white;
-        }
-
-        .password-generator .toggle {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: transparent;
-            padding: 8px;
-            border-radius: 9px
-        }
-
-        .password-generator .switch {
-            position: relative;
-            width: 44px;
-            height: 26px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 999px;
-            padding: 3px;
-            cursor: pointer
-        }
-
-        .password-generator .knob {
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: white;
-            transition: all .18s
-        }
-
-        .password-generator .switch.on {
-            background: linear-gradient(90deg, #34d399, #60a5fa)
-        }
-
-        .password-generator .switch.on .knob {
-            left: 21px;
-            background: #04202a
-        }
-
-        .password-generator .btn-row {
-            display: flex;
-            gap: 10px
-        }
-
-        .password-generator button.btn {
-            border: 0;
-            padding: 10px 12px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            background: #36d399;
-        }
-
-        .password-generator .btn-primary {
-            background: linear-gradient(90deg, #36d399, #60a5fa);
-            color: #04202a
-        }
-
-        .password-generator .btn-ghost {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            color: var(--accent)
-        }
-
-        .password-generator .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            align-items: center;
-            margin-top: 12px;
-            color: white;
-        }
-
-        .password-generator .meta .pill {
-            background: rgba(255, 255, 255, 0.02);
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: 13px
-        }
-
-        /* Strength bar */
-        .password-generator .strength {
-            margin-top: 12px
-        }
-
-        .password-generator .meter {
-            height: 12px;
-            background: rgba(255, 255, 255, 0.04);
-            border-radius: 8px;
-            display: flex;
-            overflow: hidden
-        }
-
-        .password-generator .meter>span {
-            display: block;
-            height: 100%;
-            width: 0%;
-            transition: width .24s ease
-        }
-
-        .password-generator .strength-label {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 8px;
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        /* Right column: settings */
-        .password-generator .settings {
-            padding: 16px;
-            border-radius: 12px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent)
-        }
-
-        .password-generator .settings h3 {
-            margin: 0 0 10px 0
-        }
-
-        .password-generator .help {
-            font-size: 13px;
-            color: var(--muted);
-            line-height: 1.4
-        }
-
-        .password-generator footer {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 13px;
-            text-align: center
-        }
-
-        .password-generator small.kv {
-            display: block;
-            color: var(--muted);
-            font-size: 12px
-        }
-
-        /* tiny responsive tweaks */
-        @media (max-width: 768px) {
-            .password-generator .output {
-                flex-direction: column;
-                align-items: flex-start
-            }
-
-            .password-generator .row {
-                flex-direction: column;
-                align-items: flex-start
-            }
-
-            .password-generator .container{
-                width: auto !important;
-                height: 100%;
-            }
-
-            .password-generator .card {
-                padding: 0;
-            }
-
-            .password-generator .panel {
-                padding: 0;
-            }
-
-            .password-generator .setting {
-                padding: 0;
-            }
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/Password-Generator.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Password Generator">
+    <meta property="og:description" content="Generate ultra-secure passwords instantly with this advanced online password generator. Customize length, symbols, numbers, uppercase/lowercase characters, avoid ambiguous characters, and get real-time strength analysis. No data stored — everything runs locally in your browser.">
+    <meta property="og:url" content="https://collegeall.com/tools/Password-Generator.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Password Generator">
+    <meta name="twitter:description" content="Generate ultra-secure passwords instantly with this advanced online password generator. Customize length, symbols, numbers, uppercase/lowercase characters, avoid ambiguous characters, and get real-time strength analysis. No data stored — everything runs locally in your browser.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Password Generator",
+      "description": "Generate ultra-secure passwords instantly with this advanced online password generator. Customize length, symbols, numbers, uppercase/lowercase characters, avoid ambiguous characters, and get real-time strength analysis. No data stored — everything runs locally in your browser.",
+      "url": "https://collegeall.com/tools/Password-Generator.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="viewport" content="width=device-width,initial-scale=1" />    <meta name="keywords" content="password generator, strong password generator, secure password generator, random password maker, online password tool, create strong passwords, password strength checker, crypto secure password, custom password generator, offline password generator, web crypto password generator">    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --bg: #0f1724;            --card: #0b1220;            --muted: #9aa4b2;            --accent: #6ee7b7;            --danger: #ff7b7b;            --glass: rgba(255, 255, 255, 0.03);            --radius: 12px;            --gap: 14px;            --max-width: 920px;            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;        }        .password-generator {            display: flex;            align-items: center;            justify-content: center;        }        .password-generator .container {            width: 100%;            max-width: var(--max-width);        }        .password-generator .card {            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));            border-radius: var(--radius);            padding: 22px;            box-shadow: 0 6px 30px rgba(2, 6, 23, 0.6);            backdrop-filter: blur(6px);        }        .password-generator header {            display: flex;            gap: 12px;            align-items: center;            margin-bottom: 18px        }        .password-generator .logo {            width: 44px;            height: 44px;            border-radius: 10px;            background: linear-gradient(135deg, var(--accent), #60a5fa);            display: flex;            align-items: center;            justify-content: center;            font-weight: 700;            color: #04202a        }        .password-generator h1 {            font-size: 20px;            margin: 0        }        .password-generator p.lead {            margin: 0;            color: var(--muted);            font-size: 13px        }        .password-generator .grid {            display: grid;            grid-template-columns: 1fr 320px;            gap: 18px        }        @media (max-width:880px) {            .password-generator .grid {                grid-template-columns: 1fr;            }        }        /* Left column: generator */        .password-generator .panel {            background: var(--card);            padding: 18px;            border-radius: 12px        }        .password-generator .output {            display: flex;            gap: 12px;            align-items: center;            justify-content: space-between;            background: var(--glass);            padding: 14px;            border-radius: 10px;            font-family: var(--mono);            font-size: 16px        }        .password-generator .pwd-text {            flex: 1;            word-break: break-all        }        .password-generator .controls {            display: flex;            flex-direction: column;            gap: 10px;            margin-top: 12px        }        .password-generator .row {            display: flex;            gap: 12px;            align-items: center        }        .password-generator .control {            background: rgba(255, 255, 255, 0.02);            padding: 10px;            border-radius: 10px;            display: flex;            align-items: center;            justify-content: space-between        }        .password-generator input[type=range] {            width: 100%        }        .password-generator label.small {            font-size: 13px;            color: var(--muted)        }        .password-generator .toggles {            display: flex;            flex-wrap: wrap;            gap: 10px;            color: white;        }        .password-generator .toggle {            display: flex;            align-items: center;            gap: 10px;            background: transparent;            padding: 8px;            border-radius: 9px        }        .password-generator .switch {            position: relative;            width: 44px;            height: 26px;            background: rgba(255, 255, 255, 0.06);            border-radius: 999px;            padding: 3px;            cursor: pointer        }        .password-generator .knob {            position: absolute;            top: 3px;            left: 3px;            width: 20px;            height: 20px;            border-radius: 50%;            background: white;            transition: all .18s        }        .password-generator .switch.on {            background: linear-gradient(90deg, #34d399, #60a5fa)        }        .password-generator .switch.on .knob {            left: 21px;            background: #04202a        }        .password-generator .btn-row {            display: flex;            gap: 10px        }        .password-generator button.btn {            border: 0;            padding: 10px 12px;            border-radius: 10px;            cursor: pointer;            font-weight: 600;            background: #36d399;        }        .password-generator .btn-primary {            background: linear-gradient(90deg, #36d399, #60a5fa);            color: #04202a        }        .password-generator .btn-ghost {            background: transparent;            border: 1px solid rgba(255, 255, 255, 0.06);            color: var(--accent)        }        .password-generator .meta {            display: flex;            flex-wrap: wrap;            gap: 12px;            align-items: center;            margin-top: 12px;            color: white;        }        .password-generator .meta .pill {            background: rgba(255, 255, 255, 0.02);            padding: 6px 10px;            border-radius: 999px;            font-size: 13px        }        /* Strength bar */        .password-generator .strength {            margin-top: 12px        }        .password-generator .meter {            height: 12px;            background: rgba(255, 255, 255, 0.04);            border-radius: 8px;            display: flex;            overflow: hidden        }        .password-generator .meter>span {            display: block;            height: 100%;            width: 0%;            transition: width .24s ease        }        .password-generator .strength-label {            display: flex;            flex-wrap: wrap;            justify-content: space-between;            margin-top: 8px;            font-size: 13px;            color: var(--muted)        }        /* Right column: settings */        .password-generator .settings {            padding: 16px;            border-radius: 12px;            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent)        }        .password-generator .settings h3 {            margin: 0 0 10px 0        }        .password-generator .help {            font-size: 13px;            color: var(--muted);            line-height: 1.4        }        .password-generator footer {            margin-top: 18px;            color: var(--muted);            font-size: 13px;            text-align: center        }        .password-generator small.kv {            display: block;            color: var(--muted);            font-size: 12px        }        /* tiny responsive tweaks */        @media (max-width: 768px) {            .password-generator .output {                flex-direction: column;                align-items: flex-start            }            .password-generator .row {                flex-direction: column;                align-items: flex-start            }            .password-generator .container{                width: auto !important;                height: 100%;            }            .password-generator .card {                padding: 0;            }            .password-generator .panel {                padding: 0;            }            .password-generator .setting {                padding: 0;            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

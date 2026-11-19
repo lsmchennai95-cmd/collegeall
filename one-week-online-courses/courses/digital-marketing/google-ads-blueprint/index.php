@@ -2,44 +2,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Google Ads Blueprint: Create High-Converting Ad Campaigns | CollegeAll</title>
-    <meta name="title" content="Google Ads Blueprint: Create High-Converting Ad Campaigns | CollegeAll Certified">
     <meta name="description" content="Master Google Ads in 7 days: Search, Display, Remarketing, Conversion Tracking, and Bid Optimization. Create high-performing ad campaigns and boost your ROI.">
-    <meta name="keywords" content="Google Ads, PPC, Search Ads, Display Ads, Remarketing, Conversion Tracking, Ad Campaign Optimization, Keyword Planner, Bid Strategies, Digital Advertising, CollegeAll certified">
-    <meta name="author" content="CollegeAll Certified">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Google Ads Blueprint: Create High-Converting Ad Campaigns | CollegeAll">
-    <meta property="og:description" content="Learn to run high-converting Google Ads campaigns in 7 days. Master search, display, remarketing, and analytics to drive clicks, leads, and sales.">
-    <meta property="og:image" content="https://collegeall.com/one-week-online-courses/img/google-ads.webp">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/one-week-online-courses/courses/digital-marketing/google-ads-blueprint/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Google Ads Blueprint: Create High-Converting Ad Campaigns | CollegeAll">
+    <meta property="og:description" content="Master Google Ads in 7 days: Search, Display, Remarketing, Conversion Tracking, and Bid Optimization. Create high-performing ad campaigns and boost your ROI.">
     <meta property="og:url" content="https://collegeall.com/one-week-online-courses/courses/digital-marketing/google-ads-blueprint/">
-
-    <!-- Theme and Favicon -->
-    <meta name="theme-color" content="#ffffff">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-        
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../../../css/course.css">
-    <link rel="stylesheet" href="../../../index.css">
-
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
- 
-        gtag('config', 'AW-17357684990');
+    <meta property="og:image" content="https://collegeall.com/one-week-online-courses/img/google-ads.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Google Ads Blueprint: Create High-Converting Ad Campaigns | CollegeAll">
+    <meta name="twitter:description" content="Master Google Ads in 7 days: Search, Display, Remarketing, Conversion Tracking, and Bid Optimization. Create high-performing ad campaigns and boost your ROI.">
+    <meta name="twitter:image" content="https://collegeall.com/one-week-online-courses/img/google-ads.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Google Ads Blueprint",
+      "description": "Master Google Ads in 7 days: Search, Display, Remarketing, Conversion Tracking, and Bid Optimization. Create high-performing ad campaigns and boost your ROI.",
+      "url": "https://collegeall.com/one-week-online-courses/courses/digital-marketing/google-ads-blueprint/",
+      "provider": {
+        "@type": "Organization",
+        "name": "CollegeAll Certified",
+        "url": "https://collegeall.com/one-week-online-courses/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "499",
+        "priceCurrency": "INR",
+        "category": "Online Short Course",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "1 Week"
+      }
+    }
     </script>
-</head>
+    <meta charset="UTF-8" />    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta name="keywords" content="Google Ads, PPC, Search Ads, Display Ads, Remarketing, Conversion Tracking, Ad Campaign Optimization, Keyword Planner, Bid Strategies, Digital Advertising, CollegeAll certified">    <meta name="author" content="CollegeAll Certified">    <!-- Open Graph -->    <!-- Theme and Favicon -->    <meta name="theme-color" content="#ffffff">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link rel="stylesheet" href="<?php echo asset_url('/one-week-online-courses/css/course.css'); ?>">    <link rel="stylesheet" href="<?php echo asset_url('/one-week-online-courses/index.css'); ?>">        </head>
 <body>
 
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

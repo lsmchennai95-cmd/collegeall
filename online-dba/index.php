@@ -12,7 +12,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://collegeall.com/online-dba">
+    <meta property="og:url" content="https://collegeall.com/online-dba/">
     <meta property="og:title" content="Online DBA Programs in India | Doctor of Business Administration">
     <meta property="og:description"
         content="Earn your Online DBA (Doctor of Business Administration) with flexible schedules, applied research, and global recognition. Ideal for executives, consultants, and entrepreneurs.">
@@ -20,14 +20,14 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://collegeall.com/online-dba">
+    <meta name="twitter:url" content="https://collegeall.com/online-dba/">
     <meta name="twitter:title" content="Online DBA Programs in India | Doctor of Business Administration">
     <meta name="twitter:description"
         content="Discover Online DBA Programs designed for working professionals. Flexible, research-driven, and globally recognized. Enroll now.">
     <meta name="twitter:image" content="https://collegeall.com/img/og-dba.jpg">
 
     <!-- Additional SEO -->
-    <link rel="canonical" href="https://collegeall.com/online-dba">
+    <link rel="canonical" href="https://collegeall.com/online-dba/">
     <meta name="author" content="CollegeAll">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -80,6 +80,37 @@
     src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Doctor of Business Administration (Online DBA)",
+      "description": "Advance your career with Online Doctor of Business Administration (DBA) programs in India. Flexible, research-driven, and industry-focused.",
+      "url": "https://collegeall.com/online-dba/",
+      "provider": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "3 Years"
+      }
+    }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body>

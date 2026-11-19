@@ -2,30 +2,46 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-     <!-- Title -->
     <title>Why Gen Z Prefers Online MBAs Over Traditional Programs | CollegeAll</title>
-
-    <!-- Meta Description -->
     <meta name="description" content="Discover why Gen Z is shifting to Online MBA programs—flexibility, affordability, tech-savvy learning, and career freedom without campus limits.">
-
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/blogs.css">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
-     crossorigin="anonymous"></script>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/gen-z-online-mba/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Why Gen Z Prefers Online MBAs Over Traditional Programs | CollegeAll">
+    <meta property="og:description" content="Discover why Gen Z is shifting to Online MBA programs—flexibility, affordability, tech-savvy learning, and career freedom without campus limits.">
+    <meta property="og:url" content="https://collegeall.com/blogs/gen-z-online-mba/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Why Gen Z Prefers Online MBAs Over Traditional Programs | CollegeAll">
+    <meta name="twitter:description" content="Discover why Gen Z is shifting to Online MBA programs—flexibility, affordability, tech-savvy learning, and career freedom without campus limits.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why Gen Z Prefers Online MBAs Over Traditional Programs",
+      "description": "Discover why Gen Z is shifting to Online MBA programs—flexibility, affordability, tech-savvy learning, and career freedom without campus limits.",
+      "url": "https://collegeall.com/blogs/gen-z-online-mba/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://collegeall.com/blogs/gen-z-online-mba/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://api.collegeall.com/Logo/collegeallLogo.png"
+        }
+      },
+      "image": "https://api.collegeall.com/Logo/og-image.png"
+    }
+    </script>
+    <meta charset="utf-8">    <meta http-equiv="x-ua-compatible" content="ie=edge">     <!-- Title -->    <!-- Meta Description -->    <!-- Font Awesome CDN -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="manifest" href="site.webmanifest">    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>    <link rel="stylesheet" href="../assets/css/blogs.css">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"     crossorigin="anonymous"></script></head>
     
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

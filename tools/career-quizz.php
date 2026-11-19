@@ -2,193 +2,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-    <meta name="description" content="Take our free career quiz with 5 questions to discover your ideal career path based on your interests, skills, and personality.">
-    <meta name="keywords" content="career quiz, career test, job finder, career assessment, career guidance, career path">
     <title>5-Question Career Explorer - Discover Your Ideal Career Path</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <style>
-        :root {
-            --primary: #4361ee;
-            --secondary: #3a0ca3;
-            --success: #4cc9f0;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --warning: #f72585;
-        }
-        
-        body {
-            min-height: 100vh;
-            padding-bottom: 2rem;
-        }
-        
-        
-        .quiz-main-container .quiz-container {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-top: 2rem;
-        }
-        
-        .quiz-main-container .quiz-header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        
-        .quiz-main-container .quiz-body {
-            padding: 2rem;
-        }
-        
-        .quiz-main-container .question-container {
-            display: none;
-        }
-        
-        .quiz-main-container .question-container.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .quiz-main-container .question-text {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-        
-        .quiz-main-container .option-card {
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .quiz-main-container .option-card:hover {
-            border-color: var(--primary);
-            background-color: rgba(67, 97, 238, 0.05);
-        }
-        
-        .quiz-main-container .option-card.selected {
-            border-color: var(--primary);
-            background-color: rgba(67, 97, 238, 0.1);
-        }
-        
-        .quiz-main-container .progress {
-            height: 10px;
-            margin-bottom: 2rem;
-        }
-        
-        .quiz-main-container .result-card {
-            text-align: center;
-            padding: 2rem;
-            display: none;
-        }
-        
-        .quiz-main-container .career-icon {
-            font-size: 4rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .quiz-main-container .career-title {
-            color: var(--secondary);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .quiz-main-container .career-description {
-            color: #6c757d;
-            margin-bottom: 1.5rem;
-        }
-        
-        .quiz-main-container .btn-primary {
-            background-color: var(--primary);
-            border-color: var(--primary);
-            padding: 0.7rem 1.5rem;
-            font-weight: 600;
-        }
-        
-        .quiz-main-container .btn-primary:hover {
-            background-color: var(--secondary);
-            border-color: var(--secondary);
-        }
-        
-        .quiz-main-container .btn-outline-primary {
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .quiz-main-container .btn-outline-primary:hover {
-            background-color: var(--primary);
-            border-color: var(--primary);
-        }
-        
-        .feature-card {
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            height: 100%;
-            width: 100%;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .quiz-main-container .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-        
-        .quiz-main-container .career-match-card {
-            border-left: 4px solid var(--primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .quiz-main-container .career-match-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .quiz-main-container .match-high {
-            background-color: #d4edda;
-            border-left-color: #28a745;
-        }
-        
-        .quiz-main-container .match-medium {
-            background-color: #fff3cd;
-            border-left-color: #ffc107;
-        }
-        
-        .quiz-main-container .match-low {
-            background-color: #f8d7da;
-            border-left-color: #dc3545;
-        }
-    </style>
-</head>
+    <meta name="description" content="Take our free career quiz with 5 questions to discover your ideal career path based on your interests, skills, and personality.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/career-quizz.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="5-Question Career Explorer - Discover Your Ideal Career Path">
+    <meta property="og:description" content="Take our free career quiz with 5 questions to discover your ideal career path based on your interests, skills, and personality.">
+    <meta property="og:url" content="https://collegeall.com/tools/career-quizz.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="5-Question Career Explorer - Discover Your Ideal Career Path">
+    <meta name="twitter:description" content="Take our free career quiz with 5 questions to discover your ideal career path based on your interests, skills, and personality.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "5-Question Career Explorer - Discover Your Ideal Career Path",
+      "description": "Take our free career quiz with 5 questions to discover your ideal career path based on your interests, skills, and personality.",
+      "url": "https://collegeall.com/tools/career-quizz.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="career quiz, career test, job finder, career assessment, career guidance, career path">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --primary: #4361ee;            --secondary: #3a0ca3;            --success: #4cc9f0;            --light: #f8f9fa;            --dark: #212529;            --warning: #f72585;        }        body {            min-height: 100vh;            padding-bottom: 2rem;        }        .quiz-main-container .quiz-container {            background: white;            border-radius: 15px;            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);            overflow: hidden;            margin-top: 2rem;        }        .quiz-main-container .quiz-header {            background: linear-gradient(to right, var(--primary), var(--secondary));            color: white;            padding: 2rem;            text-align: center;        }        .quiz-main-container .quiz-body {            padding: 2rem;        }        .quiz-main-container .question-container {            display: none;        }        .quiz-main-container .question-container.active {            display: block;            animation: fadeIn 0.5s ease;        }        @keyframes fadeIn {            from { opacity: 0; transform: translateY(10px); }            to { opacity: 1; transform: translateY(0); }        }        .quiz-main-container .question-text {            font-size: 1.3rem;            font-weight: 600;            margin-bottom: 1.5rem;            color: var(--dark);        }        .quiz-main-container .option-card {            border: 2px solid #e9ecef;            border-radius: 10px;            padding: 1.2rem;            margin-bottom: 1rem;            cursor: pointer;            transition: all 0.3s ease;        }        .quiz-main-container .option-card:hover {            border-color: var(--primary);            background-color: rgba(67, 97, 238, 0.05);        }        .quiz-main-container .option-card.selected {            border-color: var(--primary);            background-color: rgba(67, 97, 238, 0.1);        }        .quiz-main-container .progress {            height: 10px;            margin-bottom: 2rem;        }        .quiz-main-container .result-card {            text-align: center;            padding: 2rem;            display: none;        }        .quiz-main-container .career-icon {            font-size: 4rem;            color: var(--primary);            margin-bottom: 1.5rem;        }        .quiz-main-container .career-title {            color: var(--secondary);            font-weight: 700;            margin-bottom: 1rem;        }        .quiz-main-container .career-description {            color: #6c757d;            margin-bottom: 1.5rem;        }        .quiz-main-container .btn-primary {            background-color: var(--primary);            border-color: var(--primary);            padding: 0.7rem 1.5rem;            font-weight: 600;        }        .quiz-main-container .btn-primary:hover {            background-color: var(--secondary);            border-color: var(--secondary);        }        .quiz-main-container .btn-outline-primary {            color: var(--primary);            border-color: var(--primary);        }        .quiz-main-container .btn-outline-primary:hover {            background-color: var(--primary);            border-color: var(--primary);        }        .feature-card {            border-radius: 10px;            padding: 1.5rem;            text-align: center;            height: 100%;            width: 100%;            transition: transform 0.3s ease;        }        .feature-card:hover {            transform: translateY(-5px);        }        .feature-icon {            font-size: 2.5rem;            color: var(--primary);            margin-bottom: 1rem;        }        .quiz-main-container .nav-buttons {            display: flex;            justify-content: space-between;            margin-top: 2rem;        }        .quiz-main-container .career-match-card {            border-left: 4px solid var(--primary);            transition: transform 0.3s ease;        }        .quiz-main-container .career-match-card:hover {            transform: translateY(-5px);        }        .quiz-main-container .match-high {            background-color: #d4edda;            border-left-color: #28a745;        }        .quiz-main-container .match-medium {            background-color: #fff3cd;            border-left-color: #ffc107;        }        .quiz-main-container .match-low {            background-color: #f8d7da;            border-left-color: #dc3545;        }    </style></head>
 <body>
     
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

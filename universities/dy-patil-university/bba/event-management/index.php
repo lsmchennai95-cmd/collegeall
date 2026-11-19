@@ -6,66 +6,49 @@ require_once __DIR__ . '/../../../../config/bootstrap.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online BBA in Event Management | D.Y. Patil University</title>
-    <meta name="title" content="DY Patil Online BBA Event Management – Plan & Manage Events">
-    <!-- Meta Description -->
     <meta name="description" content="Master event planning, sponsorship & digital event marketing with DY Patil Online BBA (Event Management). Gain real-world experience online.">
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="DY Patil University, BBA in Event Management, online BBA, DY Patil University, BBA Event Management online, DY Patil online courses, BBA degree online, event management degree, online BBA program, DY Patil University online courses, BBA in EM, DY Patil BBA, event planning and management, online BBA in India, DY Patil University BBA, BBA online admission, DY Patil online education, BBA in Event Management, online degree in event management, DY Patil University admissions, BBA EM course details, DY Patil BBA program, online BBA in event management, DY Patil University BBA EM, BBA in Event Management online course, DY Patil online BBA admission, event management BBA online, DY Patil University BBA EM, online BBA, DY Patil BBA EM course, BBA in Event Management India, DY Patil University online BBA, BBA in EM, DY Patil online degree, BBA in Event Management program, DY Patil University BBA in EM, online BBA in event management, DY Patil BBA admission, BBA in Event Management online degree, DY Patil University online BBA, BBA in EM online course, DY Patil BBA in EM program, online BBA in event management India, DY Patil University BBA in Event Management, BBA in Event Management online admission, DY Patil online BBA in EM, BBA in Event Management course details, DY Patil University BBA in EM program, online BBA in event management India, DY Patil BBA in Event Management online, BBA in EM online program, DY Patil University online BBA in EM, BBA in Event Management online course, DY Patil BBA in EM online admission, event planning degree online, DY Patil BBA event planning, online BBA in event planning and management, DY Patil University BBA event management course, BBA in event management and planning, DY Patil BBA event management program, online BBA in event management and planning, DY Patil University BBA event management online, BBA in event management and planning, DY Patil online BBA event management course.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-    
-    <link rel="stylesheet" href="../../../css/course.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-BED9GZX87Z');
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/universities/dy-patil-university/bba/event-management/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Online BBA in Event Management | D.Y. Patil University">
+    <meta property="og:description" content="Master event planning, sponsorship & digital event marketing with DY Patil Online BBA (Event Management). Gain real-world experience online.">
+    <meta property="og:url" content="https://collegeall.com/universities/dy-patil-university/bba/event-management/">
+    <meta property="og:image" content="https://api.collegeall.com/university_banners/D.Y.%20Patil%20University.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Online BBA in Event Management | D.Y. Patil University">
+    <meta name="twitter:description" content="Master event planning, sponsorship & digital event marketing with DY Patil Online BBA (Event Management). Gain real-world experience online.">
+    <meta name="twitter:image" content="https://api.collegeall.com/university_banners/D.Y.%20Patil%20University.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "DY Patil Online BBA Event Management – Plan & Manage Events",
+      "description": "Master event planning, sponsorship & digital event marketing with DY Patil Online BBA (Event Management). Gain real-world experience online.",
+      "url": "https://collegeall.com/universities/dy-patil-university/bba/event-management/",
+      "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "Dy Patil University",
+        "url": "https://collegeall.com/universities/dy-patil-university/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "127100",
+        "priceCurrency": "INR",
+        "category": "Online Degree Program",
+        "availability": "https://schema.org/InStock"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "3 Years"
+      }
+    }
     </script>
-    <!--Start of Tawk.to Script-->
-    <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
-    <script id="zsiqscript"
-        src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"
-        defer=""></script>
-    <!-- Google tag (gtag.js) -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-17357684990">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17357684990');
-    </script>
-    <!--End of Tawk.to Script-->
-    <script
-        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"
-        type="module" id="zsiqscript"></script>
-    <script
-        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float.6oxmOj-1LlWpBG0Y32uXBBFcM03Y6QJpjb5zovjkQ4EUYOiCF65QS5mXs8O3NReZ.js"
-        type="nomodule" id="zsiqscript"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://css.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/css/float.j4IQ5NS9yIbjoXqwszMx1vHYVv0z7PoN_dm5TUmt0uhI7AkN5U2jVhDoruy4YwNF.css">
-    <link rel="preconnect" href="https://js.zohocdn.com">
-    <link rel="preconnect" href="https://css.zohocdn.com">
-    <link rel="preconnect" href="https://in2-files.zohopublic.in">
-    <link rel="preconnect" href="https://salesiq.zohopublic.in">
-    <link rel="preconnect" href="https://salesiq.zoho.in">
-    <link rel="preconnect" href="https://salesiq.zohopublic.in">
-    <link rel="preconnect" href="https://static.zohocdn.com">
-    <script type="text/javascript" async=""
-        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17357684990/?random=1755509390826&amp;cv=11&amp;fst=1755509390826&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be58d1h1za200xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104684208~104684211~104948813~105033763~105033765~105102051~105103161~105103163~105231383~105231385&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fcollegeall.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=College%20All%20-%20Online%20MBA%2C%20MCA%20%26%20BBA%20Courses%20from%20Top%20Universities&amp;npa=0&amp;pscdl=noapi&amp;auid=2052553747.1755077996&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253BA%253DBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B139.0.7258.128%7CChromium%3B139.0.7258.128&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
-    
-</head>
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Meta Description -->    <!-- Meta Keywords -->    <meta name="keywords" content="DY Patil University, BBA in Event Management, online BBA, DY Patil University, BBA Event Management online, DY Patil online courses, BBA degree online, event management degree, online BBA program, DY Patil University online courses, BBA in EM, DY Patil BBA, event planning and management, online BBA in India, DY Patil University BBA, BBA online admission, DY Patil online education, BBA in Event Management, online degree in event management, DY Patil University admissions, BBA EM course details, DY Patil BBA program, online BBA in event management, DY Patil University BBA EM, BBA in Event Management online course, DY Patil online BBA admission, event management BBA online, DY Patil University BBA EM, online BBA, DY Patil BBA EM course, BBA in Event Management India, DY Patil University online BBA, BBA in EM, DY Patil online degree, BBA in Event Management program, DY Patil University BBA in EM, online BBA in event management, DY Patil BBA admission, BBA in Event Management online degree, DY Patil University online BBA, BBA in EM online course, DY Patil BBA in EM program, online BBA in event management India, DY Patil University BBA in Event Management, BBA in Event Management online admission, DY Patil online BBA in EM, BBA in Event Management course details, DY Patil University BBA in EM program, online BBA in event management India, DY Patil BBA in Event Management online, BBA in EM online program, DY Patil University online BBA in EM, BBA in Event Management online course, DY Patil BBA in EM online admission, event planning degree online, DY Patil BBA event planning, online BBA in event planning and management, DY Patil University BBA event management course, BBA in event management and planning, DY Patil BBA event management program, online BBA in event management and planning, DY Patil University BBA event management online, BBA in event management and planning, DY Patil online BBA event management course.">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <link href="<?php echo asset_url('/assets/css/bootstrap.min.css'); ?>" rel="stylesheet">    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <link rel="stylesheet" href="<?php echo asset_url('/universities/css/course.css'); ?>">        <!--Start of Tawk.to Script-->    <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>    <script id="zsiqscript"        src="https://salesiq.zohopublic.in/widget?wc=siqe9edf8b4ae5e1fcdcca25643d2feb06a8b8839e396b6466ead2bd255020e6616895ff803d5b7941eecd145d236c6e040"        defer=""></script>        <!--End of Tawk.to Script-->    <script        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float~modern.2KjRBPLxUAF4zw-UknZLFW_ZDdjEiYi31KdJ99NWmYNh120tweBy_walcSH-bnSB.js"        type="module" id="zsiqscript"></script>    <script        src="https://js.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/js/float.6oxmOj-1LlWpBG0Y32uXBBFcM03Y6QJpjb5zovjkQ4EUYOiCF65QS5mXs8O3NReZ.js"        type="nomodule" id="zsiqscript"></script>    <link rel="stylesheet" type="text/css"        href="https://css.zohocdn.com/salesiq/RESOURCE_BUNDLES/embedfloat/css/float.j4IQ5NS9yIbjoXqwszMx1vHYVv0z7PoN_dm5TUmt0uhI7AkN5U2jVhDoruy4YwNF.css">    <link rel="preconnect" href="https://js.zohocdn.com">    <link rel="preconnect" href="https://css.zohocdn.com">    <link rel="preconnect" href="https://in2-files.zohopublic.in">    <link rel="preconnect" href="https://salesiq.zohopublic.in">    <link rel="preconnect" href="https://salesiq.zoho.in">    <link rel="preconnect" href="https://salesiq.zohopublic.in">    <link rel="preconnect" href="https://static.zohocdn.com">    </head>
 <body>
 
  
@@ -290,7 +273,7 @@ require_once __DIR__ . '/../../../../config/bootstrap.php';
         })();  
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../js/script.js"></script>
-    <script src="../../../js/form-validation.js"></script>
+    <script src="<?php echo asset_url('/universities/js/script.js'); ?>"></script>
+    <script src="<?php echo asset_url('/universities/js/form-validation.js'); ?>"></script>
 </body>
 </html>

@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PhD or DBA? · CollegeAll</title>
+    <title>PhD or DBA? Which Doctorate is Right for You? | CollegeAll</title>
+  <meta name="description" content="Compare PhD vs DBA programs for working professionals. Understand differences in curriculum, applied research vs theoretical research, career impact, and university admission criteria.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://collegeall.com/dba/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="CollegeAll">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="PhD or DBA? Which Doctorate is Right for You? | CollegeAll">
+  <meta property="og:description" content="Compare PhD vs DBA programs for working professionals. Understand differences in curriculum, applied research vs theoretical research, and career outcomes.">
+  <meta property="og:url" content="https://collegeall.com/dba/">
+  <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@CollegeAll">
+  <meta name="twitter:title" content="PhD or DBA? Which Doctorate is Right for You? | CollegeAll">
+  <meta name="twitter:description" content="Compare PhD vs DBA programs for working professionals. Understand differences in curriculum, applied research, and career outcomes.">
+  <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -1654,6 +1669,32 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "PhD or DBA? Which Doctorate is Right for You?",
+    "description": "Compare PhD vs DBA programs for working professionals. Understand differences in curriculum, applied research vs theoretical research, and career outcomes.",
+    "url": "https://collegeall.com/dba/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CollegeAll",
+      "url": "https://collegeall.com/",
+      "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+    }
+  }
+  </script>
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 <body>
   <!-- ===== HEADER ===== -->

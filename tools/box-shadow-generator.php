@@ -3,234 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-
     <title>Box Shadow Generator</title>
-
-    <!-- Meta Description -->
     <meta name="description" content="Generate beautiful CSS box-shadow effects instantly with our free Box Shadow Generator. Customize blur, spread, color, and offset, then copy the CSS code with one click. Fast, easy, and beginner-friendly.">
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="box shadow generator, free box shadow generator, css shadow generator, css box shadow tool, shadow creator, ui shadow tool, online box shadow generator, css effect generator, shadow maker, css design tool, web design tools, box shadow editor, box shadow builder">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <style>
-        :root {
-            --bg: #0f172a;
-            --card: #0b1220;
-            --muted: #9aa4b2;
-            --accent: #7c5cff;
-            --ui-bg: #f7f9fc;
-            --text: #0f172a;
-        }
-
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-            margin: 0;
-            min-height: 100vh;
-            background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);
-            color: var(--text);
-        }
-
-        .wrap {
-            max-width: 1100px;
-            margin: 36px auto;
-            padding: 24px;
-        }
-
-        .wrap header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 18px
-        }
-
-        .wrap h1 {
-            font-size: 20px;
-            margin: 0
-        }
-
-        .wrap p.lead {
-            margin: 0;
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .wrap .grid {
-            display: grid;
-            grid-template-columns: 360px 1fr;
-            gap: 20px
-        }
-
-        .wrap .panel {
-            background: white;
-            border-radius: 12px;
-            padding: 18px;
-            box-shadow: 0 6px 30px rgba(16, 24, 40, 0.06)
-        }
-
-        .wrap .controls {
-            display: flex;
-            flex-direction: column;
-            gap: 12px
-        }
-
-        .wrap .control {
-            display: flex;
-            flex-direction: column;
-            gap: 8px
-        }
-
-        .wrap label {
-            font-size: 13px;
-            color: var(--muted)
-        }
-
-        .wrap .row {
-            display: flex;
-            gap: 8px;
-            align-items: center
-        }
-
-        .wrap input[type=range] {
-            width: 100%;
-        }
-
-        .wrap .value {
-            min-width: 56px;
-            text-align: right;
-            font-weight: 600
-        }
-
-        .wrap .presets {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 8px
-        }
-
-        .wrap .preset {
-            padding: 6px 8px;
-            font-size: 13px;
-            border-radius: 8px;
-            border: 1px solid #e6eef8;
-            background: #fff;
-            color: black;
-            cursor: pointer
-        }
-
-        .wrap .preview-area {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            align-items: center;
-            justify-content: center;
-            padding: 28px
-        }
-
-        .wrap .box-wrap {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px
-        }
-
-        .wrap .box {
-            width: 220px;
-            height: 160px;
-            border-radius: 12px;
-            background: linear-gradient(180deg, #fff, #f3f6ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #233;
-        }
-
-        .wrap .generated {
-            display: flex;
-            flex-direction: column;
-            gap: 8px
-        }
-
-        .wrap textarea {
-            width: 100%;
-            min-height: 72px;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #e6eef8;
-            font-family: monospace;
-            font-size: 13px;
-            resize: vertical
-        }
-
-        .wrap .copy-row {
-            display: flex;
-            gap: 8px
-        }
-
-        .wrap button {
-            cursor: pointer;
-            border: 0;
-            padding: 8px 12px;
-            border-radius: 8px;
-            background: var(--accent);
-            color: white;
-            font-weight: 600
-        }
-
-        .wrap .muted {
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .wrap .top-controls {
-            display: flex;
-            gap: 12px;
-            align-items: center
-        }
-
-        .wrap .color-group {
-            display: flex;
-            gap: 8px;
-            align-items: center
-        }
-
-        .wrap .color-sample {
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            border: 1px solid rgba(0, 0, 0, 0.08)
-        }
-
-        .wrap footer {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 12px
-        }
-
-        @media (max-width:900px) {
-            .wrap .grid {
-                grid-template-columns: 1fr;
-            }
-
-            .wrap .panel {
-                padding: 12px
-            }
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/box-shadow-generator.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Box Shadow Generator">
+    <meta property="og:description" content="Generate beautiful CSS box-shadow effects instantly with our free Box Shadow Generator. Customize blur, spread, color, and offset, then copy the CSS code with one click. Fast, easy, and beginner-friendly.">
+    <meta property="og:url" content="https://collegeall.com/tools/box-shadow-generator.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Box Shadow Generator">
+    <meta name="twitter:description" content="Generate beautiful CSS box-shadow effects instantly with our free Box Shadow Generator. Customize blur, spread, color, and offset, then copy the CSS code with one click. Fast, easy, and beginner-friendly.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Box Shadow Generator",
+      "description": "Generate beautiful CSS box-shadow effects instantly with our free Box Shadow Generator. Customize blur, spread, color, and offset, then copy the CSS code with one click. Fast, easy, and beginner-friendly.",
+      "url": "https://collegeall.com/tools/box-shadow-generator.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <!-- Meta Description -->    <!-- Meta Keywords -->    <meta name="keywords" content="box shadow generator, free box shadow generator, css shadow generator, css box shadow tool, shadow creator, ui shadow tool, online box shadow generator, css effect generator, shadow maker, css design tool, web design tools, box shadow editor, box shadow builder">    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --bg: #0f172a;            --card: #0b1220;            --muted: #9aa4b2;            --accent: #7c5cff;            --ui-bg: #f7f9fc;            --text: #0f172a;        }        * {            box-sizing: border-box        }        body {            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;            margin: 0;            min-height: 100vh;            background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 100%);            color: var(--text);        }        .wrap {            max-width: 1100px;            margin: 36px auto;            padding: 24px;        }        .wrap header {            display: flex;            align-items: center;            gap: 16px;            margin-bottom: 18px        }        .wrap h1 {            font-size: 20px;            margin: 0        }        .wrap p.lead {            margin: 0;            color: var(--muted);            font-size: 13px        }        .wrap .grid {            display: grid;            grid-template-columns: 360px 1fr;            gap: 20px        }        .wrap .panel {            background: white;            border-radius: 12px;            padding: 18px;            box-shadow: 0 6px 30px rgba(16, 24, 40, 0.06)        }        .wrap .controls {            display: flex;            flex-direction: column;            gap: 12px        }        .wrap .control {            display: flex;            flex-direction: column;            gap: 8px        }        .wrap label {            font-size: 13px;            color: var(--muted)        }        .wrap .row {            display: flex;            gap: 8px;            align-items: center        }        .wrap input[type=range] {            width: 100%;        }        .wrap .value {            min-width: 56px;            text-align: right;            font-weight: 600        }        .wrap .presets {            display: flex;            flex-wrap: wrap;            gap: 8px;            margin-top: 8px        }        .wrap .preset {            padding: 6px 8px;            font-size: 13px;            border-radius: 8px;            border: 1px solid #e6eef8;            background: #fff;            color: black;            cursor: pointer        }        .wrap .preview-area {            display: flex;            flex-direction: column;            gap: 16px;            align-items: center;            justify-content: center;            padding: 28px        }        .wrap .box-wrap {            width: 100%;            display: flex;            align-items: center;            justify-content: center;            padding: 20px        }        .wrap .box {            width: 220px;            height: 160px;            border-radius: 12px;            background: linear-gradient(180deg, #fff, #f3f6ff);            display: flex;            align-items: center;            justify-content: center;            font-weight: 700;            color: #233;        }        .wrap .generated {            display: flex;            flex-direction: column;            gap: 8px        }        .wrap textarea {            width: 100%;            min-height: 72px;            padding: 12px;            border-radius: 8px;            border: 1px solid #e6eef8;            font-family: monospace;            font-size: 13px;            resize: vertical        }        .wrap .copy-row {            display: flex;            gap: 8px        }        .wrap button {            cursor: pointer;            border: 0;            padding: 8px 12px;            border-radius: 8px;            background: var(--accent);            color: white;            font-weight: 600        }        .wrap .muted {            color: var(--muted);            font-size: 13px        }        .wrap .top-controls {            display: flex;            gap: 12px;            align-items: center        }        .wrap .color-group {            display: flex;            gap: 8px;            align-items: center        }        .wrap .color-sample {            width: 28px;            height: 28px;            border-radius: 6px;            border: 1px solid rgba(0, 0, 0, 0.08)        }        .wrap footer {            margin-top: 18px;            color: var(--muted);            font-size: 12px        }        @media (max-width:900px) {            .wrap .grid {                grid-template-columns: 1fr;            }            .wrap .panel {                padding: 12px            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

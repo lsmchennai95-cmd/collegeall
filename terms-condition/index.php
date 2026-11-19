@@ -3,64 +3,23 @@
 <html lang="en">
 
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="CollegeAll">
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Terms and Conditions | CollegeAll</title>
-
-    <meta name="description"
-        content="Read the Terms and Conditions for using CollegeAll. Learn about usage policies, legal obligations, and your rights as a user.">
-    <meta name="keywords"
-        content="terms and conditions, user agreement, CollegeAll, legal, privacy, policy, website usage, terms of service">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Terms and Conditions | CollegeAll">
-    <meta property="og:description"
-        content="Understand the Terms and Conditions for using CollegeAll's services and platform.">
+    <meta name="description" content="Read the Terms and Conditions for using CollegeAll. Understand platform usage policies, counselor engagement, course admission procedures, and user rights.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/terms-condition/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://collegeall.com/terms-and-conditions">
-    <meta property="og:image" content="https://api.collegeall.com/Logo/fav.png">
-
-    <!-- Twitter -->
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Terms and Conditions | CollegeAll">
+    <meta property="og:description" content="Read the Terms and Conditions for using CollegeAll. Understand platform usage policies, counselor engagement, course admission procedures, and user rights.">
+    <meta property="og:url" content="https://collegeall.com/terms-condition/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
     <meta name="twitter:title" content="Terms and Conditions | CollegeAll">
-    <meta name="twitter:description" content="Detailed information about the Terms and Conditions of using CollegeAll.">
-    <meta name="twitter:image" content="https://api.collegeall.com/Logo/fav.png">
-    <link rel="stylesheet" href="https://api.collegeall.com/style/course.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        .terms-section {
-            padding: 5%;
-
-        }
-    </style>
-
-
-    <!-- Meta Pixel Code -->
-    <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '25443278008607273');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
-    <link rel="stylesheet" href="../index.css">
-</head>
+    <meta name="twitter:description" content="Read the Terms and Conditions for using CollegeAll. Understand platform usage policies, counselor engagement, course admission procedures, and user rights.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <!-- Basic Meta Tags -->    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="author" content="CollegeAll">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords"        content="terms and conditions, user agreement, CollegeAll, legal, privacy, policy, website usage, terms of service">    <!-- Open Graph / Facebook -->    <!-- Twitter -->    <link rel="stylesheet" href="https://api.collegeall.com/style/course.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <style>        .terms-section {            padding: 5%;        }    </style>    <!-- Meta Pixel Code -->    <script>        !function (f, b, e, v, n, t, s) {            if (f.fbq) return; n = f.fbq = function () {                n.callMethod ?                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)            };            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';            n.queue = []; t = b.createElement(e); t.async = !0;            t.src = v; s = b.getElementsByTagName(e)[0];            s.parentNode.insertBefore(t, s)        }(window, document, 'script',            'https://connect.facebook.net/en_US/fbevents.js');        fbq('init', '25443278008607273');        fbq('track', 'PageView');    </script>    <noscript><img height="1" width="1" style="display:none"            src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1" /></noscript>    <!-- End Meta Pixel Code -->    <link rel="stylesheet" href="../index.css"></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

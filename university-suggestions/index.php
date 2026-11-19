@@ -2,105 +2,32 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>College All – AI Match</title>
-  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
+    <title>AI University Match & Course Suggestions | CollegeAll</title>
+    <meta name="description" content="Discover your ideal online university program with CollegeAll AI Match. Get personalized degree recommendations tailored to your background and career goals.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://collegeall.com/university-suggestions/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="AI University Match & Course Suggestions | CollegeAll">
+    <meta property="og:description" content="Discover your ideal online university program with CollegeAll AI Match. Get personalized degree recommendations tailored to your background and career goals.">
+    <meta property="og:url" content="https://collegeall.com/university-suggestions/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="AI University Match & Course Suggestions | CollegeAll">
+    <meta name="twitter:description" content="Discover your ideal online university program with CollegeAll AI Match. Get personalized degree recommendations tailored to your background and career goals.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">  <!-- Tailwind CSS -->  <script src="https://cdn.tailwindcss.com"></script>  <!-- Google Fonts -->  <link rel="preconnect" href="https://fonts.googleapis.com">  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"    rel="stylesheet">  <!-- Import Map for Google GenAI SDK -->  <script type="importmap">{  "imports": {    "@google/genai": "https://esm.run/@google/genai",    "react": "https://aistudiocdn.com/react@^19.2.1",    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",    "react/": "https://aistudiocdn.com/react@^19.2.1/"  }}</script>  <script>    tailwind.config = {      theme: {        extend: {          fontFamily: {            sans: ['"Plus Jakarta Sans"', 'sans-serif'],          },          colors: {            brand: {              50: '#eff6ff',              100: '#dbeafe',              500: '#3b82f6',              600: '#2563eb',              700: '#1d4ed8',              900: '#1e3a8a',            }          },          animation: {            'fade-in-up': 'fadeInUp 0.5s ease-out',            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',          },          keyframes: {            fadeInUp: {              '0%': { opacity: '0', transform: 'translateY(10px)' },              '100%': { opacity: '1', transform: 'translateY(0)' },            }          }        }      }    }  </script>  <style>    body {      background-color: #f8fafc;      background-image:        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 0) 0, transparent 50%),        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.05) 0, transparent 50%),        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0) 0, transparent 50%);    }    /* Glass effect utilities */    .glass-panel {      background: rgba(255, 255, 255, 0.7);      backdrop-filter: blur(12px);      -webkit-backdrop-filter: blur(12px);      border: 1px solid rgba(255, 255, 255, 0.5);    }    .glass-nav {      background: rgba(255, 255, 255, 0.85);      backdrop-filter: blur(8px);      -webkit-backdrop-filter: blur(8px);    }    /* Custom Scrollbar */    ::-webkit-scrollbar {      width: 6px;    }    ::-webkit-scrollbar-track {      background: transparent;    }    ::-webkit-scrollbar-thumb {      background-color: #cbd5e1;      border-radius: 20px;    }    ::-webkit-scrollbar-thumb:hover {      background-color: #94a3b8;    }  </style>    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- Import Map for Google GenAI SDK -->
-  <script type="importmap">
-{
-  "imports": {
-    "@google/genai": "https://esm.run/@google/genai",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/"
-  }
-}
-</script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              900: '#1e3a8a',
-            }
-          },
-          animation: {
-            'fade-in-up': 'fadeInUp 0.5s ease-out',
-            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%': { opacity: '0', transform: 'translateY(10px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #f8fafc;
-      background-image:
-        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 0) 0, transparent 50%),
-        radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.05) 0, transparent 50%),
-        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0) 0, transparent 50%);
-    }
-
-    /* Glass effect utilities */
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .glass-nav {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #cbd5e1;
-      border-radius: 20px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background-color: #94a3b8;
-    }
-  </style>
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
+    </script>
 </head>
 
 <body class="text-slate-800 flex flex-col min-h-screen">

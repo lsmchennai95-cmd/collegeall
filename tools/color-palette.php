@@ -3,229 +3,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
     <title>Color Palette Builder</title>
-
     <meta name="description" content="Generate stunning color palettes instantly. Pick colors, copy hex codes, export schemes, and create aesthetic palettes for UI design, branding, and web projects.">
-
-    <meta name="keywords" content="color palette generator, color picker, color scheme tool, hex color palette, ui color tool, rgb hsl converter, color combinations, web design colors, gradient generator, color palette maker">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
-    <link rel="stylesheet" href="../index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <style>
-        :root {
-            --bg: #0f1724;
-            --card: #0b1220;
-            --muted: #9aa4b2;
-            --glass: rgba(255, 255, 255, 0.04)
-        }
-
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial
-        }
-
-        body {
-            background: linear-gradient(180deg, #071028 0%, var(--bg) 100%);
-            color: #e6eef6;
-        }
-
-        .color-palette{
-            padding: 10px;
-        }
-
-        .color-palette .app {
-            max-width: 1100px;
-            margin: 0 auto
-        }
-
-        .color-palette header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 18px
-        }
-
-        .color-palette h1 {
-            font-size: 20px;
-            margin: 0
-        }
-
-        .color-palette p.lead {
-            margin: 0;
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .color-palette .controls {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin: 18px 0
-        }
-
-        .color-palette button {
-            background: transparent;
-            border: 1px solid var(--glass);
-            color: inherit;
-            padding: 8px 12px;
-            border-radius: 8px;
-            cursor: pointer
-        }
-
-        .color-palette button.primary {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            border: 0;
-            color: white
-        }
-
-        .color-palette .palette {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 12px
-        }
-
-        .color-palette .swatch {
-            height: 250px;
-            border-radius: 12px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6)
-        }
-
-        .color-palette .swatch .top {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 12px;
-            backdrop-filter: blur(6px)
-        }
-
-        .color-palette .meta {
-            background: rgba(0, 0, 0, 0.18);
-            padding: 8px;
-            border-radius: 8px;
-            color: var(--muted);
-            display: flex;
-            flex-direction: column;
-            gap: 6px
-        }
-
-        .color-palette .codes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center
-        }
-
-        .color-palette .code {
-            font-family: monospace;
-            background: rgba(255, 255, 255, 0.06);
-            padding: 6px 8px;
-            border-radius: 6px;
-            cursor: pointer
-        }
-
-        .color-palette .btns {
-            display: flex;
-            gap: 6px
-        }
-
-        .color-palette .small {
-            font-size: 12px;
-            padding: 6px 8px
-        }
-
-        .color-palette .lock {
-            display: flex;
-            align-items: center;
-            gap: 6px
-        }
-
-        .color-palette .color-input {
-            position: absolute;
-            right: 8px;
-            top: 8px;
-            border-radius: 6px;
-            width: 36px;
-            height: 36px;
-            border: 0;
-            padding: 0;
-            background: transparent
-        }
-
-        .color-palette .controls .label {
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        .color-palette footer {
-            margin-top: 18px;
-            color: var(--muted);
-            font-size: 13px
-        }
-
-        /* modal */
-        .color-palette .modal-backdrop {
-            position: fixed;
-            inset: 0;
-            background: rgba(2, 6, 23, 0.6);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px
-        }
-
-        .color-palette .modal {
-            background: #0a1220;
-            border-radius: 12px;
-            padding: 18px;
-            max-width: 820px;
-            width: 100%;
-            box-shadow: 0 10px 40px rgba(2, 6, 23, 0.7)
-        }
-
-        .color-palette textarea {
-            width: 100%;
-            height: 220px;
-            background: transparent;
-            color: #e6eef6;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 12px;
-            border-radius: 8px;
-            font-family: monospace
-        }
-
-        .modal-content{
-            background: none;
-        }
-
-        @media (max-width:880px) {
-            .color-palette .palette {
-                grid-template-columns: repeat(3, 1fr)
-            }
-
-            .color-palette .swatch {
-                height: 180px
-            }
-        }
-
-        @media (max-width:480px) {
-            .color-palette .palette {
-                grid-template-columns: repeat(2, 1fr)
-            }
-        }
-    </style>
-</head>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/tools/color-palette.php">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Color Palette Builder">
+    <meta property="og:description" content="Generate stunning color palettes instantly. Pick colors, copy hex codes, export schemes, and create aesthetic palettes for UI design, branding, and web projects.">
+    <meta property="og:url" content="https://collegeall.com/tools/color-palette.php">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Color Palette Builder">
+    <meta name="twitter:description" content="Generate stunning color palettes instantly. Pick colors, copy hex codes, export schemes, and create aesthetic palettes for UI design, branding, and web projects.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Color Palette Builder",
+      "description": "Generate stunning color palettes instantly. Pick colors, copy hex codes, export schemes, and create aesthetic palettes for UI design, branding, and web projects.",
+      "url": "https://collegeall.com/tools/color-palette.php",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": "https://api.collegeall.com/Logo/collegeallLogo.png"
+      }
+    }
+    </script>
+    <meta charset="utf-8" />    <meta name="viewport" content="width=device-width,initial-scale=1" />    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="keywords" content="color palette generator, color picker, color scheme tool, hex color palette, ui color tool, rgb hsl converter, color combinations, web design colors, gradient generator, color palette maker">    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>    <link rel="stylesheet" href="../index.css">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>        :root {            --bg: #0f1724;            --card: #0b1220;            --muted: #9aa4b2;            --glass: rgba(255, 255, 255, 0.04)        }        html,        body {            height: 100%;            margin: 0;            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial        }        body {            background: linear-gradient(180deg, #071028 0%, var(--bg) 100%);            color: #e6eef6;        }        .color-palette{            padding: 10px;        }        .color-palette .app {            max-width: 1100px;            margin: 0 auto        }        .color-palette header {            display: flex;            align-items: center;            gap: 16px;            margin-bottom: 18px        }        .color-palette h1 {            font-size: 20px;            margin: 0        }        .color-palette p.lead {            margin: 0;            color: var(--muted);            font-size: 13px        }        .color-palette .controls {            display: flex;            gap: 10px;            flex-wrap: wrap;            margin: 18px 0        }        .color-palette button {            background: transparent;            border: 1px solid var(--glass);            color: inherit;            padding: 8px 12px;            border-radius: 8px;            cursor: pointer        }        .color-palette button.primary {            background: linear-gradient(90deg, #3b82f6, #8b5cf6);            border: 0;            color: white        }        .color-palette .palette {            display: grid;            grid-template-columns: repeat(6, 1fr);            gap: 12px        }        .color-palette .swatch {            height: 250px;            border-radius: 12px;            position: relative;            overflow: hidden;            box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6)        }        .color-palette .swatch .top {            position: absolute;            inset: 0;            display: flex;            flex-direction: column;            justify-content: flex-end;            padding: 12px;            backdrop-filter: blur(6px)        }        .color-palette .meta {            background: rgba(0, 0, 0, 0.18);            padding: 8px;            border-radius: 8px;            color: var(--muted);            display: flex;            flex-direction: column;            gap: 6px        }        .color-palette .codes {            display: flex;            flex-wrap: wrap;            gap: 8px;            align-items: center        }        .color-palette .code {            font-family: monospace;            background: rgba(255, 255, 255, 0.06);            padding: 6px 8px;            border-radius: 6px;            cursor: pointer        }        .color-palette .btns {            display: flex;            gap: 6px        }        .color-palette .small {            font-size: 12px;            padding: 6px 8px        }        .color-palette .lock {            display: flex;            align-items: center;            gap: 6px        }        .color-palette .color-input {            position: absolute;            right: 8px;            top: 8px;            border-radius: 6px;            width: 36px;            height: 36px;            border: 0;            padding: 0;            background: transparent        }        .color-palette .controls .label {            color: var(--muted);            font-size: 13px        }        .color-palette footer {            margin-top: 18px;            color: var(--muted);            font-size: 13px        }        /* modal */        .color-palette .modal-backdrop {            position: fixed;            inset: 0;            background: rgba(2, 6, 23, 0.6);            display: none;            align-items: center;            justify-content: center;            padding: 20px        }        .color-palette .modal {            background: #0a1220;            border-radius: 12px;            padding: 18px;            max-width: 820px;            width: 100%;            box-shadow: 0 10px 40px rgba(2, 6, 23, 0.7)        }        .color-palette textarea {            width: 100%;            height: 220px;            background: transparent;            color: #e6eef6;            border: 1px solid rgba(255, 255, 255, 0.06);            padding: 12px;            border-radius: 8px;            font-family: monospace        }        .modal-content{            background: none;        }        @media (max-width:880px) {            .color-palette .palette {                grid-template-columns: repeat(3, 1fr)            }            .color-palette .swatch {                height: 180px            }        }        @media (max-width:480px) {            .color-palette .palette {                grid-template-columns: repeat(2, 1fr)            }        }    </style></head>
 
 <body>
     <?php include COLLEGEALL_ROOT . '/header.php'; ?>

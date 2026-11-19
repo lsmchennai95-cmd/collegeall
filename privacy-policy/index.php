@@ -2,63 +2,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – CollegeAll.com</title>
-    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">
-    <meta name="theme-color" content="#ffffff">
+    <title>Privacy Policy | CollegeAll</title>
+    <meta name="description" content="Read the official Privacy Policy of CollegeAll to understand how we collect, protect, and handle your personal data when using our education counseling and admission platform.">
     <meta name="robots" content="index, follow">
-        <link rel="stylesheet" href="https://api.collegeall.com/style/course.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- legacy demo stylesheet removed -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    body {
-      background: #f8f9fa;
-      color: #333;
-    }
-    .policy-container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .policy-container h1 {
-      color: #0d6efd;
-      margin-bottom: 20px;
-    }
-    .policy-container h3 {
-      margin-top: 30px;
-      font-weight: 600;
-    }
-    .policy-container p {
-      line-height: 1.7;
-      color: #555;
-    }
-  </style>
-
-    <!-- Meta Pixel Code -->
+    <link rel="canonical" href="https://collegeall.com/privacy-policy/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="Privacy Policy | CollegeAll">
+    <meta property="og:description" content="Read the official Privacy Policy of CollegeAll to understand how we collect, protect, and handle your personal data when using our education counseling and admission platform.">
+    <meta property="og:url" content="https://collegeall.com/privacy-policy/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="Privacy Policy | CollegeAll">
+    <meta name="twitter:description" content="Read the official Privacy Policy of CollegeAll to understand how we collect, protect, and handle your personal data when using our education counseling and admission platform.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+  <meta charset="UTF-8" />  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="theme-color" content="#ffffff">        <link rel="stylesheet" href="https://api.collegeall.com/style/course.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <!-- legacy demo stylesheet removed -->    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="        crossorigin="anonymous" referrerpolicy="no-referrer" />  <style>    body {      background: #f8f9fa;      color: #333;    }    .policy-container {      max-width: 800px;      margin: 50px auto;      background: #fff;      padding: 40px;      border-radius: 12px;      box-shadow: 0 4px 15px rgba(0,0,0,0.05);    }    .policy-container h1 {      color: #0d6efd;      margin-bottom: 20px;    }    .policy-container h3 {      margin-top: 30px;      font-weight: 600;    }    .policy-container p {      line-height: 1.7;      color: #555;    }  </style>    <!-- Meta Pixel Code -->    <script>        !function(f,b,e,v,n,t,s)        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?        n.callMethod.apply(n,arguments):n.queue.push(arguments)};        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';        n.queue=[];t=b.createElement(e);t.async=!0;        t.src=v;s=b.getElementsByTagName(e)[0];        s.parentNode.insertBefore(t,s)}(window, document,'script',        'https://connect.facebook.net/en_US/fbevents.js');        fbq('init', '25443278008607273');        fbq('track', 'PageView');    </script>    <noscript><img height="1" width="1" style="display:none"    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"    /></noscript>    <!-- End Meta Pixel Code -->    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '25443278008607273');
-        fbq('track', 'PageView');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BED9GZX87Z');
+      gtag('config', 'AW-17357684990');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=25443278008607273&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
 </head>
 <body>
   <div class="row">

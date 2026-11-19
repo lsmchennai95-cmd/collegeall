@@ -7,139 +7,46 @@ require_once __DIR__ . '/../../config/bootstrap.php';
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SSC CHSL Answer Key 2025 Download Tier 1 PDF @ ssc.gov.in</title>
     <meta name="description" content="Download SSC CHSL Tier 1 Answer Key 2025 PDF, response sheet & objection link at ssc.gov.in. Raise objections till 11 December 2025. Check details.">
-    <meta name="keywords" content="ssc chsl answer key 2025, chsl answer key 2025, ssc. gov. in, ssc chsl answer key, ssc.gov.in, ssc chsl, ssc gov, ssc.gov .in, ssc.gov in, chsl answer key, ssc gov.in, ssc cglssc chsl answer key link, ssc.gov.nic, SSC CHSL Answer Key 2025">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">
-    <style>
-      
-    .blog-hero-image {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 15px 15px 0 0;
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://collegeall.com/blogs/ssc-chsl-answer-key-2025/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CollegeAll">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="SSC CHSL Answer Key 2025 Download Tier 1 PDF @ ssc.gov.in">
+    <meta property="og:description" content="Download SSC CHSL Tier 1 Answer Key 2025 PDF, response sheet & objection link at ssc.gov.in. Raise objections till 11 December 2025. Check details.">
+    <meta property="og:url" content="https://collegeall.com/blogs/ssc-chsl-answer-key-2025/">
+    <meta property="og:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CollegeAll">
+    <meta name="twitter:title" content="SSC CHSL Answer Key 2025 Download Tier 1 PDF @ ssc.gov.in">
+    <meta name="twitter:description" content="Download SSC CHSL Tier 1 Answer Key 2025 PDF, response sheet & objection link at ssc.gov.in. Raise objections till 11 December 2025. Check details.">
+    <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "SSC CHSL Answer Key 2025 Download Tier 1 PDF @ ssc.gov.in",
+      "description": "Download SSC CHSL Tier 1 Answer Key 2025 PDF, response sheet & objection link at ssc.gov.in. Raise objections till 11 December 2025. Check details.",
+      "url": "https://collegeall.com/blogs/ssc-chsl-answer-key-2025/",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://collegeall.com/blogs/ssc-chsl-answer-key-2025/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CollegeAll",
+        "url": "https://collegeall.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://api.collegeall.com/Logo/collegeallLogo.png"
+        }
+      },
+      "image": "https://api.collegeall.com/Logo/og-image.png"
     }
-
-    .blog-content {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-    }
-
-    .benefit-card {
-      background: #fff;
-      border-left: 4px solid #4361ee !important;
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      margin-bottom: 1rem;
-    }
-
-    .highlight-text {
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);
-      border-left: 4px solid #4361ee;
-      padding: 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      margin: 1.5rem 0;
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      border-radius: 2px;
-    }
-
-    .sidebar-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #f1f3f4;
-    }
-
-    .sidebar-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #4361ee;
-    }
-
-    .cta-section {
-      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-      color: white;
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .list-group-item {
-      border: none !important;
-      border-bottom: 1px solid #e9ecef !important;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      padding: 10px 0;
-      text-decoration: none;
-      color: #4a5568;
-    }
-
-    .list-group-item:hover {
-      padding-left: 5px;
-      color: #4361ee;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-
-    table th, table td {
-      border: 1px solid #dee2e6;
-      padding: 0.75rem;
-      text-align: left;
-    }
-
-    table th {
-      background: #f8f9fa;
-      font-weight: 600;
-    }
-  
-    </style>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"
-     crossorigin="anonymous"></script>
-</head>
+    </script>
+    <meta charset="utf-8">    <meta http-equiv="x-ua-compatible" content="ie=edge">    <meta name="keywords" content="ssc chsl answer key 2025, chsl answer key 2025, ssc. gov. in, ssc chsl answer key, ssc.gov.in, ssc chsl, ssc gov, ssc.gov .in, ssc.gov in, chsl answer key, ssc gov.in, ssc cglssc chsl answer key link, ssc.gov.nic, SSC CHSL Answer Key 2025">    <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="manifest" href="site.webmanifest">    <link rel="shortcut icon" type="image/x-icon" href="https://api.collegeall.com/Logo/fav.png">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">    <link rel="stylesheet" href="<?php echo asset_url('/assets/css/all.min.css'); ?>">    <style>    .blog-hero-image {      width: 100%;      height: 400px;      object-fit: cover;      border-radius: 15px 15px 0 0;    }    .blog-content {      background: #fff;      border-radius: 15px;      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);      overflow: hidden;    }    .benefit-card {      background: #fff;      border-left: 4px solid #4361ee !important;      border-radius: 12px;      padding: 1.5rem;      transition: all 0.3s ease;      position: relative;      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);      margin-bottom: 1rem;    }    .highlight-text {      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(58, 12, 163, 0.1) 100%);      border-left: 4px solid #4361ee;      padding: 1.5rem;      border-radius: 8px;      font-weight: 500;      margin: 1.5rem 0;    }    .section-title {      font-size: 1.8rem;      font-weight: 700;      color: #2c3e50;      margin-bottom: 1.5rem;      position: relative;      padding-bottom: 0.5rem;    }    .section-title::after {      content: '';      position: absolute;      bottom: 0;      left: 0;      width: 60px;      height: 3px;      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      border-radius: 2px;    }    .sidebar-card {      background: #fff;      border-radius: 15px;      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);      padding: 1.5rem;      margin-bottom: 2rem;      border: 1px solid #f1f3f4;    }    .sidebar-title {      font-size: 1.3rem;      font-weight: 700;      color: #2c3e50;      margin-bottom: 1.5rem;      position: relative;      padding-bottom: 0.5rem;      border-bottom: 2px solid #4361ee;    }    .cta-section {      background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);      color: white;      padding: 2rem;      border-radius: 15px;      text-align: center;      margin-bottom: 2rem;    }    .list-group-item {      border: none !important;      border-bottom: 1px solid #e9ecef !important;      transition: all 0.3s ease;      display: flex;      align-items: center;      padding: 10px 0;      text-decoration: none;      color: #4a5568;    }    .list-group-item:hover {      padding-left: 5px;      color: #4361ee;    }    table {      width: 100%;      border-collapse: collapse;      margin: 1rem 0;    }    table th, table td {      border: 1px solid #dee2e6;      padding: 0.75rem;      text-align: left;    }    table th {      background: #f8f9fa;      font-weight: 600;    }    </style><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8359931951854136"     crossorigin="anonymous"></script></head>
 <body>
   <?php include COLLEGEALL_ROOT . '/header.php'; ?>
 <main>
