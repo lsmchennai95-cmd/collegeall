@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../config/bootstrap.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +21,7 @@
     <meta name="twitter:description" content="Manage your course enrollments, applications, and education counseling status from your personalized CollegeAll student dashboard.">
     <meta name="twitter:image" content="https://api.collegeall.com/Logo/og-image.png">
     <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="icon" href="https://api.collegeall.com/Logo/fav.png" type="image/png">    <meta name="theme-color" content="#1f3c88">    <!-- Bootstrap CSS -->    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">    <!-- Font Awesome -->    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">    <!-- Custom CSS -->    <link href="./Css/index.css" rel="stylesheet">    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <?php render_app_config_script(); ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BED9GZX87Z"></script>
     <script>
       window.dataLayer = window.dataLayer || [];

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top shadow-lg py-2"
         style="backdrop-filter: blur(12px); background: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(0,0,0,0.05);">
         <div class="container-fluid px-4">
-            <a class="navbar-brand d-flex align-items-center" href="https://collegeall.com/">
+            <a class="navbar-brand d-flex align-items-center" href="<?php echo function_exists('app_url') ? app_url('/') : 'https://collegeall.com/'; ?>">
                 <img src="https://collegeall.com/img/Logo/collegeallLogo.png" alt="CollegeAll Logo" height="42"
                     class="me-2">
             </a>
@@ -77,18 +77,30 @@
 </style>
 <script>
     function Navigate() {
-        window.location.href = '../'
+        const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : '../';
+        window.location.href = appUrl.replace(/\/+$/, '') + '/';
     }
-    document.getElementById("searchInput").addEventListener("focus", function () {
-        window.location.href = "../search"; // Change to your desired URL
-    });
 
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.addEventListener("focus", function () {
+            const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "..";
+            window.location.href = appUrl.replace(/\/+$/, '') + "/search/";
+        });
+    }
+
+    const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+    if (mobileSearchBtn) {
+        mobileSearchBtn.addEventListener("click", function () {
+            const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "..";
+            window.location.href = appUrl.replace(/\/+$/, '') + "/search/";
+        });
+    }
 
     function userDetails() {
         const token = localStorage.getItem('authToken');
 
         if (token) {
-
             const myHeaders = new Headers();
             myHeaders.append("authtoken", token);
 
@@ -98,34 +110,51 @@
                 redirect: "follow"
             };
 
-            fetch("https://api.collegeall.com/api/v1/getuser-details/", requestOptions)
+            const apiBase = (window.APP_CONFIG && window.APP_CONFIG.apiBaseUrl) ? window.APP_CONFIG.apiBaseUrl : "https://api.collegeall.com";
+            fetch(`${apiBase}/api/v1/getuser-details/`, requestOptions)
                 .then(response => {
                     if (!response.ok) {
+                        if (response.status === 401 || response.status === 403) {
+                            localStorage.removeItem('authToken');
+                            sessionStorage.removeItem('user_details');
+                            const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "..";
+                            window.location.href = appUrl.replace(/\/+$/, '') + "/signin/";
+                            return null;
+                        }
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.json();
                 })
                 .then(result => {
+                    if (!result) return;
                     console.log("API Result:", result);
-                    const username = result.data?.userdetails[0]?.user_name
-                    const datain =result.data?.userdetails[0]
+                    const username = result.data?.userdetails?.[0]?.user_name;
+                    const datain = result.data?.userdetails?.[0];
 
-                    sessionStorage.setItem('user_details', JSON.stringify(datain))
-                    // console.log(username)
+                    if (datain) {
+                        try {
+                            sessionStorage.setItem('user_details', JSON.stringify(datain));
+                        } catch (e) {}
+                    }
                     if (username) {
-                        document.getElementById('usernameDiv').textContent = username;
+                        const userDiv = document.getElementById('usernameDiv');
+                        if (userDiv) {
+                            userDiv.textContent = username;
+                        }
                     }
                 })
                 .catch(error => {
                     console.error("API Error:", error);
-                    menuContainer.textContent = "Guest";
+                    const userDiv = document.getElementById('usernameDiv');
+                    if (userDiv) {
+                        userDiv.textContent = "Guest";
+                    }
                 });
         } else {
-            console.log('error')
+            const appUrl = (window.APP_CONFIG && window.APP_CONFIG.appUrl) ? window.APP_CONFIG.appUrl : "..";
+            window.location.href = appUrl.replace(/\/+$/, '') + "/signin/";
         }
     }
 
     userDetails();
-
-
 </script>

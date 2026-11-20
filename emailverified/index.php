@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../config/bootstrap.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +39,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Verified Icon" />
         <h1>Email Verified!</h1>
         <p>Your email address has been successfully verified. You can now continue to use our platform.</p>
-        <a href="../signin">Go to Sign in</a>
+        <a href="<?php echo function_exists('app_url') ? app_url('/signin/') : '../signin/'; ?>">Go to Sign in</a>
     </div>
 
 </body>

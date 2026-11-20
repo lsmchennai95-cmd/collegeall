@@ -64,7 +64,7 @@ window.globalCourseManager = new GlobalCourseManager();
 function validateToken() {
     const token = localStorage.getItem('authToken');
     if (!token) {
-        window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
+        window.location.href = (appConfig.appUrl || "https://collegeall.com").replace(/\/+$/, "") + "/signin/";
         return false;
     }
     return true;
@@ -283,7 +283,7 @@ class Dashboard {
     handleUnauthorized() {
         localStorage.removeItem('authToken');
         sessionStorage.removeItem('user_details');
-        window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
+        window.location.href = (appConfig.appUrl || "https://collegeall.com").replace(/\/+$/, "") + "/signin/";
     }
 
     updateUI() {
@@ -681,7 +681,7 @@ function formatPercentage(value) {
 function logoutUser() {
     localStorage.removeItem("authToken");
     sessionStorage.removeItem("user_details");
-    window.location.href = (appConfig.appUrl || "https://collegeall.com") + "/signin/";
+    window.location.href = (appConfig.appUrl || "https://collegeall.com").replace(/\/+$/, "") + "/signin/";
 }
 
 // Add token validation to page-specific scripts

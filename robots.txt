@@ -1,24 +1,45 @@
 # robots.txt for https://collegeall.com/
 
 User-agent: *
+
+# Authentication & User Accounts
 Disallow: /admin/
 Disallow: /login/
 Disallow: /register/
+Disallow: /signin/
+Disallow: /signup/
+Disallow: /verify/
+Disallow: /verify-otp/
+Disallow: /emailverified/
 Disallow: /dashboard/
+
+# Checkout, Payments & Conversion Pages
 Disallow: /cart/
 Disallow: /checkout/
+Disallow: /payment/
+Disallow: /thank-you/
+Disallow: /universities/thank-you/
+Disallow: /landing/thank-you/
+
+# Internal Configurations & Private Directories
 Disallow: /api/
 Disallow: /tmp/
+Disallow: /config/
+Disallow: /includes/
+
+# Internal Search & Dynamic Suggestion Pages
+Disallow: /search/
 Disallow: /search-results/
+Disallow: /university-suggestions/
+
 Allow: /
 
-# Block crawling of duplicate or low-value pages
+# Block crawling of duplicate or low-value query parameters
 Disallow: /*?sort=
 Disallow: /*?filter=
 Disallow: /*?page=
 
 # Sitemap locations
-Sitemap: https://collegeall.com/sitemap.xml
 Sitemap: https://collegeall.com/sitemap_index.xml
 
 # Crawl-delay (optional)

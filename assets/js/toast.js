@@ -51,9 +51,10 @@
      * @param {string} message - Notification text message.
      * @param {string} [type='info'] - 'success' | 'warning' | 'error' | 'info'.
      * @param {number} [duration=5000] - Duration in milliseconds before auto-dismissal.
+     * @param {string} [customTitle] - Optional custom title text for the notification.
      * @returns {HTMLElement} The created toast element.
      */
-    function showToast(message, type, duration) {
+    function showToast(message, type, duration, customTitle) {
         if (!message) return null;
 
         type = (type || 'info').toLowerCase();
@@ -82,7 +83,7 @@
 
         var title = document.createElement('div');
         title.className = 'ca-toast-title';
-        title.textContent = DEFAULT_TITLES[type];
+        title.textContent = (customTitle && typeof customTitle === 'string') ? customTitle : DEFAULT_TITLES[type];
         body.appendChild(title);
 
         var msgEl = document.createElement('div');
@@ -161,10 +162,10 @@
     root.showToast = showToast;
     root.Toast = {
         show: showToast,
-        success: function (msg, dur) { return showToast(msg, 'success', dur); },
-        warning: function (msg, dur) { return showToast(msg, 'warning', dur); },
-        error: function (msg, dur) { return showToast(msg, 'error', dur); },
-        info: function (msg, dur) { return showToast(msg, 'info', dur); }
+        success: function (msg, dur, title) { return showToast(msg, 'success', dur, title); },
+        warning: function (msg, dur, title) { return showToast(msg, 'warning', dur, title); },
+        error: function (msg, dur, title) { return showToast(msg, 'error', dur, title); },
+        info: function (msg, dur, title) { return showToast(msg, 'info', dur, title); }
     };
 
 })(typeof window !== 'undefined' ? window : this);

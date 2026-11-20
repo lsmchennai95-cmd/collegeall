@@ -1,22 +1,5 @@
 const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', assetBaseUrl: 'https://collegeall.com', apiBaseUrl: 'https://api.collegeall.com' };
-// document.addEventListener("DOMContentLoaded", function () {
-//   const grid = document.getElementById("universities-logos-grid");
-
-//   fetch((appConfig.apiBaseUrl || "https://api.collegeall.com") + "/api/v1/all-universities") 
-//     .then(response => response.json())
-//     .then(res => {
-//       if (res.status === 200 && res.data && res.data.universities) {
-//         res.data.universities.forEach(uni => {
-//           const logo = document.createElement("a");
-//           logo.href = uni.univeristy_url; 
-//           logo.target = "_blank";
-//           logo.innerHTML = `<img src="${uni.universities_logo}" alt="${uni.University_name} Logo">`;
-//           grid.appendChild(logo);
-//         });
-//       }
-//     })
-//     .catch(error => console.error("Error fetching logos:", error));
-// });
+ 
 (async () => {
   let ip = sessionStorage.getItem('ip_address');
 
@@ -57,7 +40,7 @@ const appConfig = window.APP_CONFIG || { appUrl: 'https://collegeall.com', asset
       campaign_name,
       by_id,
       page_id,
-      location: locationString   // ✔ send as string
+      location: locationString    
     })
   });
 })();
@@ -759,7 +742,7 @@ async function otpVerify() {
   otpInput.classList.remove("is-invalid");
 
   const otpValue = otpInput.value.trim();
-  const userId = sessionStorage.getItem("userId");
+  const userId = sessionStorage.getItem("userId") || sessionStorage.getItem("user_id");
 
   // --- Validation ---
   if (!otpValue) {
